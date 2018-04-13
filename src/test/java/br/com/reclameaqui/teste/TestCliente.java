@@ -175,10 +175,55 @@ public class TestCliente {
 	//   @Test(expected = ArithmeticException.class)
 	
 	@Test()
-	 public void testException() throws Exception {
+	 public void testDeleteClientePorCpfNotFound() throws Exception {
 
 		this.mockMvc.perform(delete("/cliente/cpf/" + "52247215122")
 	    		.contentType(MediaType.APPLICATION_JSON)).andExpect(status().isNotFound());
+	}
+	
+	@Test()
+	 public void testDeleteClientePorIdNotFound() throws Exception {
+
+		this.mockMvc.perform(delete("/cliente" + "3432def3454")
+	    		.contentType(MediaType.APPLICATION_JSON)).andExpect(status().isNotFound());
+	}
+	
+	
+	
+	
+	@Test()
+	 public void testConsultarClientePorCpfNotFound() throws Exception {
+
+		this.mockMvc.perform(get("/cliente/cpf/" + "52247215122")
+	    		.contentType(MediaType.APPLICATION_JSON)).andExpect(status().isNotFound());
+	}
+	
+	@Test()
+	 public void testConsultarClientePorIdNotFound() throws Exception {
+
+		this.mockMvc.perform(get("/cliente" + "3432def3454")
+	    		.contentType(MediaType.APPLICATION_JSON)).andExpect(status().isNotFound());
+	}
+	
+	@Test()
+	 public void testAtualizarClientePorCpfNotFound() throws Exception {
+		Endereco endereco = new Endereco("07346444", "Rua Liberdade", "1243", "Jardim Independente", "Campinas");
+		Cliente cliente = new Cliente("Jessica", "1945784854", "25042859730", endereco);
+		
+		this.mockMvc.perform(put("/cliente/cpf/" + "52247215122")
+	    		.contentType(MediaType.APPLICATION_JSON)
+	    		.content(Utils.asJsonString(cliente))).andExpect(status().isNotFound());
+	}
+	
+	@Test()
+	 public void testAtualizarClientePorIdNotFound() throws Exception {
+
+		Endereco endereco = new Endereco("07346444", "Rua Liberdade", "1243", "Jardim Independente", "Campinas");
+		Cliente cliente = new Cliente("Jessica", "1945784854", "25042859730", endereco);
+		
+		this.mockMvc.perform(put("/cliente" + "3432def3454")
+	    		.contentType(MediaType.APPLICATION_JSON)
+	    		.content(Utils.asJsonString(cliente))).andExpect(status().isNotFound());
 	}
 	
 	
