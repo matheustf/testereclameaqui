@@ -22888,3 +22888,108 @@ Caused by: java.lang.ClassNotFoundException: ch.qos.logback.core.rolling.Rolling
 16:25:59,185 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
 16:25:59,186 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@16619bdc - Registering current configuration as safe fallback point
 
+org.eclipse.m2e.logback.configuration: The org.eclipse.m2e.logback.configuration bundle was activated before the state location was initialized.  Will retry after the state location is initialized.
+org.eclipse.m2e.logback.configuration: Logback config file: /opt/otherProjects/workspace/.metadata/.plugins/org.eclipse.m2e.logback.configuration/logback.1.8.2.20171007-0217.xml
+org.eclipse.m2e.logback.configuration: Initializing logback
+19:59:25,602 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
+19:59:25,603 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+19:59:25,603 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.xml]
+19:59:25,603 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Setting up default configuration.
+19:59:25,787 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+19:59:25,802 |-INFO in ReconfigureOnChangeFilter{invocationCounter=0} - Will scan for changes in [[/opt/otherProjects/workspace/.metadata/.plugins/org.eclipse.m2e.logback.configuration/logback.1.8.2.20171007-0217.xml]] every 60 seconds. 
+19:59:25,802 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - Adding ReconfigureOnChangeFilter as a turbo filter
+19:59:25,806 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+19:59:25,806 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
+19:59:26,001 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+19:59:26,002 |-ERROR in ch.qos.logback.core.joran.action.AppenderAction - Could not create an Appender of type [ch.qos.logback.core.rolling.RollingFileAppender]. ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type ch.qos.logback.core.rolling.RollingFileAppender
+	at ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type ch.qos.logback.core.rolling.RollingFileAppender
+	at 	at ch.qos.logback.core.util.OptionHelper.instantiateByClassNameAndParameter(OptionHelper.java:73)
+	at 	at ch.qos.logback.core.util.OptionHelper.instantiateByClassName(OptionHelper.java:48)
+	at 	at ch.qos.logback.core.util.OptionHelper.instantiateByClassName(OptionHelper.java:35)
+	at 	at ch.qos.logback.core.joran.action.AppenderAction.begin(AppenderAction.java:54)
+	at 	at ch.qos.logback.core.joran.spi.Interpreter.callBeginAction(Interpreter.java:275)
+	at 	at ch.qos.logback.core.joran.spi.Interpreter.startElement(Interpreter.java:147)
+	at 	at ch.qos.logback.core.joran.spi.Interpreter.startElement(Interpreter.java:129)
+	at 	at ch.qos.logback.core.joran.spi.EventPlayer.play(EventPlayer.java:50)
+	at 	at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:149)
+	at 	at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:135)
+	at 	at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:99)
+	at 	at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:49)
+	at 	at org.eclipse.m2e.logback.configuration.LogPlugin.loadConfiguration(LogPlugin.java:185)
+	at 	at org.eclipse.m2e.logback.configuration.LogPlugin.configureLogback(LogPlugin.java:144)
+	at 	at org.eclipse.m2e.logback.configuration.LogPlugin.access$2(LogPlugin.java:107)
+	at 	at org.eclipse.m2e.logback.configuration.LogPlugin$1.run(LogPlugin.java:62)
+	at 	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at 	at java.util.TimerThread.run(Timer.java:505)
+Caused by: java.lang.ClassNotFoundException: ch.qos.logback.core.rolling.RollingFileAppender cannot be found by ch.qos.logback.classic_1.1.2.v20160208-0839
+	at 	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:484)
+	at 	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:395)
+	at 	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:387)
+	at 	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:150)
+	at 	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at 	at ch.qos.logback.core.util.OptionHelper.instantiateByClassNameAndParameter(OptionHelper.java:60)
+	at 	... 17 common frames omitted
+19:59:26,004 |-ERROR in ch.qos.logback.core.joran.spi.Interpreter@11:81 - ActionException in Action for tag [appender] ch.qos.logback.core.joran.spi.ActionException: ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type ch.qos.logback.core.rolling.RollingFileAppender
+	at ch.qos.logback.core.joran.spi.ActionException: ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type ch.qos.logback.core.rolling.RollingFileAppender
+	at 	at ch.qos.logback.core.joran.action.AppenderAction.begin(AppenderAction.java:82)
+	at 	at ch.qos.logback.core.joran.spi.Interpreter.callBeginAction(Interpreter.java:275)
+	at 	at ch.qos.logback.core.joran.spi.Interpreter.startElement(Interpreter.java:147)
+	at 	at ch.qos.logback.core.joran.spi.Interpreter.startElement(Interpreter.java:129)
+	at 	at ch.qos.logback.core.joran.spi.EventPlayer.play(EventPlayer.java:50)
+	at 	at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:149)
+	at 	at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:135)
+	at 	at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:99)
+	at 	at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:49)
+	at 	at org.eclipse.m2e.logback.configuration.LogPlugin.loadConfiguration(LogPlugin.java:185)
+	at 	at org.eclipse.m2e.logback.configuration.LogPlugin.configureLogback(LogPlugin.java:144)
+	at 	at org.eclipse.m2e.logback.configuration.LogPlugin.access$2(LogPlugin.java:107)
+	at 	at org.eclipse.m2e.logback.configuration.LogPlugin$1.run(LogPlugin.java:62)
+	at 	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at 	at java.util.TimerThread.run(Timer.java:505)
+Caused by: ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type ch.qos.logback.core.rolling.RollingFileAppender
+	at 	at ch.qos.logback.core.util.OptionHelper.instantiateByClassNameAndParameter(OptionHelper.java:73)
+	at 	at ch.qos.logback.core.util.OptionHelper.instantiateByClassName(OptionHelper.java:48)
+	at 	at ch.qos.logback.core.util.OptionHelper.instantiateByClassName(OptionHelper.java:35)
+	at 	at ch.qos.logback.core.joran.action.AppenderAction.begin(AppenderAction.java:54)
+	at 	... 14 common frames omitted
+Caused by: java.lang.ClassNotFoundException: ch.qos.logback.core.rolling.RollingFileAppender cannot be found by ch.qos.logback.classic_1.1.2.v20160208-0839
+	at 	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:484)
+	at 	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:395)
+	at 	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:387)
+	at 	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:150)
+	at 	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at 	at ch.qos.logback.core.util.OptionHelper.instantiateByClassNameAndParameter(OptionHelper.java:60)
+	at 	... 17 common frames omitted
+19:59:26,005 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [org.eclipse.m2e.logback.appender.EclipseLogAppender]
+19:59:26,008 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [EclipseLog]
+19:59:26,022 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [org.eclipse.m2e.logback.appender.MavenConsoleAppender]
+19:59:26,022 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [MavenConsoleLog]
+19:59:26,023 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to INFO
+19:59:26,023 |-ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - Could not find an appender named [FILE]. Did you define it below instead of above in the configuration file?
+19:59:26,023 |-ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - See http://logback.qos.ch/codes.html#appender_order for more details.
+19:59:26,023 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
+19:59:26,023 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [EclipseLog] to Logger[ROOT]
+19:59:26,023 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [MavenConsoleLog] to Logger[ROOT]
+19:59:26,024 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [com.ning.http.client] to INFO
+19:59:26,024 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+19:59:26,024 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@6f0eb351 - Registering current configuration as safe fallback point
+
+Memory pressure relief: Total: res = 9375744/9297920/-77824, res+swap = 5734400/5648384/-86016
+Memory pressure relief: Total: res = 9256960/9256960/0, res+swap = 5607424/5607424/0
+Memory pressure relief: Total: res = 9256960/9265152/8192, res+swap = 5615616/5615616/0
+Memory pressure relief: Total: res = 9265152/9265152/0, res+swap = 5615616/5615616/0
+Memory pressure relief: Total: res = 9265152/9265152/0, res+swap = 5615616/5615616/0
+Memory pressure relief: Total: res = 9265152/9269248/4096, res+swap = 5619712/5619712/0
+Memory pressure relief: Total: res = 9269248/9269248/0, res+swap = 5619712/5619712/0
+Memory pressure relief: Total: res = 9269248/9269248/0, res+swap = 5619712/5619712/0
+Memory pressure relief: Total: res = 9269248/9302016/32768, res+swap = 5623808/5767168/143360
+Memory pressure relief: Total: res = 9322496/9322496/0, res+swap = 5672960/5672960/0
+Memory pressure relief: Total: res = 9322496/9322496/0, res+swap = 5672960/5672960/0
+Memory pressure relief: Total: res = 10166272/10137600/-28672, res+swap = 6529024/6492160/-36864
+Memory pressure relief: Total: res = 10092544/10092544/0, res+swap = 6447104/6447104/0
+Memory pressure relief: Total: res = 10092544/10092544/0, res+swap = 6447104/6447104/0
+Memory pressure relief: Total: res = 10092544/10092544/0, res+swap = 6447104/6447104/0
+Memory pressure relief: Total: res = 10092544/10096640/4096, res+swap = 6451200/6451200/0
+Memory pressure relief: Total: res = 10080256/10080256/0, res+swap = 6434816/6438912/4096
+Memory pressure relief: Total: res = 10080256/10084352/4096, res+swap = 6438912/6438912/0
+Memory pressure relief: Total: res = 10084352/10088448/4096, res+swap = 6443008/6443008/0
