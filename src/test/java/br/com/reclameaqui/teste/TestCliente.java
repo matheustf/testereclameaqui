@@ -82,6 +82,7 @@ public class TestCliente {
             .andExpect(jsonPath("$.number").value(0))
             .andExpect(jsonPath("$.first").value("true"))
             .andExpect(jsonPath("$.last").value("true"));
+	 */
 	
 	@Test
 	 public void testQuantidadeDeClientes() throws Exception {
@@ -172,7 +173,6 @@ public class TestCliente {
 	 }
 	
 	
-	 */
 	
 	
 	
