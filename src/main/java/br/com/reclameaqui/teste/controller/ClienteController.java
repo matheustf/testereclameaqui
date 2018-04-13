@@ -40,6 +40,13 @@ public class ClienteController {
 		return clienteService.buscarTodos();
 	}
 	
+	@GetMapping()
+	@RequestMapping("/teste")
+	public String teste() {
+		
+		return "teste ok";
+	}
+	
 	@GetMapping("/cliente/{id}")
 	public ResponseEntity<ClienteDTO> consultar(@PathVariable(value = "id") String id) throws ClienteException, CampoNaoEncontradoException {
 		logger.info("Rest consultar cliente");
