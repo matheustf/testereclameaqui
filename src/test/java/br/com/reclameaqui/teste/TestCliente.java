@@ -38,6 +38,16 @@ public class TestCliente {
 		this.mockMvc = MockMvcBuilders.webAppContextSetup(this.wac).build();
 	}
 	
+	@Test
+	 public void test() throws Exception {
+
+		this.mockMvc.perform(get("/teste")
+	        		.contentType(MediaType.APPLICATION_JSON))
+	            .andExpect(status().isOk())
+	            .andExpect(jsonPath("$", Matchers.hasToString("teste ok")));
+	 }
+	
+	
 /*
  *   @InjectMocks
     private HelloController helloController;
