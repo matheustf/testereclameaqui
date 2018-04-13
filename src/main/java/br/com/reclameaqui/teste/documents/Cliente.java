@@ -23,12 +23,10 @@ public class Cliente {
 	
 	@NotNull(message = "Campo Obrigatorio!")
 	private String nome;
-	
 	private String telefone;
 	
 	@CPF
 	private String cpf;
-	
 	private Endereco endereco;
 	
 	public Cliente(String nome, String telefone, String cpf, Endereco endereco) {
@@ -44,7 +42,6 @@ public class Cliente {
 		cliente.setTelefone(clienteDetails.getTelefone());
 		cliente.setCpf(clienteDetails.getCpf());
 		cliente.setEndereco(clienteDetails.getEndereco());
-		
 		return cliente;
 	}
 
