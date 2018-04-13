@@ -95,7 +95,7 @@ public class TestClienteIntegracao {
 	            .andExpect(jsonPath("$", Matchers.hasSize(14)));
 	 }
 	
-	
+/*	
 	@Test
 	 public void testCRUDCliente() throws Exception {
 		Endereco endereco = new Endereco("07346444", "Rua Liberdade", "1243", "Jardim Independente", "Campinas");
@@ -127,7 +127,7 @@ public class TestClienteIntegracao {
 		
 	 }
 	
-	
+	*/
 
     
 }
