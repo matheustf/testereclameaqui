@@ -10,6 +10,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import java.util.Arrays;
 import java.util.List;
 
+import org.eclipse.jdt.internal.compiler.flow.UnconditionalFlowInfo.AssertionFailedException;
 import org.hamcrest.Matchers;
 import org.junit.Before;
 import org.junit.Test;
@@ -25,6 +26,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.util.AssertionErrors;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
@@ -166,6 +168,27 @@ public class TestCliente {
 		assertEquals(response.getStatusCode(), HttpStatus.OK);
 		assertEquals(response.getBody().getCpf(), clienteOne.getCpf());
 	}
+	
+	@Test
+	public void consultarClientePorTestClienteInexistente() throws ClienteNaoEncontradoException {
+
+		Mockito.when(clienteService.consultar("dasaSDK4535DF")).thenThrow(new ClienteNaoEncontradoException());
+
+		ResponseEntity<ClienteDTO> response = clienteController.consultar("dasaSDK4535DF");
+
+		assertEquals(response.getStatusCode(), HttpStatus.NOT_FOUND);
+	}
+	
+	@Test
+	public void consultarClientePorCpfTestClienteInexistente() throws ClienteNaoEncontradoException {
+
+		Mockito.when(clienteService.consultarPorCpf("12589240643")).thenThrow(new ClienteNaoEncontradoException());
+
+		ResponseEntity<ClienteDTO> response = clienteController.consultarPorCpf("12589240643");
+
+		assertEquals(response.getStatusCode(), HttpStatus.NOT_FOUND);
+	}
+	
 
 	@Test
 	public void deletarClienteTest() throws ClienteNaoEncontradoException {
