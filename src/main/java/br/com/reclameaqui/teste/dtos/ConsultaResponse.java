@@ -1,0 +1,17 @@
+package br.com.reclameaqui.teste.dtos;
+
+import java.util.List;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class ConsultaResponse {
+
+	private int clientesQueReclamaram;
+	
+	private List<ClienteDTO> clientes;
+}
