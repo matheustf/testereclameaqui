@@ -52,7 +52,14 @@ public class ClienteController {
 	public ResponseEntity<ClienteDTO> consultar(@PathVariable(value = "id") String id)
 			throws ClienteException, CampoNaoEncontradoException {
 		logger.info("Rest consultar cliente");
-		ClienteDTO clienteDTO = clienteService.consultar(id);
+		
+		ClienteDTO clienteDTO;
+		try {
+			clienteDTO = clienteService.consultar(id);
+		} catch (ClienteNaoEncontradoException e) {
+			return ResponseEntity.notFound().build();
+		}
+
 
 		return new ResponseEntity<ClienteDTO>(clienteDTO, HttpStatus.OK);
 	}
@@ -61,7 +68,13 @@ public class ClienteController {
 	public ResponseEntity<ClienteDTO> consultarPorCpf(@PathVariable(value = "cpf") String cpf)
 			throws ClienteException, CampoNaoEncontradoException {
 		logger.info("Rest consultar cliente");
-		ClienteDTO clienteDTO = clienteService.consultarPorCpf(cpf);
+		ClienteDTO clienteDTO;
+		try {
+			clienteDTO = clienteService.consultarPorCpf(cpf);
+		} catch (ClienteNaoEncontradoException e) {
+			return ResponseEntity.notFound().build();
+		}
+
 
 		return new ResponseEntity<ClienteDTO>(clienteDTO, HttpStatus.OK);
 	}
@@ -81,7 +94,13 @@ public class ClienteController {
 		logger.info("Rest atualizar cliente");
 
 		ClienteDTO clienteDTO;
-		clienteDTO = clienteService.atualizar(id, clienteDTODetails);
+		
+		try {
+			clienteDTO = clienteService.atualizar(id, clienteDTODetails);
+		} catch (ClienteNaoEncontradoException e) {
+			return ResponseEntity.notFound().build();
+		}
+
 
 		return new ResponseEntity<ClienteDTO>(clienteDTO, HttpStatus.OK);
 	}
@@ -92,7 +111,12 @@ public class ClienteController {
 		logger.info("Rest atualizar cliente");
 
 		ClienteDTO clienteDTO;
-		clienteDTO = clienteService.atualizarPorCpf(cpf, clienteDTODetails);
+		
+		try {
+			clienteDTO = clienteService.atualizarPorCpf(cpf, clienteDTODetails);
+		} catch (ClienteNaoEncontradoException e) {
+			return ResponseEntity.notFound().build();
+		}
 
 		return new ResponseEntity<ClienteDTO>(clienteDTO, HttpStatus.OK);
 	}

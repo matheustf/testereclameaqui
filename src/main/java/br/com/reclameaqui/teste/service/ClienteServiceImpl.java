@@ -40,13 +40,10 @@ public class ClienteServiceImpl implements ClienteService {
 	}
 	
 	@Override
-	public ClienteDTO consultar(String id) throws CampoNaoEncontradoException {
+	public ClienteDTO consultar(String id) throws ClienteNaoEncontradoException {
 		logger.info("Consultando cliente...");
 		Cliente cliente = clienteRepository.findById(id);
-		if (cliente == null) {
-			logger.error("Erro ao consultar Cliente!");
-			throw new CampoNaoEncontradoException("Cliente Nao encontrado!");
-		}
+		validarCliente(cliente);
 
 		ClienteDTO clienteDTO = modelMapper().map(cliente, ClienteDTO.class);
 		
@@ -68,14 +65,8 @@ public class ClienteServiceImpl implements ClienteService {
 	@Override
 	public ClienteDTO incluir(ClienteDTO clienteDTO) {
 		logger.info("Incluindo cliente...");
-
-		//Reclamacao reclamacoes = new Reclamacao(clienteDTO.getReclamacoes(),clienteDTO.getReclamacoes());
-		
-		//Type listType = new TypeToken<List<R>>() {}.getType();
-		//List<Reclamacao> reclamacoes = modelMapper().map(clienteDTO.getReclamacoes(), listType);
 		
 		Cliente cliente = modelMapper().map(clienteDTO, Cliente.class);
-		//cliente.set
 
 		clienteRepository.save(cliente);
 		
@@ -83,10 +74,13 @@ public class ClienteServiceImpl implements ClienteService {
 	}
 
 	@Override
-	public ClienteDTO atualizar(String id, ClienteDTO clienteDTODetails) {
+	public ClienteDTO atualizar(String id, ClienteDTO clienteDTODetails) throws ClienteNaoEncontradoException {
 		logger.info("Atualizando cliente...");
 
 		Cliente cliente = clienteRepository.findOne(id);
+		
+		validarCliente(cliente);
+		
 		Cliente clienteDetails = modelMapper().map(clienteDTODetails, Cliente.class);
 		
 		cliente = cliente.update(cliente, clienteDetails);
@@ -100,10 +94,7 @@ public class ClienteServiceImpl implements ClienteService {
 	public void deletar(String id) throws ClienteNaoEncontradoException {
 		logger.info("Deletando cliente... id: " + id);
 		Cliente cliente = clienteRepository.findOne(id);
-		if (cliente == null) {
-			logger.error("Erro ao deletar Cliente!");
-			throw new ClienteNaoEncontradoException("Cliente Nao encontrado para ser excluido!");
-		}
+		validarCliente(cliente);
 		clienteRepository.delete(id);
 	}
 	
@@ -134,13 +125,10 @@ public class ClienteServiceImpl implements ClienteService {
 		return null;
 	}
 
-	public ClienteDTO consultarPorCpf(String cpf) throws CampoNaoEncontradoException {
+	public ClienteDTO consultarPorCpf(String cpf) throws ClienteNaoEncontradoException {
 		logger.info("Consultando cliente...");
 		Cliente cliente = clienteRepository.findByCpf(cpf);
-		if (cliente == null) {
-			logger.error("Erro ao consultar Cliente!");
-			throw new CampoNaoEncontradoException("Cliente Nao encontrado!");
-		}
+		validarCliente(cliente);
 
 		ClienteDTO clienteDTO = modelMapper().map(cliente, ClienteDTO.class);
 		
@@ -150,18 +138,16 @@ public class ClienteServiceImpl implements ClienteService {
 	public void deletarPorCpf(String cpf) throws ClienteNaoEncontradoException {
 		logger.info("Deletando cliente... cpf: " + cpf);
 		Cliente cliente = clienteRepository.findByCpf(cpf);
-		if (cliente == null) {
-			logger.error("Erro ao deletar Cliente!");
-			throw new ClienteNaoEncontradoException("Cliente Nao encontrado para ser excluido!");
-		}
+		validarCliente(cliente);
 		clienteRepository.delete(cliente.getId());
 		
 	}
 
-	public ClienteDTO atualizarPorCpf(String cpf, ClienteDTO clienteDTODetails) {
+	public ClienteDTO atualizarPorCpf(String cpf, ClienteDTO clienteDTODetails) throws ClienteNaoEncontradoException {
 		logger.info("Atualizando cliente...");
 
 		Cliente cliente = clienteRepository.findByCpf(cpf);
+		validarCliente(cliente);
 		Cliente clienteDetails = modelMapper().map(clienteDTODetails, Cliente.class);
 		
 		cliente = cliente.update(cliente, clienteDetails);
@@ -169,6 +155,12 @@ public class ClienteServiceImpl implements ClienteService {
 		clienteRepository.save(cliente);
 		
 		return modelMapper().map(cliente, ClienteDTO.class);
+	}
+
+	private void validarCliente(Cliente cliente) throws ClienteNaoEncontradoException {
+		if (cliente == null) {
+			throw new ClienteNaoEncontradoException("Cliente Nao encontrado");
+		}
 	}
 	
 

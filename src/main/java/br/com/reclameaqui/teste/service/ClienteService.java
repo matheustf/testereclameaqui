@@ -12,12 +12,12 @@ public interface ClienteService {
 	
 	ClienteDTO incluir(ClienteDTO blocoDTO) throws CampoObrigatorioException, ClienteException;
 	
-	ClienteDTO atualizar(String id, ClienteDTO blocoDTODetails) throws CampoNaoEncontradoException;
+	ClienteDTO atualizar(String id, ClienteDTO blocoDTODetails) throws ClienteNaoEncontradoException;
 	
 	List<ClienteDTO> buscarTodos();
 
 	void deletar(String id) throws ClienteNaoEncontradoException;
 
-	ClienteDTO consultar(String id) throws CampoNaoEncontradoException;
+	ClienteDTO consultar(String id) throws ClienteNaoEncontradoException;
 
 }
