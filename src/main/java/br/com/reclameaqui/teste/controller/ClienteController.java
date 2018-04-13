@@ -23,6 +23,7 @@ import br.com.reclameaqui.teste.dtos.ConsultaResponse;
 import br.com.reclameaqui.teste.exceptions.CampoNaoEncontradoException;
 import br.com.reclameaqui.teste.exceptions.CampoObrigatorioException;
 import br.com.reclameaqui.teste.exceptions.ClienteException;
+import br.com.reclameaqui.teste.exceptions.ClienteNaoEncontradoException;
 import br.com.reclameaqui.teste.service.ClienteServiceImpl;
 
 @RestController
@@ -36,35 +37,38 @@ public class ClienteController {
 	@GetMapping()
 	@RequestMapping("/clientes")
 	public List<ClienteDTO> buscarTodasClientes() {
-		
+
 		return clienteService.buscarTodos();
 	}
-	
+
 	@GetMapping()
 	@RequestMapping("/teste")
 	public String teste() {
-		
+
 		return "teste ok";
 	}
-	
+
 	@GetMapping("/cliente/{id}")
-	public ResponseEntity<ClienteDTO> consultar(@PathVariable(value = "id") String id) throws ClienteException, CampoNaoEncontradoException {
+	public ResponseEntity<ClienteDTO> consultar(@PathVariable(value = "id") String id)
+			throws ClienteException, CampoNaoEncontradoException {
 		logger.info("Rest consultar cliente");
 		ClienteDTO clienteDTO = clienteService.consultar(id);
 
 		return new ResponseEntity<ClienteDTO>(clienteDTO, HttpStatus.OK);
 	}
-	
+
 	@GetMapping("/cliente/cpf/{cpf}")
-	public ResponseEntity<ClienteDTO> consultarPorCpf(@PathVariable(value = "cpf") String cpf) throws ClienteException, CampoNaoEncontradoException {
+	public ResponseEntity<ClienteDTO> consultarPorCpf(@PathVariable(value = "cpf") String cpf)
+			throws ClienteException, CampoNaoEncontradoException {
 		logger.info("Rest consultar cliente");
 		ClienteDTO clienteDTO = clienteService.consultarPorCpf(cpf);
 
 		return new ResponseEntity<ClienteDTO>(clienteDTO, HttpStatus.OK);
 	}
-	
+
 	@PostMapping("/cliente")
-	public ResponseEntity<ClienteDTO> incluir(@RequestBody @Valid ClienteDTO clienteDTO) throws ClienteException, CampoObrigatorioException {
+	public ResponseEntity<ClienteDTO> incluir(@RequestBody @Valid ClienteDTO clienteDTO)
+			throws ClienteException, CampoObrigatorioException {
 		logger.info("Rest incluir cliente");
 
 		ClienteDTO responseClienteDTO = clienteService.incluir(clienteDTO);
@@ -72,21 +76,19 @@ public class ClienteController {
 	}
 
 	@PutMapping("/cliente/{id}")
-	public ResponseEntity<ClienteDTO> atualizar(@PathVariable(value = "id") String id, @RequestBody @Valid ClienteDTO clienteDTODetails) {
+	public ResponseEntity<ClienteDTO> atualizar(@PathVariable(value = "id") String id,
+			@RequestBody @Valid ClienteDTO clienteDTODetails) {
 		logger.info("Rest atualizar cliente");
 
 		ClienteDTO clienteDTO;
-		try {
-			clienteDTO = clienteService.atualizar(id, clienteDTODetails);
-		} catch (CampoNaoEncontradoException e) {
-			return ResponseEntity.notFound().build();
-		}
+		clienteDTO = clienteService.atualizar(id, clienteDTODetails);
 
 		return new ResponseEntity<ClienteDTO>(clienteDTO, HttpStatus.OK);
 	}
-	
+
 	@PutMapping("/cliente/cpf/{cpf}")
-	public ResponseEntity<ClienteDTO> atualizarPorCpf(@PathVariable(value = "cpf") String cpf, @RequestBody @Valid ClienteDTO clienteDTODetails) {
+	public ResponseEntity<ClienteDTO> atualizarPorCpf(@PathVariable(value = "cpf") String cpf,
+			@RequestBody @Valid ClienteDTO clienteDTODetails) {
 		logger.info("Rest atualizar cliente");
 
 		ClienteDTO clienteDTO;
@@ -96,23 +98,34 @@ public class ClienteController {
 	}
 
 	@DeleteMapping("/cliente/{id}")
-	public ResponseEntity<ClienteDTO> deletar(@PathVariable(value = "id") String id) throws ClienteException, CampoObrigatorioException {
+	public ResponseEntity<ClienteDTO> deletar(@PathVariable(value = "id") String id)
+			throws ClienteException, CampoObrigatorioException {
 		logger.info("Rest deletar cliente");
-
-		clienteService.deletar(id);
+		try {
+			clienteService.deletar(id);
+		} catch (ClienteNaoEncontradoException e) {
+			return ResponseEntity.notFound().build();
+		}
+		
 		return new ResponseEntity<ClienteDTO>(HttpStatus.OK);
 	}
-	
+
 	@DeleteMapping("/cliente/cpf/{cpf}")
-	public ResponseEntity<ClienteDTO> deletarPorCpf(@PathVariable(value = "cpf") String cpf) throws ClienteException, CampoObrigatorioException {
+	public ResponseEntity<ClienteDTO> deletarPorCpf(@PathVariable(value = "cpf") String cpf)
+			throws ClienteException, CampoObrigatorioException {
 		logger.info("Rest deletar cliente");
 
-		clienteService.deletarPorCpf(cpf);
+		try {
+			clienteService.deletarPorCpf(cpf);
+		} catch (ClienteNaoEncontradoException e) {
+			return ResponseEntity.notFound().build();
+		}
 		return new ResponseEntity<ClienteDTO>(HttpStatus.OK);
 	}
-	
+
 	@PostMapping("/clientes/consultar/reclamantes")
-	public ConsultaResponse buscarClientesQueReclamam(@RequestBody @Valid ConsultaReclamacaoRequestDTO consultaReclamacaoRequestDTO) {
+	public ConsultaResponse buscarClientesQueReclamam(
+			@RequestBody @Valid ConsultaReclamacaoRequestDTO consultaReclamacaoRequestDTO) {
 		return clienteService.buscarClientesQueReclamam(consultaReclamacaoRequestDTO);
 	}
 

@@ -6,6 +6,7 @@ import br.com.reclameaqui.teste.dtos.ClienteDTO;
 import br.com.reclameaqui.teste.exceptions.CampoNaoEncontradoException;
 import br.com.reclameaqui.teste.exceptions.CampoObrigatorioException;
 import br.com.reclameaqui.teste.exceptions.ClienteException;
+import br.com.reclameaqui.teste.exceptions.ClienteNaoEncontradoException;
 
 public interface ClienteService {
 	
@@ -15,7 +16,7 @@ public interface ClienteService {
 	
 	List<ClienteDTO> buscarTodos();
 
-	void deletar(String id) throws CampoObrigatorioException;
+	void deletar(String id) throws ClienteNaoEncontradoException;
 
 	ClienteDTO consultar(String id) throws CampoNaoEncontradoException;
 

@@ -19,7 +19,7 @@ import br.com.reclameaqui.teste.dtos.ConsultaResponse;
 import br.com.reclameaqui.teste.enums.TipoConsulta;
 import br.com.reclameaqui.teste.exceptions.CampoNaoEncontradoException;
 import br.com.reclameaqui.teste.exceptions.CampoObrigatorioException;
-import br.com.reclameaqui.teste.exceptions.ClienteException;
+import br.com.reclameaqui.teste.exceptions.ClienteNaoEncontradoException;
 import br.com.reclameaqui.teste.repository.ClienteRepository;
 import br.com.reclameaqui.teste.repository.ReclamacaoRepository;
 
@@ -66,7 +66,7 @@ public class ClienteServiceImpl implements ClienteService {
 	}
 
 	@Override
-	public ClienteDTO incluir(ClienteDTO clienteDTO) throws ClienteException {
+	public ClienteDTO incluir(ClienteDTO clienteDTO) {
 		logger.info("Incluindo cliente...");
 
 		//Reclamacao reclamacoes = new Reclamacao(clienteDTO.getReclamacoes(),clienteDTO.getReclamacoes());
@@ -83,7 +83,7 @@ public class ClienteServiceImpl implements ClienteService {
 	}
 
 	@Override
-	public ClienteDTO atualizar(String id, ClienteDTO clienteDTODetails) throws CampoNaoEncontradoException {
+	public ClienteDTO atualizar(String id, ClienteDTO clienteDTODetails) {
 		logger.info("Atualizando cliente...");
 
 		Cliente cliente = clienteRepository.findOne(id);
@@ -97,12 +97,12 @@ public class ClienteServiceImpl implements ClienteService {
 	}
 	
 	@Override
-	public void deletar(String id) throws CampoObrigatorioException {
+	public void deletar(String id) throws ClienteNaoEncontradoException {
 		logger.info("Deletando cliente... id: " + id);
 		Cliente cliente = clienteRepository.findOne(id);
 		if (cliente == null) {
 			logger.error("Erro ao deletar Cliente!");
-			throw new CampoObrigatorioException("Cliente Nao encontrado para ser excluido!");
+			throw new ClienteNaoEncontradoException("Cliente Nao encontrado para ser excluido!");
 		}
 		clienteRepository.delete(id);
 	}
@@ -147,12 +147,12 @@ public class ClienteServiceImpl implements ClienteService {
 		return clienteDTO;
 	}
 
-	public void deletarPorCpf(String cpf) throws CampoObrigatorioException {
+	public void deletarPorCpf(String cpf) throws ClienteNaoEncontradoException {
 		logger.info("Deletando cliente... cpf: " + cpf);
 		Cliente cliente = clienteRepository.findByCpf(cpf);
 		if (cliente == null) {
 			logger.error("Erro ao deletar Cliente!");
-			throw new CampoObrigatorioException("Cliente Nao encontrado para ser excluido!");
+			throw new ClienteNaoEncontradoException("Cliente Nao encontrado para ser excluido!");
 		}
 		clienteRepository.delete(cliente.getId());
 		

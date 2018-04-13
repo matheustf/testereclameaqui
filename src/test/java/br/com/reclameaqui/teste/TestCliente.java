@@ -23,6 +23,7 @@ import org.springframework.web.context.WebApplicationContext;
 import br.com.reclameaqui.teste.documents.Cliente;
 import br.com.reclameaqui.teste.documents.Endereco;
 import br.com.reclameaqui.teste.dtos.ConsultaReclamacaoRequestDTO;
+import br.com.reclameaqui.teste.exceptions.ClienteNaoEncontradoException;
 import br.com.reclameaqui.teste.util.Utils;
 
 
@@ -171,9 +172,14 @@ public class TestCliente {
             .andExpect(status().isOk());
 		
 	 }
+	//   @Test(expected = ArithmeticException.class)
 	
-	
-	
+	@Test()
+	 public void testException() throws Exception {
+
+		this.mockMvc.perform(delete("/cliente/cpf/" + "52247215122")
+	    		.contentType(MediaType.APPLICATION_JSON)).andExpect(status().isNotFound());
+	}
 	
 	
 	
