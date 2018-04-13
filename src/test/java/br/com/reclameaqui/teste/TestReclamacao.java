@@ -29,7 +29,7 @@ import br.com.reclameaqui.teste.documents.Empresa;
 import br.com.reclameaqui.teste.documents.Endereco;
 import br.com.reclameaqui.teste.documents.Reclamacao;
 import br.com.reclameaqui.teste.dtos.ClienteDTO;
-import br.com.reclameaqui.teste.dtos.ConsultaReclamacaoRequestDTO;
+import br.com.reclameaqui.teste.dtos.ReclamantesRequestDTO;
 import br.com.reclameaqui.teste.util.Utils;
 
 

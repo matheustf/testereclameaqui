@@ -22802,3 +22802,89 @@ Deleted conf: TestBuscaCep
 15:19:52.394 [Background Thread-2 (Spring IDE/3.9.1)] DEBUG org.springframework.data.repository.config.RepositoryConfigurationDelegate - Spring Data JPA - Registering repository: patoRepository - Interface: com.tower.empresa.repository.PatoRepository - Factory: org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean
 15:19:52.403 [Background Thread-2 (Spring IDE/3.9.1)] DEBUG org.springframework.data.repository.config.RepositoryConfigurationDelegate - Spring Data JPA - Registering repository: enderecoRepository - Interface: com.tower.empresa.repository.EnderecoRepository - Factory: org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean
 15:19:52.406 [Background Thread-2 (Spring IDE/3.9.1)] DEBUG org.springframework.data.repository.config.RepositoryConfigurationDelegate - Spring Data JPA - Registering repository: empresaRepository - Interface: com.tower.empresa.repository.EmpresaRepository - Factory: org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean
+org.eclipse.m2e.logback.configuration: The org.eclipse.m2e.logback.configuration bundle was activated before the state location was initialized.  Will retry after the state location is initialized.
+org.eclipse.m2e.logback.configuration: Logback config file: /opt/workspaceSpring/.metadata/.plugins/org.eclipse.m2e.logback.configuration/logback.1.8.2.20171007-0217.xml
+org.eclipse.m2e.logback.configuration: Initializing logback
+16:25:59,011 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
+16:25:59,011 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+16:25:59,011 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.xml]
+16:25:59,011 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Setting up default configuration.
+16:25:59,117 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+16:25:59,121 |-INFO in ReconfigureOnChangeFilter{invocationCounter=0} - Will scan for changes in [[/opt/workspaceSpring/.metadata/.plugins/org.eclipse.m2e.logback.configuration/logback.1.8.2.20171007-0217.xml]] every 60 seconds. 
+16:25:59,121 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - Adding ReconfigureOnChangeFilter as a turbo filter
+16:25:59,126 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+16:25:59,126 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
+16:25:59,179 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+16:25:59,180 |-ERROR in ch.qos.logback.core.joran.action.AppenderAction - Could not create an Appender of type [ch.qos.logback.core.rolling.RollingFileAppender]. ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type ch.qos.logback.core.rolling.RollingFileAppender
+	at ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type ch.qos.logback.core.rolling.RollingFileAppender
+	at 	at ch.qos.logback.core.util.OptionHelper.instantiateByClassNameAndParameter(OptionHelper.java:73)
+	at 	at ch.qos.logback.core.util.OptionHelper.instantiateByClassName(OptionHelper.java:48)
+	at 	at ch.qos.logback.core.util.OptionHelper.instantiateByClassName(OptionHelper.java:35)
+	at 	at ch.qos.logback.core.joran.action.AppenderAction.begin(AppenderAction.java:54)
+	at 	at ch.qos.logback.core.joran.spi.Interpreter.callBeginAction(Interpreter.java:275)
+	at 	at ch.qos.logback.core.joran.spi.Interpreter.startElement(Interpreter.java:147)
+	at 	at ch.qos.logback.core.joran.spi.Interpreter.startElement(Interpreter.java:129)
+	at 	at ch.qos.logback.core.joran.spi.EventPlayer.play(EventPlayer.java:50)
+	at 	at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:149)
+	at 	at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:135)
+	at 	at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:99)
+	at 	at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:49)
+	at 	at org.eclipse.m2e.logback.configuration.LogPlugin.loadConfiguration(LogPlugin.java:185)
+	at 	at org.eclipse.m2e.logback.configuration.LogPlugin.configureLogback(LogPlugin.java:144)
+	at 	at org.eclipse.m2e.logback.configuration.LogPlugin.access$2(LogPlugin.java:107)
+	at 	at org.eclipse.m2e.logback.configuration.LogPlugin$1.run(LogPlugin.java:62)
+	at 	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at 	at java.util.TimerThread.run(Timer.java:505)
+Caused by: java.lang.ClassNotFoundException: ch.qos.logback.core.rolling.RollingFileAppender cannot be found by ch.qos.logback.classic_1.1.2.v20160208-0839
+	at 	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:484)
+	at 	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:395)
+	at 	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:387)
+	at 	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:150)
+	at 	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at 	at ch.qos.logback.core.util.OptionHelper.instantiateByClassNameAndParameter(OptionHelper.java:60)
+	at 	... 17 common frames omitted
+16:25:59,180 |-ERROR in ch.qos.logback.core.joran.spi.Interpreter@11:81 - ActionException in Action for tag [appender] ch.qos.logback.core.joran.spi.ActionException: ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type ch.qos.logback.core.rolling.RollingFileAppender
+	at ch.qos.logback.core.joran.spi.ActionException: ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type ch.qos.logback.core.rolling.RollingFileAppender
+	at 	at ch.qos.logback.core.joran.action.AppenderAction.begin(AppenderAction.java:82)
+	at 	at ch.qos.logback.core.joran.spi.Interpreter.callBeginAction(Interpreter.java:275)
+	at 	at ch.qos.logback.core.joran.spi.Interpreter.startElement(Interpreter.java:147)
+	at 	at ch.qos.logback.core.joran.spi.Interpreter.startElement(Interpreter.java:129)
+	at 	at ch.qos.logback.core.joran.spi.EventPlayer.play(EventPlayer.java:50)
+	at 	at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:149)
+	at 	at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:135)
+	at 	at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:99)
+	at 	at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:49)
+	at 	at org.eclipse.m2e.logback.configuration.LogPlugin.loadConfiguration(LogPlugin.java:185)
+	at 	at org.eclipse.m2e.logback.configuration.LogPlugin.configureLogback(LogPlugin.java:144)
+	at 	at org.eclipse.m2e.logback.configuration.LogPlugin.access$2(LogPlugin.java:107)
+	at 	at org.eclipse.m2e.logback.configuration.LogPlugin$1.run(LogPlugin.java:62)
+	at 	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at 	at java.util.TimerThread.run(Timer.java:505)
+Caused by: ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type ch.qos.logback.core.rolling.RollingFileAppender
+	at 	at ch.qos.logback.core.util.OptionHelper.instantiateByClassNameAndParameter(OptionHelper.java:73)
+	at 	at ch.qos.logback.core.util.OptionHelper.instantiateByClassName(OptionHelper.java:48)
+	at 	at ch.qos.logback.core.util.OptionHelper.instantiateByClassName(OptionHelper.java:35)
+	at 	at ch.qos.logback.core.joran.action.AppenderAction.begin(AppenderAction.java:54)
+	at 	... 14 common frames omitted
+Caused by: java.lang.ClassNotFoundException: ch.qos.logback.core.rolling.RollingFileAppender cannot be found by ch.qos.logback.classic_1.1.2.v20160208-0839
+	at 	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:484)
+	at 	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:395)
+	at 	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:387)
+	at 	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:150)
+	at 	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at 	at ch.qos.logback.core.util.OptionHelper.instantiateByClassNameAndParameter(OptionHelper.java:60)
+	at 	... 17 common frames omitted
+16:25:59,181 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [org.eclipse.m2e.logback.appender.EclipseLogAppender]
+16:25:59,181 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [EclipseLog]
+16:25:59,183 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [org.eclipse.m2e.logback.appender.MavenConsoleAppender]
+16:25:59,184 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [MavenConsoleLog]
+16:25:59,185 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to INFO
+16:25:59,185 |-ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - Could not find an appender named [FILE]. Did you define it below instead of above in the configuration file?
+16:25:59,185 |-ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - See http://logback.qos.ch/codes.html#appender_order for more details.
+16:25:59,185 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
+16:25:59,185 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [EclipseLog] to Logger[ROOT]
+16:25:59,185 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [MavenConsoleLog] to Logger[ROOT]
+16:25:59,185 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [com.ning.http.client] to INFO
+16:25:59,185 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+16:25:59,186 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@16619bdc - Registering current configuration as safe fallback point
+

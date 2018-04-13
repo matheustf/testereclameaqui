@@ -18,7 +18,7 @@ import org.springframework.data.mongodb.core.aggregation.MatchOperation;
 
 import br.com.reclameaqui.teste.documents.Cliente;
 import br.com.reclameaqui.teste.documents.Reclamacao;
-import br.com.reclameaqui.teste.dtos.ConsultaReclamacaoRequestDTO;
+import br.com.reclameaqui.teste.dtos.ReclamantesRequestDTO;
 import br.com.reclameaqui.teste.enums.TipoConsulta;
 
 public class ReclamacaoRepositoryImpl implements ReclamacaoRepositoryCustom{
@@ -35,7 +35,7 @@ public class ReclamacaoRepositoryImpl implements ReclamacaoRepositoryCustom{
 	    }
 	    
 	    @Override
-	    public List<Cliente> buscarClientesQueReclamam(TipoConsulta tipoConsulta, ConsultaReclamacaoRequestDTO request) {
+	    public List<Cliente> buscarClientesQueReclamam(TipoConsulta tipoConsulta, ReclamantesRequestDTO request) {
 	        
 	        
 	        Aggregation newAggregation = Aggregation.newAggregation(tipoConsulta.matchOperation(request),

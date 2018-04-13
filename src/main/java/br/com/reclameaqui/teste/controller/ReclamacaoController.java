@@ -18,8 +18,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.reclameaqui.teste.dtos.ClienteDTO;
-import br.com.reclameaqui.teste.dtos.ConsultaReclamacaoRequestDTO;
-import br.com.reclameaqui.teste.dtos.ConsultaResponse;
+import br.com.reclameaqui.teste.dtos.ReclamantesRequestDTO;
+import br.com.reclameaqui.teste.dtos.ReclamantesResponseDTO;
 import br.com.reclameaqui.teste.dtos.ReclamacaoDTO;
 import br.com.reclameaqui.teste.exceptions.CampoNaoEncontradoException;
 import br.com.reclameaqui.teste.exceptions.CampoObrigatorioException;
@@ -39,11 +39,10 @@ public class ReclamacaoController {
 
 		return reclamacaoService.buscarTodos();
 	}
-	
-
 
 	@GetMapping("/reclamacao/{idReclamacao}")
-	public ResponseEntity<ReclamacaoDTO> consultar(@PathVariable(value = "idReclamacao") String idReclamacao) throws ReclamacaoException, CampoNaoEncontradoException {
+	public ResponseEntity<ReclamacaoDTO> consultar(@PathVariable(value = "idReclamacao") String idReclamacao)
+			throws ReclamacaoException, CampoNaoEncontradoException {
 		logger.info("Rest consultar reclamacao");
 		ReclamacaoDTO reclamacaoDTO = reclamacaoService.consultar(idReclamacao);
 
@@ -60,7 +59,8 @@ public class ReclamacaoController {
 	}
 
 	@PutMapping("/reclamacao/{id}")
-	public ResponseEntity<ReclamacaoDTO> atualizar(@PathVariable(value = "id") String id, @RequestBody @Valid ReclamacaoDTO reclamacaoDTODetails) {
+	public ResponseEntity<ReclamacaoDTO> atualizar(@PathVariable(value = "id") String id,
+			@RequestBody @Valid ReclamacaoDTO reclamacaoDTODetails) {
 		logger.info("Rest atualizar reclamacao");
 
 		ReclamacaoDTO reclamacaoDTO;
@@ -74,7 +74,8 @@ public class ReclamacaoController {
 	}
 
 	@DeleteMapping("/reclamacao/{id}")
-	public ResponseEntity<ReclamacaoDTO> deletar(@PathVariable(value = "id") String id) throws ReclamacaoException, CampoObrigatorioException {
+	public ResponseEntity<ReclamacaoDTO> deletar(@PathVariable(value = "id") String id)
+			throws ReclamacaoException, CampoObrigatorioException {
 		logger.info("Rest deletar reclamacao");
 
 		reclamacaoService.deletar(id);

@@ -8,17 +8,16 @@ import org.apache.log4j.Logger;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.google.gson.reflect.TypeToken;
 
 import br.com.reclameaqui.teste.documents.Cliente;
 import br.com.reclameaqui.teste.dtos.ClienteDTO;
-import br.com.reclameaqui.teste.dtos.ConsultaReclamacaoRequestDTO;
-import br.com.reclameaqui.teste.dtos.ConsultaResponse;
+import br.com.reclameaqui.teste.dtos.ReclamantesRequestDTO;
+import br.com.reclameaqui.teste.dtos.ReclamantesResponseDTO;
 import br.com.reclameaqui.teste.enums.TipoConsulta;
-import br.com.reclameaqui.teste.exceptions.CampoNaoEncontradoException;
-import br.com.reclameaqui.teste.exceptions.CampoObrigatorioException;
 import br.com.reclameaqui.teste.exceptions.ClienteNaoEncontradoException;
 import br.com.reclameaqui.teste.repository.ClienteRepository;
 import br.com.reclameaqui.teste.repository.ReclamacaoRepository;
@@ -91,14 +90,19 @@ public class ClienteServiceImpl implements ClienteService {
 	}
 	
 	@Override
-	public void deletar(String id) throws ClienteNaoEncontradoException {
+	public ResponseEntity<ClienteDTO> deletar(String id) throws ClienteNaoEncontradoException {
 		logger.info("Deletando cliente... id: " + id);
+		
 		Cliente cliente = clienteRepository.findOne(id);
 		validarCliente(cliente);
+		
 		clienteRepository.delete(id);
+		
+		return ResponseEntity.noContent().build();
 	}
 	
-	public ConsultaResponse buscarClientesQueReclamam(ConsultaReclamacaoRequestDTO consulta) {
+	@Override
+	public ReclamantesResponseDTO buscarClientesQueReclamam(ReclamantesRequestDTO consulta) {
 		
 		TipoConsulta tipocConsulta = verificaParametros(consulta);
 		
@@ -107,10 +111,10 @@ public class ClienteServiceImpl implements ClienteService {
 		Type listType = new TypeToken<List<ClienteDTO>>() {}.getType();
 		List<ClienteDTO> clientesDTO = modelMapper().map(clientes, listType);
 		
-		return new ConsultaResponse(clientes.size(),clientesDTO);
+		return new ReclamantesResponseDTO(clientes.size(),clientesDTO);
 	}
 
-	private TipoConsulta verificaParametros(ConsultaReclamacaoRequestDTO consulta) {
+	private TipoConsulta verificaParametros(ReclamantesRequestDTO consulta) {
 		if(StringUtils.isNotBlank(consulta.getEmpresa()) && StringUtils.isNotBlank(consulta.getCidade())) {
 			return TipoConsulta.EMPRESAECIDADE;
 		}
@@ -125,6 +129,7 @@ public class ClienteServiceImpl implements ClienteService {
 		return null;
 	}
 
+	@Override
 	public ClienteDTO consultarPorCpf(String cpf) throws ClienteNaoEncontradoException {
 		logger.info("Consultando cliente...");
 		Cliente cliente = clienteRepository.findByCpf(cpf);
@@ -135,14 +140,19 @@ public class ClienteServiceImpl implements ClienteService {
 		return clienteDTO;
 	}
 
-	public void deletarPorCpf(String cpf) throws ClienteNaoEncontradoException {
+	@Override
+	public ResponseEntity<ClienteDTO> deletarPorCpf(String cpf) throws ClienteNaoEncontradoException {
 		logger.info("Deletando cliente... cpf: " + cpf);
+		
 		Cliente cliente = clienteRepository.findByCpf(cpf);
 		validarCliente(cliente);
+		
 		clienteRepository.delete(cliente.getId());
 		
+		return ResponseEntity.noContent().build();
 	}
 
+	@Override
 	public ClienteDTO atualizarPorCpf(String cpf, ClienteDTO clienteDTODetails) throws ClienteNaoEncontradoException {
 		logger.info("Atualizando cliente...");
 
