@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.context.annotation.EnableMBeanExport;
 
 import br.com.reclameaqui.teste.documents.Cliente;
 import br.com.reclameaqui.teste.documents.Empresa;
@@ -14,8 +16,11 @@ import br.com.reclameaqui.teste.documents.Endereco;
 import br.com.reclameaqui.teste.documents.Reclamacao;
 import br.com.reclameaqui.teste.repository.ClienteRepository;
 import br.com.reclameaqui.teste.repository.ReclamacaoRepository;
+import org.springframework.jmx.support.RegistrationPolicy;
 
 @SpringBootApplication
+@EnableCaching
+@EnableMBeanExport(registration = RegistrationPolicy.IGNORE_EXISTING)
 public class TesteApplication implements CommandLineRunner{
 
 	public static void main(String[] args) {
