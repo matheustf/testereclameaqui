@@ -35,7 +35,7 @@ import br.com.reclameaqui.teste.util.Utils;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = TesteApplication.class, webEnvironment = WebEnvironment.RANDOM_PORT)
-public class TestReclamacao implements BeanPostProcessor{
+public class TestReclamacao {
 	private MockMvc mockMvc;
 	@Autowired
 	private WebApplicationContext wac;
@@ -93,7 +93,7 @@ public class TestReclamacao implements BeanPostProcessor{
 	 }
 	
 	
-	
+	/*
 	
 	@Test
 	 public void testCRUDReclamacao() throws Exception {
@@ -117,6 +117,8 @@ public class TestReclamacao implements BeanPostProcessor{
 		
 		String content2 = resultReclamacao.getResponse().getContentAsString();
 		
+		*/
+		
 		/*
 		this.mockMvc.perform(get("/reclamacao/" + cliente.getCpf())
         		.contentType(MediaType.APPLICATION_JSON))
@@ -138,9 +140,9 @@ public class TestReclamacao implements BeanPostProcessor{
         		.contentType(MediaType.APPLICATION_JSON))
             .andExpect(status().isOk());
             
-            */
 	 }
 	
+		 */
 	
 	
 	
