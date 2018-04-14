@@ -23056,3 +23056,9 @@ Memory pressure relief: Total: res = 10100736/10100736/0, res+swap = 6467584/646
 Memory pressure relief: Total: res = 10100736/10100736/0, res+swap = 6467584/6467584/0
 Memory pressure relief: Total: res = 1384448/1388544/4096, res+swap = 1654784/1654784/0
 Memory pressure relief: Total: res = 1060864/1060864/0, res+swap = 1327104/1331200/4096
+Memory pressure relief: Total: res = 1044480/1052672/8192, res+swap = 1318912/1323008/4096
+Memory pressure relief: Total: res = 1052672/1060864/8192, res+swap = 1327104/1331200/4096
+Memory pressure relief: Total: res = 1060864/1064960/4096, res+swap = 1331200/1335296/4096
+Memory pressure relief: Total: res = 1064960/1069056/4096, res+swap = 1335296/1339392/4096
+Memory pressure relief: Total: res = 1069056/1081344/12288, res+swap = 1347584/1351680/4096
+Memory pressure relief: Total: res = 1077248/1081344/4096, res+swap = 1347584/1351680/4096
