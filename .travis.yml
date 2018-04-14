@@ -10,3 +10,12 @@ after_success:
 notifications: 
     email:
         - teles.matheus@hotmail.com #Add your email address
+
+cache:
+  directories:
+  - $HOME/.m2
+
+install: true
+
+script:
+ - mvn -f spring-boot-starter-parent/pom.xml clean verify -Pjacoco coveralls:report
