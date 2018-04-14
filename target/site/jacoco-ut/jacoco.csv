@@ -1,0 +1,36 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+teste,br.com.reclameaqui.teste,TesteApplication,5,414,0,0,2,43,1,2,1,2
+teste,br.com.reclameaqui.teste.documents,Empresa,136,9,22,0,7,1,21,1,10,1
+teste,br.com.reclameaqui.teste.documents,Cliente,291,15,46,0,13,6,40,1,17,1
+teste,br.com.reclameaqui.teste.documents,Endereco,277,18,46,0,13,1,39,1,16,1
+teste,br.com.reclameaqui.teste.documents,Reclamacao,320,18,54,0,14,7,45,1,18,1
+teste,br.com.reclameaqui.teste.repository,ReclamacaoRepositoryImpl,70,9,2,0,8,4,3,1,2,1
+teste,br.com.reclameaqui.teste.service,ClienteServiceImpl.new TypeToken() {...},6,0,0,0,1,0,1,0,1,0
+teste,br.com.reclameaqui.teste.service,ClienteServiceImpl.new TypeToken() {...},6,0,0,0,1,0,1,0,1,0
+teste,br.com.reclameaqui.teste.service,ReclamacaoServiceImpl.new TypeToken() {...},6,0,0,0,1,0,1,0,1,0
+teste,br.com.reclameaqui.teste.service,ReclamacaoServiceImpl,136,11,4,0,28,3,7,2,5,2
+teste,br.com.reclameaqui.teste.service,ClienteServiceImpl,281,7,10,0,59,2,17,1,12,1
+teste,br.com.reclameaqui.teste.util,ClearRepositories,7,3,0,0,3,1,1,1,1,1
+teste,br.com.reclameaqui.teste.util,Utils,22,0,0,0,7,0,2,0,2,0
+teste,br.com.reclameaqui.teste.controller,ClienteController,152,10,0,0,44,4,10,1,10,1
+teste,br.com.reclameaqui.teste.controller,ReclamacaoController,68,7,0,0,16,2,5,1,5,1
+teste,br.com.reclameaqui.teste.dtos,EmpresaDTO,139,0,22,0,6,0,22,0,11,0
+teste,br.com.reclameaqui.teste.dtos,ReclamantesResponseDTO,122,0,16,0,6,0,19,0,11,0
+teste,br.com.reclameaqui.teste.dtos,EmpresaDTO.EmpresaDTOBuilder,38,0,0,0,1,0,5,0,5,0
+teste,br.com.reclameaqui.teste.dtos,ReclamantesResponseDTO.ReclamantesResponseDTOBuilder,38,0,0,0,1,0,5,0,5,0
+teste,br.com.reclameaqui.teste.dtos,ClienteDTO,274,0,46,0,8,0,39,0,16,0
+teste,br.com.reclameaqui.teste.dtos,EnderecoDTO,277,0,46,0,9,0,40,0,17,0
+teste,br.com.reclameaqui.teste.dtos,ReclamacaoDTO,316,0,54,0,15,0,45,0,18,0
+teste,br.com.reclameaqui.teste.dtos,ClienteDTO.ClienteDTOBuilder,74,0,0,0,1,0,8,0,8,0
+teste,br.com.reclameaqui.teste.dtos,ReclamantesRequestDTO,139,0,22,0,6,0,22,0,11,0
+teste,br.com.reclameaqui.teste.dtos,EnderecoDTO.EnderecoDTOBuilder,74,0,0,0,1,0,8,0,8,0
+teste,br.com.reclameaqui.teste.dtos,ReclamantesRequestDTO.ReclamantesRequestDTOBuilder,38,0,0,0,1,0,5,0,5,0
+teste,br.com.reclameaqui.teste.enums,TipoConsulta.new TipoConsulta() {...},7,6,0,0,1,1,1,1,1,1
+teste,br.com.reclameaqui.teste.enums,TipoConsulta.new TipoConsulta() {...},7,6,0,0,1,1,1,1,1,1
+teste,br.com.reclameaqui.teste.enums,TipoConsulta.new TipoConsulta() {...},12,6,0,0,1,1,1,1,1,1
+teste,br.com.reclameaqui.teste.enums,TipoConsulta,0,34,0,0,0,4,0,1,0,1
+teste,br.com.reclameaqui.teste.exceptions,ClienteNaoEncontradoException,26,0,0,0,12,0,6,0,6,0
+teste,br.com.reclameaqui.teste.exceptions,CampoObrigatorioException,26,0,0,0,12,0,6,0,6,0
+teste,br.com.reclameaqui.teste.exceptions,ClienteException,16,0,0,0,8,0,4,0,4,0
+teste,br.com.reclameaqui.teste.exceptions,ReclamacaoException,16,0,0,0,8,0,4,0,4,0
+teste,br.com.reclameaqui.teste.exceptions,CampoNaoEncontradoException,26,0,0,0,12,0,6,0,6,0

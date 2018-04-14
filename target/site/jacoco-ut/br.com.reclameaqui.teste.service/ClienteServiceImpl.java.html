@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ClienteServiceImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">teste</a> &gt; <a href="index.source.html" class="el_package">br.com.reclameaqui.teste.service</a> &gt; <span class="el_source">ClienteServiceImpl.java</span></div><h1>ClienteServiceImpl.java</h1><pre class="source lang-java linenums">package br.com.reclameaqui.teste.service;
+
+import java.lang.reflect.Type;
+import java.util.List;
+
+import org.apache.commons.lang3.StringUtils;
+import org.apache.log4j.Logger;
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+
+import com.google.gson.reflect.TypeToken;
+
+import br.com.reclameaqui.teste.documents.Cliente;
+import br.com.reclameaqui.teste.dtos.ClienteDTO;
+import br.com.reclameaqui.teste.dtos.ReclamantesRequestDTO;
+import br.com.reclameaqui.teste.dtos.ReclamantesResponseDTO;
+import br.com.reclameaqui.teste.enums.TipoConsulta;
+import br.com.reclameaqui.teste.exceptions.ClienteNaoEncontradoException;
+import br.com.reclameaqui.teste.repository.ClienteRepository;
+import br.com.reclameaqui.teste.repository.ReclamacaoRepository;
+
+@Service
+<span class="fc" id="L26">public class ClienteServiceImpl implements ClienteService {</span>
+
+<span class="fc" id="L28">	private final Logger logger = Logger.getLogger(ClienteServiceImpl.class);</span>
+
+	@Autowired
+	ClienteRepository clienteRepository;
+	
+	@Autowired
+	ReclamacaoRepository reclamacaoRepository;
+	
+	@Bean
+	public ModelMapper modelMapper() {
+<span class="nc" id="L38">		return new ModelMapper();</span>
+	}
+	
+	@Override
+	public ClienteDTO consultar(String id) throws ClienteNaoEncontradoException {
+<span class="nc" id="L43">		logger.info(&quot;Consultando cliente...&quot;);</span>
+<span class="nc" id="L44">		Cliente cliente = clienteRepository.findById(id);</span>
+<span class="nc" id="L45">		validarCliente(cliente);</span>
+
+<span class="nc" id="L47">		ClienteDTO clienteDTO = modelMapper().map(cliente, ClienteDTO.class);</span>
+		
+<span class="nc" id="L49">		return clienteDTO;</span>
+	}
+
+	@Override
+	public List&lt;ClienteDTO&gt; buscarTodos() {
+<span class="nc" id="L54">		logger.info(&quot;Consultando cliente...&quot;);</span>
+
+<span class="nc" id="L56">		List&lt;Cliente&gt; clientes = (List&lt;Cliente&gt;) clienteRepository.findAll();</span>
+
+<span class="nc" id="L58">		Type listType = new TypeToken&lt;List&lt;ClienteDTO&gt;&gt;() {}.getType();</span>
+<span class="nc" id="L59">		List&lt;ClienteDTO&gt; clientesDTO = modelMapper().map(clientes, listType);</span>
+
+<span class="nc" id="L61">		return clientesDTO;</span>
+	}
+
+	@Override
+	public ClienteDTO incluir(ClienteDTO clienteDTO) {
+<span class="nc" id="L66">		logger.info(&quot;Incluindo cliente...&quot;);</span>
+		
+<span class="nc" id="L68">		Cliente cliente = modelMapper().map(clienteDTO, Cliente.class);</span>
+
+<span class="nc" id="L70">		clienteRepository.save(cliente);</span>
+		
+<span class="nc" id="L72">		return modelMapper().map(cliente, ClienteDTO.class);</span>
+	}
+
+	@Override
+	public ClienteDTO atualizar(String id, ClienteDTO clienteDTODetails) throws ClienteNaoEncontradoException {
+<span class="nc" id="L77">		logger.info(&quot;Atualizando cliente...&quot;);</span>
+
+<span class="nc" id="L79">		Cliente cliente = clienteRepository.findOne(id);</span>
+		
+<span class="nc" id="L81">		validarCliente(cliente);</span>
+		
+<span class="nc" id="L83">		Cliente clienteDetails = modelMapper().map(clienteDTODetails, Cliente.class);</span>
+		
+<span class="nc" id="L85">		cliente = cliente.update(cliente, clienteDetails);</span>
+
+<span class="nc" id="L87">		clienteRepository.save(cliente);</span>
+		
+<span class="nc" id="L89">		return modelMapper().map(cliente, ClienteDTO.class);</span>
+	}
+	
+	@Override
+	public ResponseEntity&lt;ClienteDTO&gt; deletar(String id) throws ClienteNaoEncontradoException {
+<span class="nc" id="L94">		logger.info(&quot;Deletando cliente... id: &quot; + id);</span>
+		
+<span class="nc" id="L96">		Cliente cliente = clienteRepository.findOne(id);</span>
+<span class="nc" id="L97">		validarCliente(cliente);</span>
+		
+<span class="nc" id="L99">		clienteRepository.delete(id);</span>
+		
+<span class="nc" id="L101">		return ResponseEntity.noContent().build();</span>
+	}
+	
+	@Override
+	public ReclamantesResponseDTO buscarClientesQueReclamam(ReclamantesRequestDTO consulta) {
+		
+<span class="nc" id="L107">		TipoConsulta tipocConsulta = verificaParametros(consulta);</span>
+		
+<span class="nc" id="L109">		List&lt;Cliente&gt; clientes = reclamacaoRepository.buscarClientesQueReclamam(tipocConsulta,consulta);</span>
+		
+<span class="nc" id="L111">		Type listType = new TypeToken&lt;List&lt;ClienteDTO&gt;&gt;() {}.getType();</span>
+<span class="nc" id="L112">		List&lt;ClienteDTO&gt; clientesDTO = modelMapper().map(clientes, listType);</span>
+		
+<span class="nc" id="L114">		return new ReclamantesResponseDTO(clientes.size(),clientesDTO);</span>
+	}
+
+	private TipoConsulta verificaParametros(ReclamantesRequestDTO consulta) {
+<span class="nc bnc" id="L118" title="All 4 branches missed.">		if(StringUtils.isNotBlank(consulta.getEmpresa()) &amp;&amp; StringUtils.isNotBlank(consulta.getCidade())) {</span>
+<span class="nc" id="L119">			return TipoConsulta.EMPRESAECIDADE;</span>
+		}
+		
+<span class="nc bnc" id="L122" title="All 2 branches missed.">		if(StringUtils.isNotBlank(consulta.getCidade())) {</span>
+<span class="nc" id="L123">			return TipoConsulta.CIDADE;</span>
+		}
+		
+<span class="nc bnc" id="L126" title="All 2 branches missed.">		if(StringUtils.isNotBlank(consulta.getEmpresa())) {</span>
+<span class="nc" id="L127">			return TipoConsulta.EMPRESA;</span>
+		}
+<span class="nc" id="L129">		return null;</span>
+	}
+
+	@Override
+	public ClienteDTO consultarPorCpf(String cpf) throws ClienteNaoEncontradoException {
+<span class="nc" id="L134">		logger.info(&quot;Consultando cliente...&quot;);</span>
+<span class="nc" id="L135">		Cliente cliente = clienteRepository.findByCpf(cpf);</span>
+<span class="nc" id="L136">		validarCliente(cliente);</span>
+
+<span class="nc" id="L138">		ClienteDTO clienteDTO = modelMapper().map(cliente, ClienteDTO.class);</span>
+		
+<span class="nc" id="L140">		return clienteDTO;</span>
+	}
+
+	@Override
+	public ResponseEntity&lt;ClienteDTO&gt; deletarPorCpf(String cpf) throws ClienteNaoEncontradoException {
+<span class="nc" id="L145">		logger.info(&quot;Deletando cliente... cpf: &quot; + cpf);</span>
+		
+<span class="nc" id="L147">		Cliente cliente = clienteRepository.findByCpf(cpf);</span>
+<span class="nc" id="L148">		validarCliente(cliente);</span>
+		
+<span class="nc" id="L150">		clienteRepository.delete(cliente.getId());</span>
+		
+<span class="nc" id="L152">		return ResponseEntity.noContent().build();</span>
+	}
+
+	@Override
+	public ClienteDTO atualizarPorCpf(String cpf, ClienteDTO clienteDTODetails) throws ClienteNaoEncontradoException {
+<span class="nc" id="L157">		logger.info(&quot;Atualizando cliente...&quot;);</span>
+
+<span class="nc" id="L159">		Cliente cliente = clienteRepository.findByCpf(cpf);</span>
+<span class="nc" id="L160">		validarCliente(cliente);</span>
+<span class="nc" id="L161">		Cliente clienteDetails = modelMapper().map(clienteDTODetails, Cliente.class);</span>
+		
+<span class="nc" id="L163">		cliente = cliente.update(cliente, clienteDetails);</span>
+
+<span class="nc" id="L165">		clienteRepository.save(cliente);</span>
+		
+<span class="nc" id="L167">		return modelMapper().map(cliente, ClienteDTO.class);</span>
+	}
+
+	private void validarCliente(Cliente cliente) throws ClienteNaoEncontradoException {
+<span class="nc bnc" id="L171" title="All 2 branches missed.">		if (cliente == null) {</span>
+<span class="nc" id="L172">			throw new ClienteNaoEncontradoException(&quot;Cliente Nao encontrado&quot;);</span>
+		}
+<span class="nc" id="L174">	}</span>
+	
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.1.201803210924</span></div></body></html>

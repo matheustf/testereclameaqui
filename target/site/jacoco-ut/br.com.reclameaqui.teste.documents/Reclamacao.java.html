@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Reclamacao.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">teste</a> &gt; <a href="index.source.html" class="el_package">br.com.reclameaqui.teste.documents</a> &gt; <span class="el_source">Reclamacao.java</span></div><h1>Reclamacao.java</h1><pre class="source lang-java linenums">package br.com.reclameaqui.teste.documents;
+
+import java.util.List;
+
+import javax.validation.constraints.NotNull;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.TypeAlias;
+import org.springframework.data.mongodb.core.mapping.DBRef;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+<span class="nc bnc" id="L15" title="All 54 branches missed.">@Data</span>
+<span class="nc" id="L16">@NoArgsConstructor</span>
+@Document(collection=&quot;reclamacao&quot;)
+@TypeAlias(&quot;reclamacao&quot;)
+public class Reclamacao {
+
+	@Id
+<span class="nc" id="L22">	private String id;</span>
+	
+	@NotNull(message = &quot;Campo Obrigatorio!&quot;)
+<span class="nc" id="L25">	private String nome;</span>
+	
+	@NotNull(message = &quot;Campo Obrigatorio!&quot;)
+<span class="nc" id="L28">	private String descricao;</span>
+	
+	@NotNull(message = &quot;Campo Obrigatorio!&quot;)
+<span class="nc" id="L31">	private Endereco endereco;</span>
+	
+	@NotNull(message = &quot;Campo Obrigatorio!&quot;)
+<span class="nc" id="L34">	private Empresa empresa;</span>
+	
+	@DBRef
+<span class="nc" id="L37">	private Cliente idCliente;</span>
+	
+<span class="fc" id="L39">	public Reclamacao(String nome, String descricao, Endereco endereco, Empresa empresa, Cliente idCliente) {</span>
+<span class="fc" id="L40">		this.nome = nome;</span>
+<span class="fc" id="L41">		this.descricao = descricao;</span>
+<span class="fc" id="L42">		this.endereco = endereco;</span>
+<span class="fc" id="L43">		this.empresa = empresa;</span>
+<span class="fc" id="L44">		this.idCliente = idCliente;</span>
+<span class="fc" id="L45">	}</span>
+	
+	public Reclamacao update(Reclamacao reclamacao, Reclamacao reclamacaoDetails) {
+<span class="nc" id="L48">		reclamacao.setNome(reclamacaoDetails.getNome());</span>
+<span class="nc" id="L49">		reclamacao.setDescricao(reclamacaoDetails.getDescricao());</span>
+<span class="nc" id="L50">		reclamacao.setEndereco(reclamacaoDetails.getEndereco());</span>
+<span class="nc" id="L51">		reclamacao.setEmpresa(reclamacaoDetails.getEmpresa());</span>
+<span class="nc" id="L52">		reclamacao.setIdCliente(reclamacaoDetails.getIdCliente());</span>
+		
+<span class="nc" id="L54">		return reclamacao;</span>
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.1.201803210924</span></div></body></html>

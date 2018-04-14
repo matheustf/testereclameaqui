@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ReclamacaoServiceImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">teste</a> &gt; <a href="index.source.html" class="el_package">br.com.reclameaqui.teste.service</a> &gt; <span class="el_source">ReclamacaoServiceImpl.java</span></div><h1>ReclamacaoServiceImpl.java</h1><pre class="source lang-java linenums">package br.com.reclameaqui.teste.service;
+
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.log4j.Logger;
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Service;
+
+import com.google.gson.reflect.TypeToken;
+
+import br.com.reclameaqui.teste.documents.Cliente;
+import br.com.reclameaqui.teste.documents.Reclamacao;
+import br.com.reclameaqui.teste.dtos.ClienteDTO;
+import br.com.reclameaqui.teste.dtos.ReclamantesRequestDTO;
+import br.com.reclameaqui.teste.dtos.ReclamantesResponseDTO;
+import br.com.reclameaqui.teste.dtos.ReclamacaoDTO;
+import br.com.reclameaqui.teste.exceptions.CampoNaoEncontradoException;
+import br.com.reclameaqui.teste.exceptions.CampoObrigatorioException;
+import br.com.reclameaqui.teste.repository.ClienteRepository;
+import br.com.reclameaqui.teste.repository.ReclamacaoRepository;
+
+@Service
+<span class="fc" id="L27">public class ReclamacaoServiceImpl implements ReclamacaoService {</span>
+
+<span class="fc" id="L29">	private final Logger logger = Logger.getLogger(ReclamacaoServiceImpl.class);</span>
+
+	@Autowired
+	ReclamacaoRepository reclamacaoRepository;
+	
+	@Autowired
+	ClienteRepository clienteRepository;
+	
+	@Override
+	public ReclamacaoDTO consultar(String id) {
+<span class="nc" id="L39">		logger.info(&quot;Consultando reclamacao...&quot;);</span>
+		
+<span class="nc" id="L41">		Reclamacao reclamacao = reclamacaoRepository.findById(id);</span>
+		
+<span class="nc bnc" id="L43" title="All 2 branches missed.">		if (reclamacao == null) {</span>
+<span class="nc" id="L44">			logger.error(&quot;Erro ao consultar Reclamacao!&quot;);</span>
+			//throw new CampoNaoEncontradoException(&quot;Reclamacao Nao encontrado!&quot;);
+		}
+
+<span class="nc" id="L48">		ReclamacaoDTO reclamacaoDTO = modelMapper().map(reclamacao, ReclamacaoDTO.class);</span>
+		
+<span class="nc" id="L50">		return reclamacaoDTO;</span>
+	}
+
+	@Override
+	public List&lt;ReclamacaoDTO&gt; buscarTodos() {
+<span class="nc" id="L55">		logger.info(&quot;Consultando reclamacao...&quot;);</span>
+
+<span class="nc" id="L57">		List&lt;Reclamacao&gt; reclamacaos = (List&lt;Reclamacao&gt;) reclamacaoRepository.findAll();</span>
+
+<span class="nc" id="L59">		Type listType = new TypeToken&lt;List&lt;ReclamacaoDTO&gt;&gt;() {}.getType();</span>
+<span class="nc" id="L60">		List&lt;ReclamacaoDTO&gt; reclamacaosDTO = modelMapper().map(reclamacaos, listType);</span>
+
+<span class="nc" id="L62">		return reclamacaosDTO;</span>
+	}
+
+	@Override
+	public ReclamacaoDTO incluir(ReclamacaoDTO reclamacaoDTO) {
+<span class="nc" id="L67">		logger.info(&quot;Incluindo reclamacao...&quot;);</span>
+
+<span class="nc" id="L69">		Reclamacao reclamacao = modelMapper().map(reclamacaoDTO, Reclamacao.class);</span>
+		
+		/*
+		Cliente cliente = clienteRepository.findOne(idCliente);
+		if (cliente != null) {
+			cliente.setId(idCliente);
+			cliente.getReclamacoes().add(reclamacao);
+		}
+		*/
+
+		//reclamacaoRepository.save(reclamacao);
+<span class="nc" id="L80">		reclamacaoRepository.save(reclamacao);</span>
+		
+<span class="nc" id="L82">		return modelMapper().map(reclamacao, ReclamacaoDTO.class);</span>
+	}
+
+	@Override
+	public ReclamacaoDTO atualizar(String id, ReclamacaoDTO reclamacaoDTODetails) throws CampoNaoEncontradoException {
+<span class="nc" id="L87">		logger.info(&quot;Atualizando reclamacao...&quot;);</span>
+
+<span class="nc" id="L89">		Reclamacao reclamacao = reclamacaoRepository.findById(id);</span>
+<span class="nc" id="L90">		Reclamacao reclamacaoDetails = modelMapper().map(reclamacaoDTODetails, Reclamacao.class);</span>
+		
+<span class="nc" id="L92">		reclamacao = reclamacao.update(reclamacao, reclamacaoDetails);</span>
+
+<span class="nc" id="L94">		reclamacaoRepository.save(reclamacao);</span>
+		
+<span class="nc" id="L96">		return modelMapper().map(reclamacao, ReclamacaoDTO.class);</span>
+	}
+	
+	@Override
+	public void deletar(String id) throws CampoObrigatorioException {
+<span class="nc" id="L101">		logger.info(&quot;Deletando reclamacao... id: &quot; + id);</span>
+<span class="nc" id="L102">		Reclamacao reclamacao = reclamacaoRepository.findOne(id);</span>
+<span class="nc bnc" id="L103" title="All 2 branches missed.">		if (reclamacao == null) {</span>
+<span class="nc" id="L104">			logger.error(&quot;Erro ao deletar Reclamacao!&quot;);</span>
+<span class="nc" id="L105">			throw new CampoObrigatorioException(&quot;Reclamacao Nao encontrado para ser excluido!&quot;);</span>
+		}
+<span class="nc" id="L107">		reclamacaoRepository.delete(id);</span>
+<span class="nc" id="L108">	}</span>
+
+	@Bean
+	public ModelMapper modelMapper() {
+<span class="fc" id="L112">		return new ModelMapper();</span>
+	}
+
+
+	
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.1.201803210924</span></div></body></html>
