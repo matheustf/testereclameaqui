@@ -23042,3 +23042,9 @@ Set a breakpoint on '_pixman_log_error' to debug
 In pixman_region32_init_rect: Invalid rectangle passed
 Set a breakpoint on '_pixman_log_error' to debug
 
+Memory pressure relief: Total: res = 10080256/10092544/12288, res+swap = 6459392/6459392/0
+Memory pressure relief: Total: res = 10092544/10096640/4096, res+swap = 6463488/6463488/0
+Memory pressure relief: Total: res = 10108928/10096640/-12288, res+swap = 6475776/6463488/-12288
+Memory pressure relief: Total: res = 10096640/10096640/0, res+swap = 6463488/6463488/0
+Memory pressure relief: Total: res = 10096640/10100736/4096, res+swap = 6467584/6467584/0
+Memory pressure relief: Total: res = 10100736/10100736/0, res+swap = 6467584/6467584/0
