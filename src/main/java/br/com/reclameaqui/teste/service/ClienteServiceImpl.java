@@ -26,13 +26,17 @@ import br.com.reclameaqui.teste.repository.ReclamacaoRepository;
 public class ClienteServiceImpl implements ClienteService {
 
 	private final Logger logger = Logger.getLogger(ClienteServiceImpl.class);
+	
+	private ReclamacaoRepository reclamacaoRepository;
+	
+	private ClienteRepository clienteRepository;
 
 	@Autowired
-	ClienteRepository clienteRepository;
-	
-	@Autowired
-	ReclamacaoRepository reclamacaoRepository;
-	
+	public ClienteServiceImpl(ClienteRepository clienteRepository, ReclamacaoRepository reclamacaoRepository) {
+		this.clienteRepository = clienteRepository;
+		this.reclamacaoRepository = reclamacaoRepository;
+	}
+
 	@Bean
 	public ModelMapper modelMapper() {
 		return new ModelMapper();
@@ -41,6 +45,7 @@ public class ClienteServiceImpl implements ClienteService {
 	@Override
 	public ClienteDTO consultar(String id) throws ClienteNaoEncontradoException {
 		logger.info("Consultando cliente...");
+		
 		Cliente cliente = clienteRepository.findById(id);
 		validarCliente(cliente);
 
@@ -108,10 +113,15 @@ public class ClienteServiceImpl implements ClienteService {
 		
 		List<Cliente> clientes = reclamacaoRepository.buscarClientesQueReclamam(tipocConsulta,consulta);
 		
-		Type listType = new TypeToken<List<ClienteDTO>>() {}.getType();
-		List<ClienteDTO> clientesDTO = modelMapper().map(clientes, listType);
+		List<ClienteDTO> clientesDTO = modelMapperTransfer(clientes);
 		
 		return new ReclamantesResponseDTO(clientes.size(),clientesDTO);
+	}
+
+	private List<ClienteDTO> modelMapperTransfer(List<Cliente> clientes) {
+		Type listType = new TypeToken<List<ClienteDTO>>() {}.getType();
+		List<ClienteDTO> clientesDTO = modelMapper().map(clientes, listType);
+		return clientesDTO;
 	}
 
 	private TipoConsulta verificaParametros(ReclamantesRequestDTO consulta) {
@@ -167,7 +177,7 @@ public class ClienteServiceImpl implements ClienteService {
 		return modelMapper().map(cliente, ClienteDTO.class);
 	}
 
-	private void validarCliente(Cliente cliente) throws ClienteNaoEncontradoException {
+	public void validarCliente(Cliente cliente) throws ClienteNaoEncontradoException {
 		if (cliente == null) {
 			throw new ClienteNaoEncontradoException("Cliente Nao encontrado");
 		}

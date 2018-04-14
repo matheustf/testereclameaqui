@@ -5,10 +5,14 @@ import java.io.Serializable;
 import javax.validation.constraints.NotNull;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Builder;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class Empresa implements Serializable {
@@ -19,12 +23,5 @@ public class Empresa implements Serializable {
 
 	@NotNull(message = "Campo Obrigatorio!")
 	private String nome;
-
-	public Empresa update(Empresa empresa, Empresa empresaDetails) {
-		empresa.setNome(empresaDetails.getNome());
-		empresa.setCnpj(empresaDetails.getCnpj());
-
-		return empresa;
-	}
 
 }

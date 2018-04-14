@@ -17,45 +17,53 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.reclameaqui.teste.dtos.ClienteDTO;
-import br.com.reclameaqui.teste.dtos.ReclamantesRequestDTO;
-import br.com.reclameaqui.teste.dtos.ReclamantesResponseDTO;
 import br.com.reclameaqui.teste.dtos.ReclamacaoDTO;
-import br.com.reclameaqui.teste.exceptions.CampoNaoEncontradoException;
-import br.com.reclameaqui.teste.exceptions.CampoObrigatorioException;
-import br.com.reclameaqui.teste.exceptions.ReclamacaoException;
+import br.com.reclameaqui.teste.exceptions.ReclamacaoNaoEncontradaException;
+import br.com.reclameaqui.teste.service.ReclamacaoService;
 import br.com.reclameaqui.teste.service.ReclamacaoServiceImpl;
 
 @RestController
 @RequestMapping("")
 public class ReclamacaoController {
 
+	private ReclamacaoService reclamacaoService;
+
 	@Autowired
-	private ReclamacaoServiceImpl reclamacaoService;
+	public ReclamacaoController(ReclamacaoService reclamacaoService) {
+		this.reclamacaoService = reclamacaoService;
+	}
+	
 	private final Logger logger = Logger.getLogger(ReclamacaoServiceImpl.class);
 
 	@GetMapping("/reclamacoes")
-	public List<ReclamacaoDTO> buscarTodasReclamacoes() {
+	public ResponseEntity<List<ReclamacaoDTO>> buscarTodasReclamacoes() {
 
-		return reclamacaoService.buscarTodos();
+		List<ReclamacaoDTO> listReclamacoes = reclamacaoService.buscarTodos();
+		
+		return new ResponseEntity<List<ReclamacaoDTO>>(listReclamacoes, HttpStatus.OK);
 	}
 
 	@GetMapping("/reclamacao/{idReclamacao}")
-	public ResponseEntity<ReclamacaoDTO> consultar(@PathVariable(value = "idReclamacao") String idReclamacao)
-			throws ReclamacaoException, CampoNaoEncontradoException {
+	public ResponseEntity<ReclamacaoDTO> consultar(@PathVariable(value = "idReclamacao") String idReclamacao) {
 		logger.info("Rest consultar reclamacao");
-		ReclamacaoDTO reclamacaoDTO = reclamacaoService.consultar(idReclamacao);
+		
+		ReclamacaoDTO reclamacaoDTO;
+		try {
+			reclamacaoDTO = reclamacaoService.consultar(idReclamacao);
 
+		} catch (ReclamacaoNaoEncontradaException e) {
+			return ResponseEntity.notFound().build();
+		}
+		
 		return new ResponseEntity<ReclamacaoDTO>(reclamacaoDTO, HttpStatus.OK);
 	}
 
 	@PostMapping("/reclamacao")
-	public ResponseEntity<ReclamacaoDTO> incluir(@RequestBody ReclamacaoDTO reclamacaoDTO)
-			throws ReclamacaoException, CampoObrigatorioException {
+	public ResponseEntity<ReclamacaoDTO> incluir(@RequestBody ReclamacaoDTO reclamacaoDTO) {
 		logger.info("Rest incluir reclamacao");
 
 		ReclamacaoDTO responseReclamacaoDTO = reclamacaoService.incluir(reclamacaoDTO);
-		return new ResponseEntity<ReclamacaoDTO>(responseReclamacaoDTO, HttpStatus.OK);
+		return new ResponseEntity<ReclamacaoDTO>(responseReclamacaoDTO, HttpStatus.CREATED);
 	}
 
 	@PutMapping("/reclamacao/{id}")
@@ -66,20 +74,26 @@ public class ReclamacaoController {
 		ReclamacaoDTO reclamacaoDTO;
 		try {
 			reclamacaoDTO = reclamacaoService.atualizar(id, reclamacaoDTODetails);
-		} catch (CampoNaoEncontradoException e) {
+		} catch (ReclamacaoNaoEncontradaException e) {
 			return ResponseEntity.notFound().build();
 		}
 
-		return new ResponseEntity<ReclamacaoDTO>(reclamacaoDTO, HttpStatus.OK);
+		return new ResponseEntity<ReclamacaoDTO>(reclamacaoDTO, HttpStatus.NO_CONTENT);
 	}
 
 	@DeleteMapping("/reclamacao/{id}")
-	public ResponseEntity<ReclamacaoDTO> deletar(@PathVariable(value = "id") String id)
-			throws ReclamacaoException, CampoObrigatorioException {
+	public ResponseEntity<ReclamacaoDTO> deletar(@PathVariable(value = "id") String id) {
 		logger.info("Rest deletar reclamacao");
+		
+		ResponseEntity<ReclamacaoDTO> response;
+		try {
+			response = reclamacaoService.deletar(id);
+		} catch (ReclamacaoNaoEncontradaException e) {
+			return ResponseEntity.notFound().build();
+		}
 
-		reclamacaoService.deletar(id);
-		return new ResponseEntity<ReclamacaoDTO>(HttpStatus.OK);
+		
+		return response;
 	}
 
 }

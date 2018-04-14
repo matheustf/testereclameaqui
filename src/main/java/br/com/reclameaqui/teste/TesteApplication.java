@@ -9,6 +9,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.EnableMBeanExport;
+import org.springframework.jmx.support.RegistrationPolicy;
 
 import br.com.reclameaqui.teste.documents.Cliente;
 import br.com.reclameaqui.teste.documents.Empresa;
@@ -16,7 +17,7 @@ import br.com.reclameaqui.teste.documents.Endereco;
 import br.com.reclameaqui.teste.documents.Reclamacao;
 import br.com.reclameaqui.teste.repository.ClienteRepository;
 import br.com.reclameaqui.teste.repository.ReclamacaoRepository;
-import org.springframework.jmx.support.RegistrationPolicy;
+import br.com.reclameaqui.teste.utils.ClearRepositories;
 
 @SpringBootApplication
 @EnableCaching
@@ -32,11 +33,13 @@ public class TesteApplication implements CommandLineRunner{
 	
 	@Autowired
 	private ReclamacaoRepository reclamacaoRepository;
+	
+	@Autowired
+	private ClearRepositories clearRepositories;
 
 	@Override
 	public void run(String... arg0) throws Exception {
-		this.clienteRepository.deleteAll();
-		this.reclamacaoRepository.deleteAll();
+		clearRepositories.clear();
 
 		Endereco ruaAlamedaSaoPaulo = new Endereco("06454050", "Alameda Grajau", "554", "Alphaville Industrial", "Barueri");
 		Endereco ruaOliveiraSaoPaulo = new Endereco("09420350", "Rua Oliveira", "7", "Jardim Paulista", "São Paulo");
@@ -67,8 +70,6 @@ public class TesteApplication implements CommandLineRunner{
 		Empresa samsung = new Empresa("80.276.244/0001-30", "Samsung");
 		Empresa net = new Empresa("12.760.939/0001-33", "NET");
 		
-		
-		
 		//Netflix
 		Reclamacao reclamacaoNetflixMatheus = new Reclamacao("O Netflix parou de funcionar", "Não consigo assistir minhas series", ruaAlamedaSaoPaulo, netflix, matheus);
 		Reclamacao reclamacaoNetflixAndre = new Reclamacao("O meu plano nao está 4k", "Não consigo assistir filmes em 4K", ruaBotafogoRioDeJaneiro, netflix, andre);
@@ -91,7 +92,8 @@ public class TesteApplication implements CommandLineRunner{
 		//NET
 		Reclamacao reclamacaoNetRenata = new Reclamacao("Cobrando mais do que o esperado ", "O plano de futevol está cobrando mais do que o esperado", ruaDomingoSaoPaulo, net, renata);
 		
-		List<Reclamacao> listReclamacoes = Arrays.asList(reclamacaoNetflixMatheus, 
+		List<Reclamacao> listReclamacoes = Arrays.asList(
+				reclamacaoNetflixMatheus, 
 				reclamacaoVivoPedro, 
 				reclamacaoNetRenata, 
 				reclamacaoSamsungIgor, 
@@ -105,7 +107,7 @@ public class TesteApplication implements CommandLineRunner{
 				reclamacaoSamsungAndre,
 				reclamacaoSamsungPaula,
 				reclamacaoSamsungPedro
-				);
+		);
 
 		this.reclamacaoRepository.save(listReclamacoes);
 		

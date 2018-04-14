@@ -1,11 +1,12 @@
+br/com/reclameaqui/teste/exceptions/ReclamacaoNaoEncontradaException.class
 br/com/reclameaqui/teste/exceptions/ClienteNaoEncontradoException.class
 br/com/reclameaqui/teste/dtos/EnderecoDTO$EnderecoDTOBuilder.class
 br/com/reclameaqui/teste/TesteApplication.class
 br/com/reclameaqui/teste/enums/TipoConsulta$3.class
+br/com/reclameaqui/teste/dtos/ReclamacaoDTO$ReclamacaoDTOBuilder.class
 br/com/reclameaqui/teste/dtos/ReclamantesResponseDTO.class
 br/com/reclameaqui/teste/util/Utils.class
 br/com/reclameaqui/teste/service/ClienteServiceImpl$2.class
-br/com/reclameaqui/teste/exceptions/ClienteException.class
 br/com/reclameaqui/teste/dtos/ClienteDTO$ClienteDTOBuilder.class
 br/com/reclameaqui/teste/repository/ClienteRepository.class
 br/com/reclameaqui/teste/dtos/EmpresaDTO.class
@@ -15,8 +16,9 @@ br/com/reclameaqui/teste/dtos/EmpresaDTO$EmpresaDTOBuilder.class
 br/com/reclameaqui/teste/repository/ReclamacaoRepositoryImpl.class
 br/com/reclameaqui/teste/util/ClearRepositories.class
 br/com/reclameaqui/teste/enums/TipoConsultaInterface.class
-br/com/reclameaqui/teste/exceptions/ReclamacaoException.class
+br/com/reclameaqui/teste/documents/Endereco$EnderecoBuilder.class
 br/com/reclameaqui/teste/repository/ReclamacaoRepository.class
+br/com/reclameaqui/teste/documents/Cliente$ClienteBuilder.class
 br/com/reclameaqui/teste/repository/ReclamacaoRepositoryCustom.class
 br/com/reclameaqui/teste/service/ClienteServiceImpl$1.class
 br/com/reclameaqui/teste/documents/Empresa.class

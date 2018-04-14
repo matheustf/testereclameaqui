@@ -1,4 +1,3 @@
-/opt/warzone/teste/src/main/java/br/com/reclameaqui/teste/exceptions/ClienteException.java
 /opt/warzone/teste/src/main/java/br/com/reclameaqui/teste/dtos/EmpresaDTO.java
 /opt/warzone/teste/src/main/java/br/com/reclameaqui/teste/controller/ClienteController.java
 /opt/warzone/teste/src/main/java/br/com/reclameaqui/teste/exceptions/ClienteNaoEncontradoException.java
@@ -6,7 +5,6 @@
 /opt/warzone/teste/src/main/java/br/com/reclameaqui/teste/documents/Empresa.java
 /opt/warzone/teste/src/main/java/br/com/reclameaqui/teste/service/ReclamacaoService.java
 /opt/warzone/teste/src/main/java/br/com/reclameaqui/teste/dtos/EnderecoDTO.java
-/opt/warzone/teste/src/main/java/br/com/reclameaqui/teste/exceptions/ReclamacaoException.java
 /opt/warzone/teste/src/main/java/br/com/reclameaqui/teste/documents/Reclamacao.java
 /opt/warzone/teste/src/main/java/br/com/reclameaqui/teste/repository/ReclamacaoRepositoryImpl.java
 /opt/warzone/teste/src/main/java/br/com/reclameaqui/teste/repository/ClienteRepository.java
@@ -16,6 +14,7 @@
 /opt/warzone/teste/src/main/java/br/com/reclameaqui/teste/repository/ReclamacaoRepositoryCustom.java
 /opt/warzone/teste/src/main/java/br/com/reclameaqui/teste/service/ReclamacaoServiceImpl.java
 /opt/warzone/teste/src/main/java/br/com/reclameaqui/teste/exceptions/CampoNaoEncontradoException.java
+/opt/warzone/teste/src/main/java/br/com/reclameaqui/teste/exceptions/ReclamacaoNaoEncontradaException.java
 /opt/warzone/teste/src/main/java/br/com/reclameaqui/teste/dtos/ReclamacaoDTO.java
 /opt/warzone/teste/src/main/java/br/com/reclameaqui/teste/dtos/ReclamantesRequestDTO.java
 /opt/warzone/teste/src/main/java/br/com/reclameaqui/teste/service/ClienteServiceImpl.java

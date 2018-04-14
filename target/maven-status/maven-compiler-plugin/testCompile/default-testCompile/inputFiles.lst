@@ -1,4 +1,5 @@
-/opt/warzone/teste/src/test/java/br/com/reclameaqui/teste/TestCliente.java
-/opt/warzone/teste/src/test/java/br/com/reclameaqui/teste/TestReclamacao.java
-/opt/warzone/teste/src/test/java/br/com/reclameaqui/teste/TesteApplicationTests.java
-/opt/warzone/teste/src/test/java/br/com/reclameaqui/teste/TestClienteIntegracao.java
+/opt/warzone/teste/src/test/java/br/com/reclameaqui/teste/integracao/TestClienteIntegracao.java
+/opt/warzone/teste/src/test/java/br/com/reclameaqui/teste/controller/TestCliente.java
+/opt/warzone/teste/src/test/java/br/com/reclameaqui/teste/serive/TestClienteService.java
+/opt/warzone/teste/src/test/java/br/com/reclameaqui/teste/controller/TestReclamacao.java
+/opt/warzone/teste/src/test/java/br/com/reclameaqui/teste/integracao/TesteApplicationTests.java

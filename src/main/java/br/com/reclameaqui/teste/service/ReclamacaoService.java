@@ -2,21 +2,22 @@ package br.com.reclameaqui.teste.service;
 
 import java.util.List;
 
+import org.springframework.http.ResponseEntity;
+
 import br.com.reclameaqui.teste.dtos.ReclamacaoDTO;
-import br.com.reclameaqui.teste.exceptions.CampoNaoEncontradoException;
-import br.com.reclameaqui.teste.exceptions.CampoObrigatorioException;
-import br.com.reclameaqui.teste.exceptions.ReclamacaoException;
+import br.com.reclameaqui.teste.exceptions.ReclamacaoNaoEncontradaException;
 
 public interface ReclamacaoService {
 	
-	ReclamacaoDTO atualizar(String id, ReclamacaoDTO blocoDTODetails) throws CampoNaoEncontradoException;
+	ReclamacaoDTO atualizar(String id, ReclamacaoDTO blocoDTODetails) throws ReclamacaoNaoEncontradaException;
 	
-	void deletar(String id) throws CampoObrigatorioException;
+	ResponseEntity<ReclamacaoDTO> deletar(String id) throws ReclamacaoNaoEncontradaException;
 
 	List<ReclamacaoDTO> buscarTodos();
 
 	ReclamacaoDTO incluir(ReclamacaoDTO reclamacaoDTO);
 
-	ReclamacaoDTO consultar(String idReclamacao);
+	ReclamacaoDTO consultar(String idReclamacao) throws ReclamacaoNaoEncontradaException;
 
 }
+

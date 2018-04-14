@@ -2,13 +2,17 @@ package br.com.reclameaqui.teste.dtos;
 
 import javax.validation.constraints.NotNull;
 
-import org.springframework.data.annotation.Id;
-
-import lombok.Data;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
+@Builder
 @NoArgsConstructor
+@AllArgsConstructor
 public class ReclamacaoDTO {
 
 	private String id;
@@ -28,15 +32,5 @@ public class ReclamacaoDTO {
 	@NotNull()
 	private String idCliente;
 
-	public ReclamacaoDTO(String nome, String descricao, EmpresaDTO empresa, EnderecoDTO endereco, String idCliente) {
-		super();
-		this.nome = nome;
-		this.descricao = descricao;
-		this.empresa = empresa;
-		this.endereco = endereco;
-		this.idCliente = idCliente;
-	}
-	
-	
 	
 }

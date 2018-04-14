@@ -3,10 +3,14 @@ package br.com.reclameaqui.teste.documents;
 import javax.validation.constraints.NotNull;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Builder;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class Endereco {
@@ -25,15 +29,5 @@ public class Endereco {
 	
 	@NotNull(message = "Campo Obrigatorio!")
 	private String cidade;
-	
-	public Endereco update(Endereco endereco, Endereco enderecoDetails) {
-		endereco.setLogradouro(enderecoDetails.getLogradouro());
-		endereco.setNumero(enderecoDetails.getNumero());
-		endereco.setBairro(enderecoDetails.getBairro());
-		endereco.setCidade(enderecoDetails.getCidade());
-		endereco.setCep(enderecoDetails.getCep());
-		
-		return endereco;
-	}
 	
 }
