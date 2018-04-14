@@ -25,6 +25,8 @@ import br.com.reclameaqui.teste.service.ReclamacaoServiceImpl;
 @RestController
 @RequestMapping("")
 public class ReclamacaoController {
+	
+	private final Logger logger = Logger.getLogger(ReclamacaoServiceImpl.class);
 
 	private ReclamacaoService reclamacaoService;
 
@@ -33,8 +35,6 @@ public class ReclamacaoController {
 		this.reclamacaoService = reclamacaoService;
 	}
 	
-	private final Logger logger = Logger.getLogger(ReclamacaoServiceImpl.class);
-
 	@GetMapping("/reclamacoes")
 	public ResponseEntity<List<ReclamacaoDTO>> buscarTodasReclamacoes() {
 

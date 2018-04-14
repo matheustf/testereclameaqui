@@ -38,13 +38,11 @@ public class TestReclamacaoController {
 
 	private ReclamacaoDTO reclamacaoSamsungMatheus, reclamacaoSamsungOne, reclamacaoSamsungTwo;
 
-	private EmpresaDTO empresaSamsung;
-	
 	@Before
 	public void initialize() {
 		MockitoAnnotations.initMocks(this);
 
-		empresaSamsung = EmpresaDTO.builder().cnpj("52306301000141").nome("Samsung").build();
+		EmpresaDTO empresaSamsung = EmpresaDTO.builder().cnpj("52306301000141").nome("Samsung").build();
 		
 		EnderecoDTO endereco = EnderecoDTO.builder().cep("07346444").logradouro("Rua Liberdade").numero("1243")
 				.bairro("Jardim Independente").cidade("Campinas").build();

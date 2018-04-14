@@ -9,7 +9,6 @@ import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoOperations;
-import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.aggregation.Aggregation;
 
 import br.com.reclameaqui.teste.documents.Cliente;
@@ -18,15 +17,11 @@ import br.com.reclameaqui.teste.dtos.ReclamantesRequestDTO;
 import br.com.reclameaqui.teste.enums.TipoConsulta;
 
 public class ReclamacaoRepositoryImpl implements ReclamacaoRepositoryCustom{
-	
-	 private final MongoTemplate mongoTemplate;
 	 
 	 private final MongoOperations mongoOperations;
-	 
 
 	    @Autowired
-	    public ReclamacaoRepositoryImpl(MongoTemplate mongoTemplate, MongoOperations mongoOperations) {
-	        this.mongoTemplate = mongoTemplate;
+	    public ReclamacaoRepositoryImpl(MongoOperations mongoOperations) {
 	        this.mongoOperations = mongoOperations;
 	    }
 	    
