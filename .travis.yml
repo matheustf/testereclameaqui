@@ -3,9 +3,5 @@ jdk:
   - oraclejdk8
 services: mongodb
 
-script:
-  - mvn clean test jacoco:report coveralls:report
-
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
-
+  - mvn jacoco:report coveralls:report 
