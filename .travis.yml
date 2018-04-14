@@ -14,4 +14,5 @@ after_success:
 notifications: 
     email:
         - teles.matheus@hotmail.com #Add your email address
-
+script:
+  - mvn -f spring-boot-starter-parent/pom.xml clean verify -Pjacoco coveralls:report
