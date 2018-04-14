@@ -33,7 +33,6 @@ import br.com.reclameaqui.teste.dtos.ClienteDTO;
 import br.com.reclameaqui.teste.dtos.EmpresaDTO;
 import br.com.reclameaqui.teste.dtos.EnderecoDTO;
 import br.com.reclameaqui.teste.dtos.ReclamacaoDTO;
-import br.com.reclameaqui.teste.exceptions.ClienteNaoEncontradoException;
 import br.com.reclameaqui.teste.exceptions.ReclamacaoNaoEncontradaException;
 import br.com.reclameaqui.teste.repository.ReclamacaoRepository;
 import br.com.reclameaqui.teste.service.ReclamacaoServiceImpl;
@@ -52,16 +51,6 @@ public class TestReclamacaoService {
 	
 	private Reclamacao reclamacaoSamsungMatheus, reclamacaoSamsungOne;
 
-	private EnderecoDTO enderecoDTO;
-	
-	private Endereco endereco;
-
-	private EmpresaDTO empresaSamsungDTO;
-	
-	private Empresa empresaSamsung;
-	
-	private Cliente clienteMatheus;
-
 	@Bean
 	public ModelMapper modelMapper() {
 		return new ModelMapper();
@@ -71,17 +60,17 @@ public class TestReclamacaoService {
 	public void initialize() {
 		MockitoAnnotations.initMocks(this);
 
-		empresaSamsungDTO = EmpresaDTO.builder().cnpj("52306301000141").nome("Samsung").build();
+		EmpresaDTO empresaSamsungDTO = EmpresaDTO.builder().cnpj("52306301000141").nome("Samsung").build();
 		
-		empresaSamsung = Empresa.builder().cnpj("52306301000141").nome("Samsung").build();
+		Empresa empresaSamsung = Empresa.builder().cnpj("52306301000141").nome("Samsung").build();
 		
-		enderecoDTO = EnderecoDTO.builder().cep("07346444").logradouro("Rua Liberdade").numero("1243")
+		EnderecoDTO enderecoDTO = EnderecoDTO.builder().cep("07346444").logradouro("Rua Liberdade").numero("1243")
 				.bairro("Jardim Independente").cidade("Campinas").build();
 		
-		endereco = Endereco.builder().cep("07346444").logradouro("Rua Liberdade").numero("1243")
+		Endereco endereco = Endereco.builder().cep("07346444").logradouro("Rua Liberdade").numero("1243")
 				.bairro("Jardim Independente").cidade("Campinas").build();
 		
-		clienteMatheus = Cliente.builder().nome("Matheus").telefone("1945784854").cpf("90004258592")
+		Cliente clienteMatheus = Cliente.builder().nome("Matheus").telefone("1945784854").cpf("90004258592")
 				.endereco(endereco).build();
 
 		reclamacaoSamsungTwoDTO = ReclamacaoDTO.builder().nome("A TV pifou").descricao("Comprei uma tv e ela parou de funcionar").empresa(empresaSamsungDTO).endereco(enderecoDTO).idCliente("id154345fgC").build();

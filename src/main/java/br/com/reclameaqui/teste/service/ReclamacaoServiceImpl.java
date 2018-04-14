@@ -22,7 +22,7 @@ public class ReclamacaoServiceImpl implements ReclamacaoService {
 
 	private final Logger logger = Logger.getLogger(ReclamacaoServiceImpl.class);
 	
-	ReclamacaoRepository reclamacaoRepository;
+	private ReclamacaoRepository reclamacaoRepository;
 	
 	@Autowired
 	public ReclamacaoServiceImpl(ReclamacaoRepository reclamacaoRepository) {

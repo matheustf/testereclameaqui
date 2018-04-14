@@ -38,8 +38,6 @@ public class TestReclamacaoController {
 
 	private ReclamacaoDTO reclamacaoSamsungMatheus, reclamacaoSamsungOne, reclamacaoSamsungTwo;
 
-	private EnderecoDTO endereco;
-
 	private EmpresaDTO empresaSamsung;
 	
 	@Before
@@ -48,7 +46,7 @@ public class TestReclamacaoController {
 
 		empresaSamsung = EmpresaDTO.builder().cnpj("52306301000141").nome("Samsung").build();
 		
-		endereco = EnderecoDTO.builder().cep("07346444").logradouro("Rua Liberdade").numero("1243")
+		EnderecoDTO endereco = EnderecoDTO.builder().cep("07346444").logradouro("Rua Liberdade").numero("1243")
 				.bairro("Jardim Independente").cidade("Campinas").build();
 
 		reclamacaoSamsungTwo = ReclamacaoDTO.builder().nome("A TV pifou").descricao("Comprei uma tv e ela parou de funcionar").empresa(empresaSamsung).endereco(endereco).idCliente("id154345fgC").build();

@@ -27,6 +27,8 @@ import br.com.reclameaqui.teste.service.ClienteServiceImpl;
 @RestController
 @RequestMapping("")
 public class ClienteController {
+	
+	private final Logger logger = Logger.getLogger(ClienteServiceImpl.class);
 
 	private ClienteService clienteService;
 
@@ -34,8 +36,6 @@ public class ClienteController {
 	public ClienteController(ClienteService clienteService) {
 		this.clienteService = clienteService;
 	}
-
-	private final Logger logger = Logger.getLogger(ClienteServiceImpl.class);
 
 	@GetMapping()
 	@RequestMapping("/clientes")

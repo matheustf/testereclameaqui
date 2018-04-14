@@ -24,10 +24,6 @@ import br.com.reclameaqui.teste.utils.ClearRepositories;
 @EnableMBeanExport(registration = RegistrationPolicy.IGNORE_EXISTING)
 public class TesteApplication implements CommandLineRunner{
 
-	public static void main(String[] args) {
-		SpringApplication.run(TesteApplication.class, args);
-	}
-	
 	@Autowired
 	private ClienteRepository clienteRepository;
 	
@@ -111,5 +107,9 @@ public class TesteApplication implements CommandLineRunner{
 
 		this.reclamacaoRepository.save(listReclamacoes);
 		
+	}
+	
+	public static void main(String[] args) {
+		SpringApplication.run(TesteApplication.class, args);
 	}
 }

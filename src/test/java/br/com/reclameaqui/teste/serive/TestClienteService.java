@@ -56,10 +56,6 @@ public class TestClienteService {
 
 	private ReclamantesRequestDTO reclamantesResquest;
 
-	private EnderecoDTO enderecoOneDTO, enderecoTwoDTO;
-	
-	private Endereco enderecoOne;
-
 	@Bean
 	public ModelMapper modelMapper() {
 		return new ModelMapper();
@@ -67,12 +63,13 @@ public class TestClienteService {
 	
 	@Before
 	public void initialize() {
+		
 		MockitoAnnotations.initMocks(this);
 
-		enderecoOneDTO = EnderecoDTO.builder().cep("07346444").logradouro("Rua Liberdade").numero("1243")
+		EnderecoDTO enderecoOneDTO = EnderecoDTO.builder().cep("07346444").logradouro("Rua Liberdade").numero("1243")
 				.bairro("Jardim Independente").cidade("Campinas").build();
 
-		enderecoTwoDTO = EnderecoDTO.builder().cep("09516426").logradouro("Rua Otávio").numero("111")
+		EnderecoDTO enderecoTwoDTO = EnderecoDTO.builder().cep("09516426").logradouro("Rua Otávio").numero("111")
 				.bairro("Jardim Independente").cidade("Campinas").build();
 
 		clienteOneDTO = ClienteDTO.builder().nome("Matheus").telefone("1945784854").cpf("40934361932")
@@ -86,7 +83,7 @@ public class TestClienteService {
 
 		reclamantesResquest = ReclamantesRequestDTO.builder().cidade("Campinas").empresa("Bradesco").build();
 
-		enderecoOne = Endereco.builder().cep("07346444").logradouro("Rua Liberdade").numero("1243")
+		Endereco enderecoOne = Endereco.builder().cep("07346444").logradouro("Rua Liberdade").numero("1243")
 				.bairro("Jardim Independente").cidade("Campinas").build();
 		
 		clienteMatheus = Cliente.builder().nome("Matheus").telefone("1945784854").cpf("90004258592")

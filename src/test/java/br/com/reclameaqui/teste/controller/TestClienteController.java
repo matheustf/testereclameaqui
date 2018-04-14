@@ -43,17 +43,16 @@ public class TestClienteController {
 
 	private ReclamantesResponseDTO reclamantesResponse;
 
-	private EnderecoDTO enderecoOne, enderecoTwo;
-
-
+	
 	@Before
 	public void initialize() {
+		
 		MockitoAnnotations.initMocks(this);
 
-		enderecoOne = EnderecoDTO.builder().cep("07346444").logradouro("Rua Liberdade").numero("1243")
+		EnderecoDTO enderecoOne = EnderecoDTO.builder().cep("07346444").logradouro("Rua Liberdade").numero("1243")
 				.bairro("Jardim Independente").cidade("Campinas").build();
 
-		enderecoTwo = EnderecoDTO.builder().cep("09516426").logradouro("Rua Otávio").numero("111")
+		EnderecoDTO enderecoTwo = EnderecoDTO.builder().cep("09516426").logradouro("Rua Otávio").numero("111")
 				.bairro("Jardim Independente").cidade("Campinas").build();
 
 		clienteOne = ClienteDTO.builder().id("id12345ABC").nome("Matheus").telefone("1945784854").cpf("40934361932")
