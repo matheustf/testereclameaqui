@@ -1,4 +1,4 @@
-package br.com.reclameaqui.teste.serive;
+package br.com.reclameaqui.teste.service;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.assertEquals;

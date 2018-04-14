@@ -1,5 +1,6 @@
 package br.com.reclameaqui.teste.integracao;
 
+import static org.junit.Assert.assertNotNull;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
@@ -17,6 +18,7 @@ import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
@@ -43,22 +45,25 @@ public class TestClienteIntegracao {
     @Test
 	 public void testQuantidadeDeClientes() throws Exception {
 
-		this.mockMvc.perform(get("/clientes")
+		ResultActions andExpect = this.mockMvc.perform(get("/clientes")
 	        		.contentType(MediaType.APPLICATION_JSON))
 	            .andExpect(status().isOk())
 	            .andExpect(jsonPath("$", Matchers.hasSize(9)));
+		assertNotNull(andExpect);
 	 }
 	
 	@Test
 	 public void testQuantidadeDeReclamacoesEmpresaECidade() throws Exception {
 		ReclamantesRequestDTO consulta = new ReclamantesRequestDTO("Samsung","São Paulo");
 
-		this.mockMvc.perform(post("/clientes/consultar/reclamantes")
+		ResultActions andExpect = this.mockMvc.perform(post("/clientes/consultar/reclamantes")
 	        		.contentType(MediaType.APPLICATION_JSON)
 	        		.content(Utils.asJsonString(consulta))
 	        	            .accept(MediaType.APPLICATION_JSON))
 	            .andExpect(status().isOk())
 	            .andExpect(jsonPath("$.clientesQueReclamaram", Matchers.hasToString("5")));
+		
+		assertNotNull(andExpect);
 	 }
 	
 	@Test
@@ -66,12 +71,14 @@ public class TestClienteIntegracao {
 		ReclamantesRequestDTO consulta = new ReclamantesRequestDTO();
 		consulta.setEmpresa("Samsung");
 
-		this.mockMvc.perform(post("/clientes/consultar/reclamantes")
+		ResultActions andExpect = this.mockMvc.perform(post("/clientes/consultar/reclamantes")
 	        		.contentType(MediaType.APPLICATION_JSON)
 	        		.content(Utils.asJsonString(consulta))
 	        	            .accept(MediaType.APPLICATION_JSON))
 	            .andExpect(status().isOk())
 	            .andExpect(jsonPath("$.clientesQueReclamaram", Matchers.hasToString("8")));
+		
+		assertNotNull(andExpect);
 	 }
 	
 	@Test
@@ -79,21 +86,25 @@ public class TestClienteIntegracao {
 		ReclamantesRequestDTO consulta = new ReclamantesRequestDTO();
 		consulta.setCidade("São Paulo");
 
-		this.mockMvc.perform(post("/clientes/consultar/reclamantes")
+		ResultActions andExpect = this.mockMvc.perform(post("/clientes/consultar/reclamantes")
 	        		.contentType(MediaType.APPLICATION_JSON)
 	        		.content(Utils.asJsonString(consulta))
 	        	            .accept(MediaType.APPLICATION_JSON))
 	            .andExpect(status().isOk())
 	            .andExpect(jsonPath("$.clientesQueReclamaram", Matchers.hasToString("6")));
+		
+		assertNotNull(andExpect);
 	 }
 	
 	@Test
 	 public void testQuantidadeReclamantes() throws Exception {
 
-		this.mockMvc.perform(get("/reclamacoes")
+		ResultActions andExpect = this.mockMvc.perform(get("/reclamacoes")
 	        		.contentType(MediaType.APPLICATION_JSON))
 	            .andExpect(status().isOk())
 	            .andExpect(jsonPath("$", Matchers.hasSize(14)));
+		
+		assertNotNull(andExpect);
 	 }
 	
 	@Test
@@ -121,9 +132,11 @@ public class TestClienteIntegracao {
            .andExpect(status().isOk())
            .andExpect(jsonPath("$.nome", Matchers.hasToString("Patricia")));
 		
-		this.mockMvc.perform(delete("/cliente/cpf/" + cliente.getCpf())
+		ResultActions andExpect = 	this.mockMvc.perform(delete("/cliente/cpf/" + cliente.getCpf())
        		.contentType(MediaType.APPLICATION_JSON))
            .andExpect(status().isNoContent());
+		
+		assertNotNull(andExpect);
 		
 	 }
 	
