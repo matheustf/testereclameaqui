@@ -4,11 +4,8 @@ jdk:
 services: mongodb
 
 script:
-  -mvn clean test jacoco:report coveralls:report
+  - mvn clean test jacoco:report coveralls:report
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
 
-notifications: 
-    email:
-        - teles.matheus@hotmail.com #Add your email address
