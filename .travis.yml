@@ -4,5 +4,4 @@ jdk:
 services: mongodb
 
 after_success:
-  - mvn jacoco:report 
   - bash <(curl -s https://codecov.io/bash)

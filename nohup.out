@@ -23001,3 +23001,11 @@ Memory pressure relief: Total: res = 10092544/10092544/0, res+swap = 6447104/644
 Memory pressure relief: Total: res = 10084352/10084352/0, res+swap = 6438912/6438912/0
 Memory pressure relief: Total: res = 10084352/10084352/0, res+swap = 6438912/6443008/4096
 Memory pressure relief: Total: res = 10092544/10096640/4096, res+swap = 6463488/6463488/0
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
