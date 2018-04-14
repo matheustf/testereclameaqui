@@ -99,9 +99,6 @@
 				<groupId>org.eluder.coveralls</groupId>
 				<artifactId>coveralls-maven-plugin</artifactId>
 				<version>4.3.0</version>
-				<configuration>
-					 <repoToken>c9R6uopJSvDArQ1qMDSjPERDdsDKyh9kE</repoToken>
-				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
@@ -115,6 +112,5 @@
 			</plugin>
 		</plugins>
 	</build>
-
 
 </project>

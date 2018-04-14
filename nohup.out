@@ -23085,3 +23085,6 @@ ADVERTÊNCIA: A connection to http://repo.spring.io/ was leaked. Did you forget 
 Memory pressure relief: Total: res = 1085440/1085440/0, res+swap = 1351680/1351680/0
 Memory pressure relief: Total: res = 1085440/1089536/4096, res+swap = 1355776/1359872/4096
 Memory pressure relief: Total: res = 1097728/1101824/4096, res+swap = 1368064/1368064/0
+
+
+
