@@ -1,34 +1,16 @@
 language: java
 
-os: linux
-dist: trusty
   
 jdk:
-  - oraclejdk9
+  - oraclejdk8
   - openjdk8
 
 services: mongodb
 
 after_success:
-  - mvn jacoco:report coveralls:report 
-  - bash <(curl -s https://codecov.io/bash)
+  - mvn clean cobertura:cobertura coveralls:report
 
 notifications: 
     email:
         - teles.matheus@hotmail.com #Add your email address
 
-matrix:
-  include:
-    - env: NAME="Coverage report"
-      jdk: oraclejdk8
-      script:
-        - mvn clean test jacoco:report coveralls:report
-
-cache:
-  directories:
-  - $HOME/.m2
-
-install: true
-
-script:
- - mvn -f pom.xml clean verify -Pjacoco coveralls:report

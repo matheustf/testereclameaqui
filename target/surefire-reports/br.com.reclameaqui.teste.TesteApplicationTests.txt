@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: br.com.reclameaqui.teste.TesteApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.883 sec - in br.com.reclameaqui.teste.TesteApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.59 sec - in br.com.reclameaqui.teste.TesteApplicationTests

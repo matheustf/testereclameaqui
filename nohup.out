@@ -23062,3 +23062,26 @@ Memory pressure relief: Total: res = 1060864/1064960/4096, res+swap = 1331200/13
 Memory pressure relief: Total: res = 1064960/1069056/4096, res+swap = 1335296/1339392/4096
 Memory pressure relief: Total: res = 1069056/1081344/12288, res+swap = 1347584/1351680/4096
 Memory pressure relief: Total: res = 1077248/1081344/4096, res+swap = 1347584/1351680/4096
+Memory pressure relief: Total: res = 1089536/1097728/8192, res+swap = 1359872/1363968/4096
+Memory pressure relief: Total: res = 1081344/1085440/4096, res+swap = 1351680/1351680/0
+abr 14, 2018 12:30:51 AM okhttp3.internal.platform.Platform log
+ADVERTÊNCIA: A connection to http://repo.spring.io/ was leaked. Did you forget to close a response body? To see where this was allocated, set the OkHttpClient logger level to FINE: Logger.getLogger(OkHttpClient.class.getName()).setLevel(Level.FINE);
+abr 14, 2018 12:30:51 AM okhttp3.internal.platform.Platform log
+ADVERTÊNCIA: A connection to http://repo.spring.io/ was leaked. Did you forget to close a response body? To see where this was allocated, set the OkHttpClient logger level to FINE: Logger.getLogger(OkHttpClient.class.getName()).setLevel(Level.FINE);
+abr 14, 2018 12:30:51 AM okhttp3.internal.platform.Platform log
+ADVERTÊNCIA: A connection to http://repo.spring.io/ was leaked. Did you forget to close a response body? To see where this was allocated, set the OkHttpClient logger level to FINE: Logger.getLogger(OkHttpClient.class.getName()).setLevel(Level.FINE);
+abr 14, 2018 12:30:51 AM okhttp3.internal.platform.Platform log
+ADVERTÊNCIA: A connection to http://repo.spring.io/ was leaked. Did you forget to close a response body? To see where this was allocated, set the OkHttpClient logger level to FINE: Logger.getLogger(OkHttpClient.class.getName()).setLevel(Level.FINE);
+abr 14, 2018 12:30:51 AM okhttp3.internal.platform.Platform log
+ADVERTÊNCIA: A connection to http://repo.spring.io/ was leaked. Did you forget to close a response body? To see where this was allocated, set the OkHttpClient logger level to FINE: Logger.getLogger(OkHttpClient.class.getName()).setLevel(Level.FINE);
+abr 14, 2018 12:30:51 AM okhttp3.internal.platform.Platform log
+ADVERTÊNCIA: A connection to http://repo.spring.io/ was leaked. Did you forget to close a response body? To see where this was allocated, set the OkHttpClient logger level to FINE: Logger.getLogger(OkHttpClient.class.getName()).setLevel(Level.FINE);
+abr 14, 2018 12:30:51 AM okhttp3.internal.platform.Platform log
+ADVERTÊNCIA: A connection to http://repo.spring.io/ was leaked. Did you forget to close a response body? To see where this was allocated, set the OkHttpClient logger level to FINE: Logger.getLogger(OkHttpClient.class.getName()).setLevel(Level.FINE);
+abr 14, 2018 12:30:51 AM okhttp3.internal.platform.Platform log
+ADVERTÊNCIA: A connection to http://repo.spring.io/ was leaked. Did you forget to close a response body? To see where this was allocated, set the OkHttpClient logger level to FINE: Logger.getLogger(OkHttpClient.class.getName()).setLevel(Level.FINE);
+abr 14, 2018 12:30:51 AM okhttp3.internal.platform.Platform log
+ADVERTÊNCIA: A connection to http://repo.spring.io/ was leaked. Did you forget to close a response body? To see where this was allocated, set the OkHttpClient logger level to FINE: Logger.getLogger(OkHttpClient.class.getName()).setLevel(Level.FINE);
+Memory pressure relief: Total: res = 1085440/1085440/0, res+swap = 1351680/1351680/0
+Memory pressure relief: Total: res = 1085440/1089536/4096, res+swap = 1355776/1359872/4096
+Memory pressure relief: Total: res = 1097728/1101824/4096, res+swap = 1368064/1368064/0
