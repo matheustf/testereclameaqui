@@ -49,7 +49,7 @@ public class ClienteController {
 	@GetMapping()
 	@RequestMapping("/teste")
 	public String teste() {
-		return "teste ok";
+		return "Application OK";
 	}
 
 	@GetMapping("/cliente/{id}")
