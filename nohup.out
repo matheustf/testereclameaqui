@@ -23178,3 +23178,19 @@ Caused by: java.lang.ClassNotFoundException: ch.qos.logback.core.rolling.Rolling
 20:22:27,143 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
 20:22:27,144 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@67572949 - Registering current configuration as safe fallback point
 
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
