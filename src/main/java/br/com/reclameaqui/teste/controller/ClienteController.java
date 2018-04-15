@@ -37,8 +37,7 @@ public class ClienteController {
 		this.clienteService = clienteService;
 	}
 
-	@GetMapping()
-	@RequestMapping("/clientes")
+	@GetMapping("/clientes")
 	public ResponseEntity<List<ClienteDTO>> buscarTodasClientes() {
 
 		List<ClienteDTO> listClientes = clienteService.buscarTodos();
@@ -46,8 +45,7 @@ public class ClienteController {
 		return new ResponseEntity<List<ClienteDTO>>(listClientes, HttpStatus.OK);
 	}
 
-	@GetMapping()
-	@RequestMapping("/teste")
+	@GetMapping("/teste")
 	public String teste() {
 		return "Application OK";
 	}
