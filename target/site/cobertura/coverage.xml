@@ -1,0 +1,2117 @@
+<?xml version="1.0"?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+
+<coverage line-rate="0.9787798408488063" branch-rate="0.9285714285714286" lines-covered="369" lines-valid="377" branches-covered="13" branches-valid="14" complexity="1.4266666666666667" version="2.1.1" timestamp="1523823534842">
+	<sources>
+		<source>/opt/warzone/teste/src/main/java</source>
+		<source>--source</source>
+	</sources>
+	<packages>
+		<package name="br.com.reclameaqui.teste" line-rate="0.96" branch-rate="1.0" complexity="1.0">
+			<classes>
+				<class name="br.com.reclameaqui.teste.SwaggerConfig" filename="br/com/reclameaqui/teste/SwaggerConfig.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="14" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="productApi" signature="()Lspringfox/documentation/spring/web/plugins/Docket;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="18" hits="4" branch="false"/>
+								<line number="19" hits="2" branch="false"/>
+								<line number="20" hits="2" branch="false"/>
+								<line number="21" hits="2" branch="false"/>
+								<line number="22" hits="2" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="14" hits="2" branch="false"/>
+						<line number="18" hits="4" branch="false"/>
+						<line number="19" hits="2" branch="false"/>
+						<line number="20" hits="2" branch="false"/>
+						<line number="21" hits="2" branch="false"/>
+						<line number="22" hits="2" branch="false"/>
+					</lines>
+				</class>
+				<class name="br.com.reclameaqui.teste.TesteApplication" filename="br/com/reclameaqui/teste/TesteApplication.java" line-rate="0.9545454545454546" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="25" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="main" signature="([Ljava/lang/String;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="113" hits="0" branch="false"/>
+								<line number="114" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="run" signature="([Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="38" hits="2" branch="false"/>
+								<line number="40" hits="2" branch="false"/>
+								<line number="41" hits="2" branch="false"/>
+								<line number="42" hits="2" branch="false"/>
+								<line number="43" hits="2" branch="false"/>
+								<line number="44" hits="2" branch="false"/>
+								<line number="45" hits="2" branch="false"/>
+								<line number="46" hits="2" branch="false"/>
+								<line number="47" hits="2" branch="false"/>
+								<line number="50" hits="2" branch="false"/>
+								<line number="51" hits="2" branch="false"/>
+								<line number="52" hits="2" branch="false"/>
+								<line number="53" hits="2" branch="false"/>
+								<line number="54" hits="2" branch="false"/>
+								<line number="55" hits="2" branch="false"/>
+								<line number="56" hits="2" branch="false"/>
+								<line number="57" hits="2" branch="false"/>
+								<line number="58" hits="2" branch="false"/>
+								<line number="60" hits="2" branch="false"/>
+								<line number="62" hits="2" branch="false"/>
+								<line number="64" hits="2" branch="false"/>
+								<line number="65" hits="2" branch="false"/>
+								<line number="66" hits="2" branch="false"/>
+								<line number="67" hits="2" branch="false"/>
+								<line number="70" hits="2" branch="false"/>
+								<line number="71" hits="2" branch="false"/>
+								<line number="72" hits="2" branch="false"/>
+								<line number="75" hits="2" branch="false"/>
+								<line number="76" hits="2" branch="false"/>
+								<line number="79" hits="2" branch="false"/>
+								<line number="80" hits="2" branch="false"/>
+								<line number="81" hits="2" branch="false"/>
+								<line number="82" hits="2" branch="false"/>
+								<line number="83" hits="2" branch="false"/>
+								<line number="84" hits="2" branch="false"/>
+								<line number="85" hits="2" branch="false"/>
+								<line number="86" hits="2" branch="false"/>
+								<line number="89" hits="2" branch="false"/>
+								<line number="91" hits="2" branch="false"/>
+								<line number="108" hits="2" branch="false"/>
+								<line number="110" hits="2" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="25" hits="2" branch="false"/>
+						<line number="38" hits="2" branch="false"/>
+						<line number="40" hits="2" branch="false"/>
+						<line number="41" hits="2" branch="false"/>
+						<line number="42" hits="2" branch="false"/>
+						<line number="43" hits="2" branch="false"/>
+						<line number="44" hits="2" branch="false"/>
+						<line number="45" hits="2" branch="false"/>
+						<line number="46" hits="2" branch="false"/>
+						<line number="47" hits="2" branch="false"/>
+						<line number="50" hits="2" branch="false"/>
+						<line number="51" hits="2" branch="false"/>
+						<line number="52" hits="2" branch="false"/>
+						<line number="53" hits="2" branch="false"/>
+						<line number="54" hits="2" branch="false"/>
+						<line number="55" hits="2" branch="false"/>
+						<line number="56" hits="2" branch="false"/>
+						<line number="57" hits="2" branch="false"/>
+						<line number="58" hits="2" branch="false"/>
+						<line number="60" hits="2" branch="false"/>
+						<line number="62" hits="2" branch="false"/>
+						<line number="64" hits="2" branch="false"/>
+						<line number="65" hits="2" branch="false"/>
+						<line number="66" hits="2" branch="false"/>
+						<line number="67" hits="2" branch="false"/>
+						<line number="70" hits="2" branch="false"/>
+						<line number="71" hits="2" branch="false"/>
+						<line number="72" hits="2" branch="false"/>
+						<line number="75" hits="2" branch="false"/>
+						<line number="76" hits="2" branch="false"/>
+						<line number="79" hits="2" branch="false"/>
+						<line number="80" hits="2" branch="false"/>
+						<line number="81" hits="2" branch="false"/>
+						<line number="82" hits="2" branch="false"/>
+						<line number="83" hits="2" branch="false"/>
+						<line number="84" hits="2" branch="false"/>
+						<line number="85" hits="2" branch="false"/>
+						<line number="86" hits="2" branch="false"/>
+						<line number="89" hits="2" branch="false"/>
+						<line number="91" hits="2" branch="false"/>
+						<line number="108" hits="2" branch="false"/>
+						<line number="110" hits="2" branch="false"/>
+						<line number="113" hits="0" branch="false"/>
+						<line number="114" hits="0" branch="false"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package name="br.com.reclameaqui.teste.controller" line-rate="0.9866666666666667" branch-rate="1.0" complexity="2.0588235294117645">
+			<classes>
+				<class name="br.com.reclameaqui.teste.controller.ClienteController" filename="br/com/reclameaqui/teste/controller/ClienteController.java" line-rate="0.9791666666666666" branch-rate="1.0" complexity="2.090909090909091">
+					<methods>
+						<method name="&lt;init&gt;" signature="(Lbr/com/reclameaqui/teste/service/ClienteService;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="31" hits="17" branch="false"/>
+								<line number="36" hits="17" branch="false"/>
+								<line number="37" hits="17" branch="false"/>
+								<line number="38" hits="17" branch="false"/>
+							</lines>
+						</method>
+						<method name="atualizar" signature="(Ljava/lang/String;Lbr/com/reclameaqui/teste/dtos/ClienteDTO;)Lorg/springframework/http/ResponseEntity;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="91" hits="2" branch="false"/>
+								<line number="96" hits="2" branch="false"/>
+								<line number="97" hits="1" branch="false"/>
+								<line number="98" hits="1" branch="false"/>
+								<line number="99" hits="1" branch="false"/>
+								<line number="101" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="atualizarPorCpf" signature="(Ljava/lang/String;Lbr/com/reclameaqui/teste/dtos/ClienteDTO;)Lorg/springframework/http/ResponseEntity;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="107" hits="3" branch="false"/>
+								<line number="112" hits="3" branch="false"/>
+								<line number="113" hits="1" branch="false"/>
+								<line number="114" hits="1" branch="false"/>
+								<line number="115" hits="2" branch="false"/>
+								<line number="117" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="buscarClientesQueReclamam" signature="(Lbr/com/reclameaqui/teste/dtos/ReclamantesRequestDTO;)Lorg/springframework/http/ResponseEntity;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="152" hits="4" branch="false"/>
+								<line number="154" hits="4" branch="false"/>
+							</lines>
+						</method>
+						<method name="buscarTodasClientes" signature="()Lorg/springframework/http/ResponseEntity;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="43" hits="2" branch="false"/>
+								<line number="45" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="consultar" signature="(Ljava/lang/String;)Lorg/springframework/http/ResponseEntity;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="55" hits="2" branch="false"/>
+								<line number="59" hits="2" branch="false"/>
+								<line number="60" hits="1" branch="false"/>
+								<line number="61" hits="1" branch="false"/>
+								<line number="62" hits="1" branch="false"/>
+								<line number="64" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="consultarPorCpf" signature="(Ljava/lang/String;)Lorg/springframework/http/ResponseEntity;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="69" hits="4" branch="false"/>
+								<line number="72" hits="4" branch="false"/>
+								<line number="73" hits="1" branch="false"/>
+								<line number="74" hits="1" branch="false"/>
+								<line number="75" hits="3" branch="false"/>
+								<line number="77" hits="3" branch="false"/>
+							</lines>
+						</method>
+						<method name="deletar" signature="(Ljava/lang/String;)Lorg/springframework/http/ResponseEntity;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="122" hits="2" branch="false"/>
+								<line number="126" hits="2" branch="false"/>
+								<line number="127" hits="1" branch="false"/>
+								<line number="128" hits="1" branch="false"/>
+								<line number="129" hits="1" branch="false"/>
+								<line number="131" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="deletarPorCpf" signature="(Ljava/lang/String;)Lorg/springframework/http/ResponseEntity;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="136" hits="3" branch="false"/>
+								<line number="140" hits="3" branch="false"/>
+								<line number="141" hits="1" branch="false"/>
+								<line number="142" hits="1" branch="false"/>
+								<line number="143" hits="2" branch="false"/>
+								<line number="145" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="incluir" signature="(Lbr/com/reclameaqui/teste/dtos/ClienteDTO;)Lorg/springframework/http/ResponseEntity;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="82" hits="2" branch="false"/>
+								<line number="84" hits="2" branch="false"/>
+								<line number="85" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="teste" signature="()Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="50" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="31" hits="17" branch="false"/>
+						<line number="36" hits="17" branch="false"/>
+						<line number="37" hits="17" branch="false"/>
+						<line number="38" hits="17" branch="false"/>
+						<line number="43" hits="2" branch="false"/>
+						<line number="45" hits="2" branch="false"/>
+						<line number="50" hits="0" branch="false"/>
+						<line number="55" hits="2" branch="false"/>
+						<line number="59" hits="2" branch="false"/>
+						<line number="60" hits="1" branch="false"/>
+						<line number="61" hits="1" branch="false"/>
+						<line number="62" hits="1" branch="false"/>
+						<line number="64" hits="1" branch="false"/>
+						<line number="69" hits="4" branch="false"/>
+						<line number="72" hits="4" branch="false"/>
+						<line number="73" hits="1" branch="false"/>
+						<line number="74" hits="1" branch="false"/>
+						<line number="75" hits="3" branch="false"/>
+						<line number="77" hits="3" branch="false"/>
+						<line number="82" hits="2" branch="false"/>
+						<line number="84" hits="2" branch="false"/>
+						<line number="85" hits="2" branch="false"/>
+						<line number="91" hits="2" branch="false"/>
+						<line number="96" hits="2" branch="false"/>
+						<line number="97" hits="1" branch="false"/>
+						<line number="98" hits="1" branch="false"/>
+						<line number="99" hits="1" branch="false"/>
+						<line number="101" hits="1" branch="false"/>
+						<line number="107" hits="3" branch="false"/>
+						<line number="112" hits="3" branch="false"/>
+						<line number="113" hits="1" branch="false"/>
+						<line number="114" hits="1" branch="false"/>
+						<line number="115" hits="2" branch="false"/>
+						<line number="117" hits="2" branch="false"/>
+						<line number="122" hits="2" branch="false"/>
+						<line number="126" hits="2" branch="false"/>
+						<line number="127" hits="1" branch="false"/>
+						<line number="128" hits="1" branch="false"/>
+						<line number="129" hits="1" branch="false"/>
+						<line number="131" hits="1" branch="false"/>
+						<line number="136" hits="3" branch="false"/>
+						<line number="140" hits="3" branch="false"/>
+						<line number="141" hits="1" branch="false"/>
+						<line number="142" hits="1" branch="false"/>
+						<line number="143" hits="2" branch="false"/>
+						<line number="145" hits="2" branch="false"/>
+						<line number="152" hits="4" branch="false"/>
+						<line number="154" hits="4" branch="false"/>
+					</lines>
+				</class>
+				<class name="br.com.reclameaqui.teste.controller.ReclamacaoController" filename="br/com/reclameaqui/teste/controller/ReclamacaoController.java" line-rate="1.0" branch-rate="1.0" complexity="2.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="(Lbr/com/reclameaqui/teste/service/ReclamacaoService;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="29" hits="10" branch="false"/>
+								<line number="34" hits="10" branch="false"/>
+								<line number="35" hits="10" branch="false"/>
+								<line number="36" hits="10" branch="false"/>
+							</lines>
+						</method>
+						<method name="atualizar" signature="(Ljava/lang/String;Lbr/com/reclameaqui/teste/dtos/ReclamacaoDTO;)Lorg/springframework/http/ResponseEntity;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="72" hits="2" branch="false"/>
+								<line number="76" hits="2" branch="false"/>
+								<line number="77" hits="1" branch="false"/>
+								<line number="78" hits="1" branch="false"/>
+								<line number="79" hits="1" branch="false"/>
+								<line number="81" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="buscarTodasReclamacoes" signature="()Lorg/springframework/http/ResponseEntity;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="41" hits="2" branch="false"/>
+								<line number="43" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="consultar" signature="(Ljava/lang/String;)Lorg/springframework/http/ResponseEntity;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="48" hits="2" branch="false"/>
+								<line number="52" hits="2" branch="false"/>
+								<line number="54" hits="1" branch="false"/>
+								<line number="55" hits="1" branch="false"/>
+								<line number="56" hits="1" branch="false"/>
+								<line number="58" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="deletar" signature="(Ljava/lang/String;)Lorg/springframework/http/ResponseEntity;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="86" hits="2" branch="false"/>
+								<line number="90" hits="2" branch="false"/>
+								<line number="91" hits="1" branch="false"/>
+								<line number="92" hits="1" branch="false"/>
+								<line number="93" hits="1" branch="false"/>
+								<line number="96" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="incluir" signature="(Lbr/com/reclameaqui/teste/dtos/ReclamacaoDTO;)Lorg/springframework/http/ResponseEntity;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="63" hits="1" branch="false"/>
+								<line number="65" hits="1" branch="false"/>
+								<line number="66" hits="1" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="29" hits="10" branch="false"/>
+						<line number="34" hits="10" branch="false"/>
+						<line number="35" hits="10" branch="false"/>
+						<line number="36" hits="10" branch="false"/>
+						<line number="41" hits="2" branch="false"/>
+						<line number="43" hits="2" branch="false"/>
+						<line number="48" hits="2" branch="false"/>
+						<line number="52" hits="2" branch="false"/>
+						<line number="54" hits="1" branch="false"/>
+						<line number="55" hits="1" branch="false"/>
+						<line number="56" hits="1" branch="false"/>
+						<line number="58" hits="1" branch="false"/>
+						<line number="63" hits="1" branch="false"/>
+						<line number="65" hits="1" branch="false"/>
+						<line number="66" hits="1" branch="false"/>
+						<line number="72" hits="2" branch="false"/>
+						<line number="76" hits="2" branch="false"/>
+						<line number="77" hits="1" branch="false"/>
+						<line number="78" hits="1" branch="false"/>
+						<line number="79" hits="1" branch="false"/>
+						<line number="81" hits="1" branch="false"/>
+						<line number="86" hits="2" branch="false"/>
+						<line number="90" hits="2" branch="false"/>
+						<line number="91" hits="1" branch="false"/>
+						<line number="92" hits="1" branch="false"/>
+						<line number="93" hits="1" branch="false"/>
+						<line number="96" hits="1" branch="false"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package name="br.com.reclameaqui.teste.documents" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+			<classes>
+				<class name="br.com.reclameaqui.teste.documents.Cliente" filename="br/com/reclameaqui/teste/documents/Cliente.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="19" hits="53" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lbr/com/reclameaqui/teste/documents/Endereco;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="37" hits="19" branch="false"/>
+								<line number="38" hits="19" branch="false"/>
+								<line number="39" hits="19" branch="false"/>
+								<line number="40" hits="19" branch="false"/>
+								<line number="41" hits="19" branch="false"/>
+								<line number="42" hits="19" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lbr/com/reclameaqui/teste/documents/Endereco;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="20" hits="26" branch="false"/>
+							</lines>
+						</method>
+						<method name="builder" signature="()Lbr/com/reclameaqui/teste/documents/Cliente$ClienteBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="18" hits="26" branch="false"/>
+							</lines>
+						</method>
+						<method name="getCpf" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="33" hits="46" branch="false"/>
+							</lines>
+						</method>
+						<method name="getEndereco" signature="()Lbr/com/reclameaqui/teste/documents/Endereco;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="34" hits="190" branch="false"/>
+							</lines>
+						</method>
+						<method name="getId" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="26" hits="58" branch="false"/>
+							</lines>
+						</method>
+						<method name="getNome" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="29" hits="42" branch="false"/>
+							</lines>
+						</method>
+						<method name="getTelefone" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="30" hits="42" branch="false"/>
+							</lines>
+						</method>
+						<method name="setCpf" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="setEndereco" signature="(Lbr/com/reclameaqui/teste/documents/Endereco;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="17" hits="60" branch="false"/>
+							</lines>
+						</method>
+						<method name="setId" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="setNome" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="setTelefone" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="update" signature="(Lbr/com/reclameaqui/teste/documents/Cliente;Lbr/com/reclameaqui/teste/documents/Cliente;)Lbr/com/reclameaqui/teste/documents/Cliente;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="45" hits="3" branch="false"/>
+								<line number="46" hits="3" branch="false"/>
+								<line number="47" hits="3" branch="false"/>
+								<line number="48" hits="3" branch="false"/>
+								<line number="49" hits="3" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="17" hits="60" branch="false"/>
+						<line number="18" hits="26" branch="false"/>
+						<line number="19" hits="53" branch="false"/>
+						<line number="20" hits="26" branch="false"/>
+						<line number="26" hits="58" branch="false"/>
+						<line number="29" hits="42" branch="false"/>
+						<line number="30" hits="42" branch="false"/>
+						<line number="33" hits="46" branch="false"/>
+						<line number="34" hits="190" branch="false"/>
+						<line number="37" hits="19" branch="false"/>
+						<line number="38" hits="19" branch="false"/>
+						<line number="39" hits="19" branch="false"/>
+						<line number="40" hits="19" branch="false"/>
+						<line number="41" hits="19" branch="false"/>
+						<line number="42" hits="19" branch="false"/>
+						<line number="45" hits="3" branch="false"/>
+						<line number="46" hits="3" branch="false"/>
+						<line number="47" hits="3" branch="false"/>
+						<line number="48" hits="3" branch="false"/>
+						<line number="49" hits="3" branch="false"/>
+					</lines>
+				</class>
+				<class name="br.com.reclameaqui.teste.documents.Cliente$ClienteBuilder" filename="br/com/reclameaqui/teste/documents/Cliente.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="build" signature="()Lbr/com/reclameaqui/teste/documents/Cliente;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="cpf" signature="(Ljava/lang/String;)Lbr/com/reclameaqui/teste/documents/Cliente$ClienteBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="endereco" signature="(Lbr/com/reclameaqui/teste/documents/Endereco;)Lbr/com/reclameaqui/teste/documents/Cliente$ClienteBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="id" signature="(Ljava/lang/String;)Lbr/com/reclameaqui/teste/documents/Cliente$ClienteBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="nome" signature="(Ljava/lang/String;)Lbr/com/reclameaqui/teste/documents/Cliente$ClienteBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="telefone" signature="(Ljava/lang/String;)Lbr/com/reclameaqui/teste/documents/Cliente$ClienteBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="toString" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="18" hits="166" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="18" hits="166" branch="false"/>
+					</lines>
+				</class>
+				<class name="br.com.reclameaqui.teste.documents.Empresa" filename="br/com/reclameaqui/teste/documents/Empresa.java" line-rate="1.0" branch-rate="1.0" complexity="0.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="16" hits="16" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="17" hits="14" branch="false"/>
+							</lines>
+						</method>
+						<method name="builder" signature="()Lbr/com/reclameaqui/teste/documents/Empresa$EmpresaBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="15" hits="6" branch="false"/>
+							</lines>
+						</method>
+						<method name="getCnpj" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="22" hits="17" branch="false"/>
+							</lines>
+						</method>
+						<method name="getNome" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="25" hits="17" branch="false"/>
+							</lines>
+						</method>
+						<method name="setCnpj" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="setNome" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="14" hits="4" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="14" hits="4" branch="false"/>
+						<line number="15" hits="6" branch="false"/>
+						<line number="16" hits="16" branch="false"/>
+						<line number="17" hits="14" branch="false"/>
+						<line number="22" hits="17" branch="false"/>
+						<line number="25" hits="17" branch="false"/>
+					</lines>
+				</class>
+				<class name="br.com.reclameaqui.teste.documents.Empresa$EmpresaBuilder" filename="br/com/reclameaqui/teste/documents/Empresa.java" line-rate="1.0" branch-rate="1.0" complexity="0.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="build" signature="()Lbr/com/reclameaqui/teste/documents/Empresa;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="cnpj" signature="(Ljava/lang/String;)Lbr/com/reclameaqui/teste/documents/Empresa$EmpresaBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="nome" signature="(Ljava/lang/String;)Lbr/com/reclameaqui/teste/documents/Empresa$EmpresaBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="toString" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="15" hits="24" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="15" hits="24" branch="false"/>
+					</lines>
+				</class>
+				<class name="br.com.reclameaqui.teste.documents.Endereco" filename="br/com/reclameaqui/teste/documents/Endereco.java" line-rate="1.0" branch-rate="1.0" complexity="0.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="14" hits="67" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="15" hits="33" branch="false"/>
+							</lines>
+						</method>
+						<method name="builder" signature="()Lbr/com/reclameaqui/teste/documents/Endereco$EnderecoBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="13" hits="16" branch="false"/>
+							</lines>
+						</method>
+						<method name="getBairro" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="28" hits="56" branch="false"/>
+							</lines>
+						</method>
+						<method name="getCep" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="19" hits="56" branch="false"/>
+							</lines>
+						</method>
+						<method name="getCidade" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="31" hits="56" branch="false"/>
+							</lines>
+						</method>
+						<method name="getLogradouro" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="22" hits="56" branch="false"/>
+							</lines>
+						</method>
+						<method name="getNumero" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="25" hits="56" branch="false"/>
+							</lines>
+						</method>
+						<method name="setBairro" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="setCep" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="setCidade" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="12" hits="35" branch="false"/>
+							</lines>
+						</method>
+						<method name="setLogradouro" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="setNumero" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="12" hits="35" branch="false"/>
+						<line number="13" hits="16" branch="false"/>
+						<line number="14" hits="67" branch="false"/>
+						<line number="15" hits="33" branch="false"/>
+						<line number="19" hits="56" branch="false"/>
+						<line number="22" hits="56" branch="false"/>
+						<line number="25" hits="56" branch="false"/>
+						<line number="28" hits="56" branch="false"/>
+						<line number="31" hits="56" branch="false"/>
+					</lines>
+				</class>
+				<class name="br.com.reclameaqui.teste.documents.Endereco$EnderecoBuilder" filename="br/com/reclameaqui/teste/documents/Endereco.java" line-rate="1.0" branch-rate="1.0" complexity="0.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="bairro" signature="(Ljava/lang/String;)Lbr/com/reclameaqui/teste/documents/Endereco$EnderecoBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="build" signature="()Lbr/com/reclameaqui/teste/documents/Endereco;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="cep" signature="(Ljava/lang/String;)Lbr/com/reclameaqui/teste/documents/Endereco$EnderecoBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="cidade" signature="(Ljava/lang/String;)Lbr/com/reclameaqui/teste/documents/Endereco$EnderecoBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="logradouro" signature="(Ljava/lang/String;)Lbr/com/reclameaqui/teste/documents/Endereco$EnderecoBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="numero" signature="(Ljava/lang/String;)Lbr/com/reclameaqui/teste/documents/Endereco$EnderecoBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="toString" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="13" hits="112" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="13" hits="112" branch="false"/>
+					</lines>
+				</class>
+				<class name="br.com.reclameaqui.teste.documents.Reclamacao" filename="br/com/reclameaqui/teste/documents/Reclamacao.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="19" hits="35" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;Lbr/com/reclameaqui/teste/documents/Endereco;Lbr/com/reclameaqui/teste/documents/Empresa;Lbr/com/reclameaqui/teste/documents/Cliente;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="43" hits="28" branch="false"/>
+								<line number="44" hits="28" branch="false"/>
+								<line number="45" hits="28" branch="false"/>
+								<line number="46" hits="28" branch="false"/>
+								<line number="47" hits="28" branch="false"/>
+								<line number="48" hits="28" branch="false"/>
+								<line number="49" hits="28" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lbr/com/reclameaqui/teste/documents/Endereco;Lbr/com/reclameaqui/teste/documents/Empresa;Lbr/com/reclameaqui/teste/documents/Cliente;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="20" hits="12" branch="false"/>
+							</lines>
+						</method>
+						<method name="builder" signature="()Lbr/com/reclameaqui/teste/documents/Reclamacao$ReclamacaoBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="18" hits="12" branch="false"/>
+							</lines>
+						</method>
+						<method name="getDescricao" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="32" hits="18" branch="false"/>
+							</lines>
+						</method>
+						<method name="getEmpresa" signature="()Lbr/com/reclameaqui/teste/documents/Empresa;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="38" hits="35" branch="false"/>
+							</lines>
+						</method>
+						<method name="getEndereco" signature="()Lbr/com/reclameaqui/teste/documents/Endereco;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="35" hits="86" branch="false"/>
+							</lines>
+						</method>
+						<method name="getId" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="26" hits="17" branch="false"/>
+							</lines>
+						</method>
+						<method name="getIdCliente" signature="()Lbr/com/reclameaqui/teste/documents/Cliente;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="41" hits="37" branch="false"/>
+							</lines>
+						</method>
+						<method name="getNome" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="29" hits="18" branch="false"/>
+							</lines>
+						</method>
+						<method name="setDescricao" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="setEmpresa" signature="(Lbr/com/reclameaqui/teste/documents/Empresa;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="setEndereco" signature="(Lbr/com/reclameaqui/teste/documents/Endereco;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="setId" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="setIdCliente" signature="(Lbr/com/reclameaqui/teste/documents/Cliente;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="17" hits="28" branch="false"/>
+							</lines>
+						</method>
+						<method name="setNome" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="update" signature="(Lbr/com/reclameaqui/teste/documents/Reclamacao;Lbr/com/reclameaqui/teste/documents/Reclamacao;)Lbr/com/reclameaqui/teste/documents/Reclamacao;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="52" hits="1" branch="false"/>
+								<line number="53" hits="1" branch="false"/>
+								<line number="54" hits="1" branch="false"/>
+								<line number="55" hits="1" branch="false"/>
+								<line number="56" hits="1" branch="false"/>
+								<line number="58" hits="1" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="17" hits="28" branch="false"/>
+						<line number="18" hits="12" branch="false"/>
+						<line number="19" hits="35" branch="false"/>
+						<line number="20" hits="12" branch="false"/>
+						<line number="26" hits="17" branch="false"/>
+						<line number="29" hits="18" branch="false"/>
+						<line number="32" hits="18" branch="false"/>
+						<line number="35" hits="86" branch="false"/>
+						<line number="38" hits="35" branch="false"/>
+						<line number="41" hits="37" branch="false"/>
+						<line number="43" hits="28" branch="false"/>
+						<line number="44" hits="28" branch="false"/>
+						<line number="45" hits="28" branch="false"/>
+						<line number="46" hits="28" branch="false"/>
+						<line number="47" hits="28" branch="false"/>
+						<line number="48" hits="28" branch="false"/>
+						<line number="49" hits="28" branch="false"/>
+						<line number="52" hits="1" branch="false"/>
+						<line number="53" hits="1" branch="false"/>
+						<line number="54" hits="1" branch="false"/>
+						<line number="55" hits="1" branch="false"/>
+						<line number="56" hits="1" branch="false"/>
+						<line number="58" hits="1" branch="false"/>
+					</lines>
+				</class>
+				<class name="br.com.reclameaqui.teste.documents.Reclamacao$ReclamacaoBuilder" filename="br/com/reclameaqui/teste/documents/Reclamacao.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="build" signature="()Lbr/com/reclameaqui/teste/documents/Reclamacao;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="descricao" signature="(Ljava/lang/String;)Lbr/com/reclameaqui/teste/documents/Reclamacao$ReclamacaoBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="empresa" signature="(Lbr/com/reclameaqui/teste/documents/Empresa;)Lbr/com/reclameaqui/teste/documents/Reclamacao$ReclamacaoBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="endereco" signature="(Lbr/com/reclameaqui/teste/documents/Endereco;)Lbr/com/reclameaqui/teste/documents/Reclamacao$ReclamacaoBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="id" signature="(Ljava/lang/String;)Lbr/com/reclameaqui/teste/documents/Reclamacao$ReclamacaoBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="idCliente" signature="(Lbr/com/reclameaqui/teste/documents/Cliente;)Lbr/com/reclameaqui/teste/documents/Reclamacao$ReclamacaoBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="nome" signature="(Ljava/lang/String;)Lbr/com/reclameaqui/teste/documents/Reclamacao$ReclamacaoBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="toString" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="18" hits="90" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="18" hits="90" branch="false"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package name="br.com.reclameaqui.teste.dtos" line-rate="1.0" branch-rate="1.0" complexity="0.0">
+			<classes>
+				<class name="br.com.reclameaqui.teste.dtos.ClienteDTO" filename="br/com/reclameaqui/teste/dtos/ClienteDTO.java" line-rate="1.0" branch-rate="1.0" complexity="0.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="16" hits="41" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lbr/com/reclameaqui/teste/dtos/EnderecoDTO;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="17" hits="75" branch="false"/>
+							</lines>
+						</method>
+						<method name="builder" signature="()Lbr/com/reclameaqui/teste/dtos/ClienteDTO$ClienteDTOBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="15" hits="75" branch="false"/>
+							</lines>
+						</method>
+						<method name="getCpf" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="28" hits="59" branch="false"/>
+							</lines>
+						</method>
+						<method name="getEndereco" signature="()Lbr/com/reclameaqui/teste/dtos/EnderecoDTO;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="29" hits="59" branch="false"/>
+							</lines>
+						</method>
+						<method name="getId" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="20" hits="63" branch="false"/>
+							</lines>
+						</method>
+						<method name="getNome" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="23" hits="47" branch="false"/>
+							</lines>
+						</method>
+						<method name="getTelefone" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="24" hits="37" branch="false"/>
+							</lines>
+						</method>
+						<method name="setCpf" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="setEndereco" signature="(Lbr/com/reclameaqui/teste/dtos/EnderecoDTO;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="14" hits="351" branch="false"/>
+							</lines>
+						</method>
+						<method name="setId" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="setNome" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="setTelefone" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="14" hits="351" branch="false"/>
+						<line number="15" hits="75" branch="false"/>
+						<line number="16" hits="41" branch="false"/>
+						<line number="17" hits="75" branch="false"/>
+						<line number="20" hits="63" branch="false"/>
+						<line number="23" hits="47" branch="false"/>
+						<line number="24" hits="37" branch="false"/>
+						<line number="28" hits="59" branch="false"/>
+						<line number="29" hits="59" branch="false"/>
+					</lines>
+				</class>
+				<class name="br.com.reclameaqui.teste.dtos.ClienteDTO$ClienteDTOBuilder" filename="br/com/reclameaqui/teste/dtos/ClienteDTO.java" line-rate="1.0" branch-rate="1.0" complexity="0.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="build" signature="()Lbr/com/reclameaqui/teste/dtos/ClienteDTO;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="cpf" signature="(Ljava/lang/String;)Lbr/com/reclameaqui/teste/dtos/ClienteDTO$ClienteDTOBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="endereco" signature="(Lbr/com/reclameaqui/teste/dtos/EnderecoDTO;)Lbr/com/reclameaqui/teste/dtos/ClienteDTO$ClienteDTOBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="id" signature="(Ljava/lang/String;)Lbr/com/reclameaqui/teste/dtos/ClienteDTO$ClienteDTOBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="nome" signature="(Ljava/lang/String;)Lbr/com/reclameaqui/teste/dtos/ClienteDTO$ClienteDTOBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="telefone" signature="(Ljava/lang/String;)Lbr/com/reclameaqui/teste/dtos/ClienteDTO$ClienteDTOBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="toString" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="15" hits="480" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="15" hits="480" branch="false"/>
+					</lines>
+				</class>
+				<class name="br.com.reclameaqui.teste.dtos.EmpresaDTO" filename="br/com/reclameaqui/teste/dtos/EmpresaDTO.java" line-rate="1.0" branch-rate="1.0" complexity="0.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="16" hits="17" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="17" hits="14" branch="false"/>
+							</lines>
+						</method>
+						<method name="builder" signature="()Lbr/com/reclameaqui/teste/dtos/EmpresaDTO$EmpresaDTOBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="15" hits="14" branch="false"/>
+							</lines>
+						</method>
+						<method name="getCnpj" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="22" hits="16" branch="false"/>
+							</lines>
+						</method>
+						<method name="getNome" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="25" hits="16" branch="false"/>
+							</lines>
+						</method>
+						<method name="setCnpj" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="setNome" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="14" hits="34" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="14" hits="34" branch="false"/>
+						<line number="15" hits="14" branch="false"/>
+						<line number="16" hits="17" branch="false"/>
+						<line number="17" hits="14" branch="false"/>
+						<line number="22" hits="16" branch="false"/>
+						<line number="25" hits="16" branch="false"/>
+					</lines>
+				</class>
+				<class name="br.com.reclameaqui.teste.dtos.EmpresaDTO$EmpresaDTOBuilder" filename="br/com/reclameaqui/teste/dtos/EmpresaDTO.java" line-rate="1.0" branch-rate="1.0" complexity="0.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="build" signature="()Lbr/com/reclameaqui/teste/dtos/EmpresaDTO;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="cnpj" signature="(Ljava/lang/String;)Lbr/com/reclameaqui/teste/dtos/EmpresaDTO$EmpresaDTOBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="nome" signature="(Ljava/lang/String;)Lbr/com/reclameaqui/teste/dtos/EmpresaDTO$EmpresaDTOBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="toString" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="15" hits="56" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="15" hits="56" branch="false"/>
+					</lines>
+				</class>
+				<class name="br.com.reclameaqui.teste.dtos.EnderecoDTO" filename="br/com/reclameaqui/teste/dtos/EnderecoDTO.java" line-rate="1.0" branch-rate="1.0" complexity="0.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="14" hits="56" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="15" hits="64" branch="false"/>
+							</lines>
+						</method>
+						<method name="builder" signature="()Lbr/com/reclameaqui/teste/dtos/EnderecoDTO$EnderecoDTOBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="13" hits="64" branch="false"/>
+							</lines>
+						</method>
+						<method name="getBairro" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="28" hits="53" branch="false"/>
+							</lines>
+						</method>
+						<method name="getCep" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="19" hits="53" branch="false"/>
+							</lines>
+						</method>
+						<method name="getCidade" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="31" hits="53" branch="false"/>
+							</lines>
+						</method>
+						<method name="getLogradouro" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="22" hits="53" branch="false"/>
+							</lines>
+						</method>
+						<method name="getNumero" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="25" hits="53" branch="false"/>
+							</lines>
+						</method>
+						<method name="setBairro" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="setCep" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="setCidade" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="12" hits="280" branch="false"/>
+							</lines>
+						</method>
+						<method name="setLogradouro" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="setNumero" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="12" hits="280" branch="false"/>
+						<line number="13" hits="64" branch="false"/>
+						<line number="14" hits="56" branch="false"/>
+						<line number="15" hits="64" branch="false"/>
+						<line number="19" hits="53" branch="false"/>
+						<line number="22" hits="53" branch="false"/>
+						<line number="25" hits="53" branch="false"/>
+						<line number="28" hits="53" branch="false"/>
+						<line number="31" hits="53" branch="false"/>
+					</lines>
+				</class>
+				<class name="br.com.reclameaqui.teste.dtos.EnderecoDTO$EnderecoDTOBuilder" filename="br/com/reclameaqui/teste/dtos/EnderecoDTO.java" line-rate="1.0" branch-rate="1.0" complexity="0.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="bairro" signature="(Ljava/lang/String;)Lbr/com/reclameaqui/teste/dtos/EnderecoDTO$EnderecoDTOBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="build" signature="()Lbr/com/reclameaqui/teste/dtos/EnderecoDTO;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="cep" signature="(Ljava/lang/String;)Lbr/com/reclameaqui/teste/dtos/EnderecoDTO$EnderecoDTOBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="cidade" signature="(Ljava/lang/String;)Lbr/com/reclameaqui/teste/dtos/EnderecoDTO$EnderecoDTOBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="logradouro" signature="(Ljava/lang/String;)Lbr/com/reclameaqui/teste/dtos/EnderecoDTO$EnderecoDTOBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="numero" signature="(Ljava/lang/String;)Lbr/com/reclameaqui/teste/dtos/EnderecoDTO$EnderecoDTOBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="toString" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="13" hits="448" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="13" hits="448" branch="false"/>
+					</lines>
+				</class>
+				<class name="br.com.reclameaqui.teste.dtos.ReclamacaoDTO" filename="br/com/reclameaqui/teste/dtos/ReclamacaoDTO.java" line-rate="1.0" branch-rate="1.0" complexity="0.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="14" hits="19" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lbr/com/reclameaqui/teste/dtos/EmpresaDTO;Lbr/com/reclameaqui/teste/dtos/EnderecoDTO;Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="15" hits="42" branch="false"/>
+							</lines>
+						</method>
+						<method name="builder" signature="()Lbr/com/reclameaqui/teste/dtos/ReclamacaoDTO$ReclamacaoDTOBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="13" hits="42" branch="false"/>
+							</lines>
+						</method>
+						<method name="getDescricao" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="24" hits="16" branch="false"/>
+							</lines>
+						</method>
+						<method name="getEmpresa" signature="()Lbr/com/reclameaqui/teste/dtos/EmpresaDTO;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="27" hits="18" branch="false"/>
+							</lines>
+						</method>
+						<method name="getEndereco" signature="()Lbr/com/reclameaqui/teste/dtos/EnderecoDTO;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="30" hits="26" branch="false"/>
+							</lines>
+						</method>
+						<method name="getId" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="18" hits="44" branch="false"/>
+							</lines>
+						</method>
+						<method name="getIdCliente" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="33" hits="16" branch="false"/>
+							</lines>
+						</method>
+						<method name="getNome" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="21" hits="22" branch="false"/>
+							</lines>
+						</method>
+						<method name="setDescricao" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="setEmpresa" signature="(Lbr/com/reclameaqui/teste/dtos/EmpresaDTO;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="setEndereco" signature="(Lbr/com/reclameaqui/teste/dtos/EnderecoDTO;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="setId" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="setIdCliente" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="12" hits="196" branch="false"/>
+							</lines>
+						</method>
+						<method name="setNome" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="12" hits="196" branch="false"/>
+						<line number="13" hits="42" branch="false"/>
+						<line number="14" hits="19" branch="false"/>
+						<line number="15" hits="42" branch="false"/>
+						<line number="18" hits="44" branch="false"/>
+						<line number="21" hits="22" branch="false"/>
+						<line number="24" hits="16" branch="false"/>
+						<line number="27" hits="18" branch="false"/>
+						<line number="30" hits="26" branch="false"/>
+						<line number="33" hits="16" branch="false"/>
+					</lines>
+				</class>
+				<class name="br.com.reclameaqui.teste.dtos.ReclamacaoDTO$ReclamacaoDTOBuilder" filename="br/com/reclameaqui/teste/dtos/ReclamacaoDTO.java" line-rate="1.0" branch-rate="1.0" complexity="0.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="build" signature="()Lbr/com/reclameaqui/teste/dtos/ReclamacaoDTO;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="descricao" signature="(Ljava/lang/String;)Lbr/com/reclameaqui/teste/dtos/ReclamacaoDTO$ReclamacaoDTOBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="empresa" signature="(Lbr/com/reclameaqui/teste/dtos/EmpresaDTO;)Lbr/com/reclameaqui/teste/dtos/ReclamacaoDTO$ReclamacaoDTOBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="endereco" signature="(Lbr/com/reclameaqui/teste/dtos/EnderecoDTO;)Lbr/com/reclameaqui/teste/dtos/ReclamacaoDTO$ReclamacaoDTOBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="id" signature="(Ljava/lang/String;)Lbr/com/reclameaqui/teste/dtos/ReclamacaoDTO$ReclamacaoDTOBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="idCliente" signature="(Ljava/lang/String;)Lbr/com/reclameaqui/teste/dtos/ReclamacaoDTO$ReclamacaoDTOBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="nome" signature="(Ljava/lang/String;)Lbr/com/reclameaqui/teste/dtos/ReclamacaoDTO$ReclamacaoDTOBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="toString" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="13" hits="302" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="13" hits="302" branch="false"/>
+					</lines>
+				</class>
+				<class name="br.com.reclameaqui.teste.dtos.ReclamantesRequestDTO" filename="br/com/reclameaqui/teste/dtos/ReclamantesRequestDTO.java" line-rate="1.0" branch-rate="1.0" complexity="0.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="13" hits="5" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="12" hits="27" branch="false"/>
+							</lines>
+						</method>
+						<method name="builder" signature="()Lbr/com/reclameaqui/teste/dtos/ReclamantesRequestDTO$ReclamantesRequestDTOBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="11" hits="26" branch="false"/>
+							</lines>
+						</method>
+						<method name="getCidade" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="18" hits="11" branch="false"/>
+							</lines>
+						</method>
+						<method name="getEmpresa" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="16" hits="11" branch="false"/>
+							</lines>
+						</method>
+						<method name="setCidade" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="10" hits="8" branch="false"/>
+							</lines>
+						</method>
+						<method name="setEmpresa" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="10" hits="8" branch="false"/>
+						<line number="11" hits="26" branch="false"/>
+						<line number="12" hits="27" branch="false"/>
+						<line number="13" hits="5" branch="false"/>
+						<line number="16" hits="11" branch="false"/>
+						<line number="18" hits="11" branch="false"/>
+					</lines>
+				</class>
+				<class name="br.com.reclameaqui.teste.dtos.ReclamantesRequestDTO$ReclamantesRequestDTOBuilder" filename="br/com/reclameaqui/teste/dtos/ReclamantesRequestDTO.java" line-rate="1.0" branch-rate="1.0" complexity="0.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="build" signature="()Lbr/com/reclameaqui/teste/dtos/ReclamantesRequestDTO;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="cidade" signature="(Ljava/lang/String;)Lbr/com/reclameaqui/teste/dtos/ReclamantesRequestDTO$ReclamantesRequestDTOBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="empresa" signature="(Ljava/lang/String;)Lbr/com/reclameaqui/teste/dtos/ReclamantesRequestDTO$ReclamantesRequestDTOBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="toString" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="11" hits="104" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="11" hits="104" branch="false"/>
+					</lines>
+				</class>
+				<class name="br.com.reclameaqui.teste.dtos.ReclamantesResponseDTO" filename="br/com/reclameaqui/teste/dtos/ReclamantesResponseDTO.java" line-rate="1.0" branch-rate="1.0" complexity="0.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="(ILjava/util/List;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="11" hits="19" branch="false"/>
+							</lines>
+						</method>
+						<method name="builder" signature="()Lbr/com/reclameaqui/teste/dtos/ReclamantesResponseDTO$ReclamantesResponseDTOBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="10" hits="15" branch="false"/>
+							</lines>
+						</method>
+						<method name="getClientes" signature="()Ljava/util/List;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="16" hits="5" branch="false"/>
+							</lines>
+						</method>
+						<method name="getClientesQueReclamaram" signature="()I" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="14" hits="5" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="10" hits="15" branch="false"/>
+						<line number="11" hits="19" branch="false"/>
+						<line number="14" hits="5" branch="false"/>
+						<line number="16" hits="5" branch="false"/>
+					</lines>
+				</class>
+				<class name="br.com.reclameaqui.teste.dtos.ReclamantesResponseDTO$ReclamantesResponseDTOBuilder" filename="br/com/reclameaqui/teste/dtos/ReclamantesResponseDTO.java" line-rate="1.0" branch-rate="1.0" complexity="0.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="build" signature="()Lbr/com/reclameaqui/teste/dtos/ReclamantesResponseDTO;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="clientes" signature="(Ljava/util/List;)Lbr/com/reclameaqui/teste/dtos/ReclamantesResponseDTO$ReclamantesResponseDTOBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="clientesQueReclamaram" signature="(I)Lbr/com/reclameaqui/teste/dtos/ReclamantesResponseDTO$ReclamantesResponseDTOBuilder;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="toString" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="10" hits="60" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="10" hits="60" branch="false"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package name="br.com.reclameaqui.teste.enums" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+			<classes>
+				<class name="br.com.reclameaqui.teste.enums.TipoConsulta" filename="br/com/reclameaqui/teste/enums/TipoConsulta.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;clinit&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="10" hits="7" branch="false"/>
+								<line number="12" hits="1" branch="false"/>
+								<line number="18" hits="1" branch="false"/>
+								<line number="24" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;I)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;ILbr/com/reclameaqui/teste/enums/TipoConsulta$1;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="valueOf" signature="(Ljava/lang/String;)Lbr/com/reclameaqui/teste/enums/TipoConsulta;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="values" signature="()[Lbr/com/reclameaqui/teste/enums/TipoConsulta;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="10" hits="7" branch="false"/>
+						<line number="12" hits="1" branch="false"/>
+						<line number="18" hits="1" branch="false"/>
+						<line number="24" hits="1" branch="false"/>
+					</lines>
+				</class>
+				<class name="br.com.reclameaqui.teste.enums.TipoConsulta$1" filename="br/com/reclameaqui/teste/enums/TipoConsulta.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;I)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="12" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="matchOperation" signature="(Lbr/com/reclameaqui/teste/dtos/ReclamantesRequestDTO;)Lorg/springframework/data/mongodb/core/aggregation/MatchOperation;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="15" hits="1" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="12" hits="1" branch="false"/>
+						<line number="15" hits="1" branch="false"/>
+					</lines>
+				</class>
+				<class name="br.com.reclameaqui.teste.enums.TipoConsulta$2" filename="br/com/reclameaqui/teste/enums/TipoConsulta.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;I)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="18" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="matchOperation" signature="(Lbr/com/reclameaqui/teste/dtos/ReclamantesRequestDTO;)Lorg/springframework/data/mongodb/core/aggregation/MatchOperation;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="21" hits="1" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="18" hits="1" branch="false"/>
+						<line number="21" hits="1" branch="false"/>
+					</lines>
+				</class>
+				<class name="br.com.reclameaqui.teste.enums.TipoConsulta$3" filename="br/com/reclameaqui/teste/enums/TipoConsulta.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;I)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="24" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="matchOperation" signature="(Lbr/com/reclameaqui/teste/dtos/ReclamantesRequestDTO;)Lorg/springframework/data/mongodb/core/aggregation/MatchOperation;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="27" hits="1" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="24" hits="1" branch="false"/>
+						<line number="27" hits="1" branch="false"/>
+					</lines>
+				</class>
+				<class name="br.com.reclameaqui.teste.enums.TipoConsultaInterface" filename="br/com/reclameaqui/teste/enums/TipoConsultaInterface.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+					</methods>
+					<lines>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package name="br.com.reclameaqui.teste.exceptions" line-rate="0.6666666666666666" branch-rate="1.0" complexity="1.0">
+			<classes>
+				<class name="br.com.reclameaqui.teste.exceptions.ClienteNaoEncontradoException" filename="br/com/reclameaqui/teste/exceptions/ClienteNaoEncontradoException.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="7" hits="7" branch="false"/>
+								<line number="8" hits="7" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="7" hits="7" branch="false"/>
+						<line number="8" hits="7" branch="false"/>
+					</lines>
+				</class>
+				<class name="br.com.reclameaqui.teste.exceptions.JsonConverterException" filename="br/com/reclameaqui/teste/exceptions/JsonConverterException.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="7" hits="0" branch="false"/>
+								<line number="8" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="7" hits="0" branch="false"/>
+						<line number="8" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="br.com.reclameaqui.teste.exceptions.ReclamacaoNaoEncontradaException" filename="br/com/reclameaqui/teste/exceptions/ReclamacaoNaoEncontradaException.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="7" hits="4" branch="false"/>
+								<line number="8" hits="4" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="7" hits="4" branch="false"/>
+						<line number="8" hits="4" branch="false"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package name="br.com.reclameaqui.teste.repository" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+			<classes>
+				<class name="br.com.reclameaqui.teste.repository.ClienteRepository" filename="br/com/reclameaqui/teste/repository/ClienteRepository.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+					</methods>
+					<lines>
+					</lines>
+				</class>
+				<class name="br.com.reclameaqui.teste.repository.ReclamacaoRepository" filename="br/com/reclameaqui/teste/repository/ReclamacaoRepository.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+					</methods>
+					<lines>
+					</lines>
+				</class>
+				<class name="br.com.reclameaqui.teste.repository.ReclamacaoRepositoryCustom" filename="br/com/reclameaqui/teste/repository/ReclamacaoRepositoryCustom.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+					</methods>
+					<lines>
+					</lines>
+				</class>
+				<class name="br.com.reclameaqui.teste.repository.ReclamacaoRepositoryImpl" filename="br/com/reclameaqui/teste/repository/ReclamacaoRepositoryImpl.java" line-rate="1.0" branch-rate="1.0" complexity="0.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="(Lorg/springframework/data/mongodb/core/MongoOperations;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="24" hits="2" branch="false"/>
+								<line number="25" hits="2" branch="false"/>
+								<line number="26" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="buscarClientesQueReclamam" signature="(Lbr/com/reclameaqui/teste/enums/TipoConsulta;Lbr/com/reclameaqui/teste/dtos/ReclamantesRequestDTO;)Ljava/util/List;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="32" hits="6" branch="false"/>
+								<line number="33" hits="3" branch="false"/>
+								<line number="34" hits="3" branch="false"/>
+								<line number="40" hits="3" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="41" hits="19" branch="false"/>
+								<line number="42" hits="19" branch="false"/>
+								<line number="44" hits="3" branch="false"/>
+							</lines>
+						</method>
+						<method name="lambda$buscarClientesQueReclamam$0" signature="(Lbr/com/reclameaqui/teste/documents/Reclamacao;)Lbr/com/reclameaqui/teste/documents/Cliente;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="37" hits="22" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="24" hits="2" branch="false"/>
+						<line number="25" hits="2" branch="false"/>
+						<line number="26" hits="2" branch="false"/>
+						<line number="32" hits="6" branch="false"/>
+						<line number="33" hits="3" branch="false"/>
+						<line number="34" hits="3" branch="false"/>
+						<line number="37" hits="22" branch="false"/>
+						<line number="40" hits="3" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="41" hits="19" branch="false"/>
+						<line number="42" hits="19" branch="false"/>
+						<line number="44" hits="3" branch="false"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package name="br.com.reclameaqui.teste.service" line-rate="0.9902912621359223" branch-rate="0.9166666666666666" complexity="1.3055555555555556">
+			<classes>
+				<class name="br.com.reclameaqui.teste.service.ClienteService" filename="br/com/reclameaqui/teste/service/ClienteService.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+					</methods>
+					<lines>
+					</lines>
+				</class>
+				<class name="br.com.reclameaqui.teste.service.ClienteServiceImpl" filename="br/com/reclameaqui/teste/service/ClienteServiceImpl.java" line-rate="0.9848484848484849" branch-rate="0.9" complexity="1.6428571428571428">
+					<methods>
+						<method name="&lt;init&gt;" signature="(Lbr/com/reclameaqui/teste/repository/ClienteRepository;Lbr/com/reclameaqui/teste/repository/ReclamacaoRepository;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="28" hits="12" branch="false"/>
+								<line number="35" hits="12" branch="false"/>
+								<line number="36" hits="12" branch="false"/>
+								<line number="37" hits="12" branch="false"/>
+								<line number="38" hits="12" branch="false"/>
+							</lines>
+						</method>
+						<method name="atualizar" signature="(Ljava/lang/String;Lbr/com/reclameaqui/teste/dtos/ClienteDTO;)Lbr/com/reclameaqui/teste/dtos/ClienteDTO;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="82" hits="1" branch="false"/>
+								<line number="84" hits="1" branch="false"/>
+								<line number="86" hits="1" branch="false"/>
+								<line number="88" hits="1" branch="false"/>
+								<line number="90" hits="1" branch="false"/>
+								<line number="92" hits="1" branch="false"/>
+								<line number="94" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="atualizarPorCpf" signature="(Ljava/lang/String;Lbr/com/reclameaqui/teste/dtos/ClienteDTO;)Lbr/com/reclameaqui/teste/dtos/ClienteDTO;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="167" hits="2" branch="false"/>
+								<line number="169" hits="2" branch="false"/>
+								<line number="170" hits="2" branch="false"/>
+								<line number="171" hits="2" branch="false"/>
+								<line number="173" hits="2" branch="false"/>
+								<line number="175" hits="2" branch="false"/>
+								<line number="177" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="buscarClientesQueReclamam" signature="(Lbr/com/reclameaqui/teste/dtos/ReclamantesRequestDTO;)Lbr/com/reclameaqui/teste/dtos/ReclamantesResponseDTO;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="112" hits="4" branch="false"/>
+								<line number="114" hits="4" branch="false"/>
+								<line number="116" hits="4" branch="false"/>
+								<line number="118" hits="4" branch="false"/>
+							</lines>
+						</method>
+						<method name="buscarTodos" signature="()Ljava/util/List;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="59" hits="2" branch="false"/>
+								<line number="61" hits="2" branch="false"/>
+								<line number="63" hits="2" branch="false"/>
+								<line number="64" hits="2" branch="false"/>
+								<line number="66" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="consultar" signature="(Ljava/lang/String;)Lbr/com/reclameaqui/teste/dtos/ClienteDTO;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="47" hits="1" branch="false"/>
+								<line number="49" hits="1" branch="false"/>
+								<line number="50" hits="1" branch="false"/>
+								<line number="52" hits="1" branch="false"/>
+								<line number="54" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="consultarPorCpf" signature="(Ljava/lang/String;)Lbr/com/reclameaqui/teste/dtos/ClienteDTO;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="144" hits="3" branch="false"/>
+								<line number="145" hits="3" branch="false"/>
+								<line number="146" hits="3" branch="false"/>
+								<line number="148" hits="3" branch="false"/>
+								<line number="150" hits="3" branch="false"/>
+							</lines>
+						</method>
+						<method name="deletar" signature="(Ljava/lang/String;)Lorg/springframework/http/ResponseEntity;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="99" hits="1" branch="false"/>
+								<line number="101" hits="1" branch="false"/>
+								<line number="102" hits="1" branch="false"/>
+								<line number="104" hits="1" branch="false"/>
+								<line number="106" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="deletarPorCpf" signature="(Ljava/lang/String;)Lorg/springframework/http/ResponseEntity;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="155" hits="2" branch="false"/>
+								<line number="157" hits="2" branch="false"/>
+								<line number="158" hits="2" branch="false"/>
+								<line number="160" hits="2" branch="false"/>
+								<line number="162" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="incluir" signature="(Lbr/com/reclameaqui/teste/dtos/ClienteDTO;)Lbr/com/reclameaqui/teste/dtos/ClienteDTO;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="71" hits="2" branch="false"/>
+								<line number="73" hits="2" branch="false"/>
+								<line number="75" hits="2" branch="false"/>
+								<line number="77" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="modelMapper" signature="()Lorg/modelmapper/ModelMapper;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="42" hits="20" branch="false"/>
+							</lines>
+						</method>
+						<method name="modelMapperTransfer" signature="(Ljava/util/List;)Ljava/util/List;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="122" hits="4" branch="false"/>
+								<line number="123" hits="4" branch="false"/>
+								<line number="124" hits="4" branch="false"/>
+							</lines>
+						</method>
+						<method name="validarCliente" signature="(Lbr/com/reclameaqui/teste/documents/Cliente;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="181" hits="11" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="182" hits="1" branch="false"/>
+								<line number="184" hits="10" branch="false"/>
+							</lines>
+						</method>
+						<method name="verificaParametros" signature="(Lbr/com/reclameaqui/teste/dtos/ReclamantesRequestDTO;)Lbr/com/reclameaqui/teste/enums/TipoConsulta;" line-rate="0.8571428571428571" branch-rate="0.875" complexity="0">
+							<lines>
+								<line number="128" hits="4" branch="true" condition-coverage="100% (4/4)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+										<condition number="1" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="129" hits="2" branch="false"/>
+								<line number="132" hits="2" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="133" hits="1" branch="false"/>
+								<line number="136" hits="1" branch="true" condition-coverage="50% (1/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="50%"/>
+									</conditions>
+								</line>
+								<line number="137" hits="1" branch="false"/>
+								<line number="139" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="28" hits="12" branch="false"/>
+						<line number="35" hits="12" branch="false"/>
+						<line number="36" hits="12" branch="false"/>
+						<line number="37" hits="12" branch="false"/>
+						<line number="38" hits="12" branch="false"/>
+						<line number="42" hits="20" branch="false"/>
+						<line number="47" hits="1" branch="false"/>
+						<line number="49" hits="1" branch="false"/>
+						<line number="50" hits="1" branch="false"/>
+						<line number="52" hits="1" branch="false"/>
+						<line number="54" hits="1" branch="false"/>
+						<line number="59" hits="2" branch="false"/>
+						<line number="61" hits="2" branch="false"/>
+						<line number="63" hits="2" branch="false"/>
+						<line number="64" hits="2" branch="false"/>
+						<line number="66" hits="2" branch="false"/>
+						<line number="71" hits="2" branch="false"/>
+						<line number="73" hits="2" branch="false"/>
+						<line number="75" hits="2" branch="false"/>
+						<line number="77" hits="2" branch="false"/>
+						<line number="82" hits="1" branch="false"/>
+						<line number="84" hits="1" branch="false"/>
+						<line number="86" hits="1" branch="false"/>
+						<line number="88" hits="1" branch="false"/>
+						<line number="90" hits="1" branch="false"/>
+						<line number="92" hits="1" branch="false"/>
+						<line number="94" hits="1" branch="false"/>
+						<line number="99" hits="1" branch="false"/>
+						<line number="101" hits="1" branch="false"/>
+						<line number="102" hits="1" branch="false"/>
+						<line number="104" hits="1" branch="false"/>
+						<line number="106" hits="1" branch="false"/>
+						<line number="112" hits="4" branch="false"/>
+						<line number="114" hits="4" branch="false"/>
+						<line number="116" hits="4" branch="false"/>
+						<line number="118" hits="4" branch="false"/>
+						<line number="122" hits="4" branch="false"/>
+						<line number="123" hits="4" branch="false"/>
+						<line number="124" hits="4" branch="false"/>
+						<line number="128" hits="4" branch="true" condition-coverage="100% (4/4)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+								<condition number="1" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="129" hits="2" branch="false"/>
+						<line number="132" hits="2" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="133" hits="1" branch="false"/>
+						<line number="136" hits="1" branch="true" condition-coverage="50% (1/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="50%"/>
+							</conditions>
+						</line>
+						<line number="137" hits="1" branch="false"/>
+						<line number="139" hits="0" branch="false"/>
+						<line number="144" hits="3" branch="false"/>
+						<line number="145" hits="3" branch="false"/>
+						<line number="146" hits="3" branch="false"/>
+						<line number="148" hits="3" branch="false"/>
+						<line number="150" hits="3" branch="false"/>
+						<line number="155" hits="2" branch="false"/>
+						<line number="157" hits="2" branch="false"/>
+						<line number="158" hits="2" branch="false"/>
+						<line number="160" hits="2" branch="false"/>
+						<line number="162" hits="2" branch="false"/>
+						<line number="167" hits="2" branch="false"/>
+						<line number="169" hits="2" branch="false"/>
+						<line number="170" hits="2" branch="false"/>
+						<line number="171" hits="2" branch="false"/>
+						<line number="173" hits="2" branch="false"/>
+						<line number="175" hits="2" branch="false"/>
+						<line number="177" hits="2" branch="false"/>
+						<line number="181" hits="11" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="182" hits="1" branch="false"/>
+						<line number="184" hits="10" branch="false"/>
+					</lines>
+				</class>
+				<class name="br.com.reclameaqui.teste.service.ClienteServiceImpl$1" filename="br/com/reclameaqui/teste/service/ClienteServiceImpl.java" line-rate="1.0" branch-rate="1.0" complexity="1.6428571428571428">
+					<methods>
+						<method name="&lt;init&gt;" signature="(Lbr/com/reclameaqui/teste/service/ClienteServiceImpl;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="63" hits="2" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="63" hits="2" branch="false"/>
+					</lines>
+				</class>
+				<class name="br.com.reclameaqui.teste.service.ClienteServiceImpl$2" filename="br/com/reclameaqui/teste/service/ClienteServiceImpl.java" line-rate="1.0" branch-rate="1.0" complexity="1.6428571428571428">
+					<methods>
+						<method name="&lt;init&gt;" signature="(Lbr/com/reclameaqui/teste/service/ClienteServiceImpl;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="122" hits="4" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="122" hits="4" branch="false"/>
+					</lines>
+				</class>
+				<class name="br.com.reclameaqui.teste.service.ReclamacaoService" filename="br/com/reclameaqui/teste/service/ReclamacaoService.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+					</methods>
+					<lines>
+					</lines>
+				</class>
+				<class name="br.com.reclameaqui.teste.service.ReclamacaoServiceImpl" filename="br/com/reclameaqui/teste/service/ReclamacaoServiceImpl.java" line-rate="1.0" branch-rate="1.0" complexity="1.25">
+					<methods>
+						<method name="&lt;init&gt;" signature="(Lbr/com/reclameaqui/teste/repository/ReclamacaoRepository;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="23" hits="8" branch="false"/>
+								<line number="28" hits="8" branch="false"/>
+								<line number="29" hits="8" branch="false"/>
+								<line number="30" hits="8" branch="false"/>
+							</lines>
+						</method>
+						<method name="atualizar" signature="(Ljava/lang/String;Lbr/com/reclameaqui/teste/dtos/ReclamacaoDTO;)Lbr/com/reclameaqui/teste/dtos/ReclamacaoDTO;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="69" hits="1" branch="false"/>
+								<line number="71" hits="1" branch="false"/>
+								<line number="72" hits="1" branch="false"/>
+								<line number="74" hits="1" branch="false"/>
+								<line number="76" hits="1" branch="false"/>
+								<line number="78" hits="1" branch="false"/>
+								<line number="80" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="buscarTodos" signature="()Ljava/util/List;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="46" hits="2" branch="false"/>
+								<line number="48" hits="2" branch="false"/>
+								<line number="50" hits="2" branch="false"/>
+								<line number="51" hits="2" branch="false"/>
+								<line number="53" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="consultar" signature="(Ljava/lang/String;)Lbr/com/reclameaqui/teste/dtos/ReclamacaoDTO;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="34" hits="1" branch="false"/>
+								<line number="36" hits="1" branch="false"/>
+								<line number="37" hits="1" branch="false"/>
+								<line number="39" hits="1" branch="false"/>
+								<line number="41" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="deletar" signature="(Ljava/lang/String;)Lorg/springframework/http/ResponseEntity;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="85" hits="1" branch="false"/>
+								<line number="87" hits="1" branch="false"/>
+								<line number="88" hits="1" branch="false"/>
+								<line number="90" hits="1" branch="false"/>
+								<line number="92" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="incluir" signature="(Lbr/com/reclameaqui/teste/dtos/ReclamacaoDTO;)Lbr/com/reclameaqui/teste/dtos/ReclamacaoDTO;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="58" hits="1" branch="false"/>
+								<line number="60" hits="1" branch="false"/>
+								<line number="62" hits="1" branch="false"/>
+								<line number="64" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="modelMapper" signature="()Lorg/modelmapper/ModelMapper;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="97" hits="9" branch="false"/>
+							</lines>
+						</method>
+						<method name="validarReclamacao" signature="(Lbr/com/reclameaqui/teste/documents/Reclamacao;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="101" hits="4" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="102" hits="1" branch="false"/>
+								<line number="104" hits="3" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="23" hits="8" branch="false"/>
+						<line number="28" hits="8" branch="false"/>
+						<line number="29" hits="8" branch="false"/>
+						<line number="30" hits="8" branch="false"/>
+						<line number="34" hits="1" branch="false"/>
+						<line number="36" hits="1" branch="false"/>
+						<line number="37" hits="1" branch="false"/>
+						<line number="39" hits="1" branch="false"/>
+						<line number="41" hits="1" branch="false"/>
+						<line number="46" hits="2" branch="false"/>
+						<line number="48" hits="2" branch="false"/>
+						<line number="50" hits="2" branch="false"/>
+						<line number="51" hits="2" branch="false"/>
+						<line number="53" hits="2" branch="false"/>
+						<line number="58" hits="1" branch="false"/>
+						<line number="60" hits="1" branch="false"/>
+						<line number="62" hits="1" branch="false"/>
+						<line number="64" hits="1" branch="false"/>
+						<line number="69" hits="1" branch="false"/>
+						<line number="71" hits="1" branch="false"/>
+						<line number="72" hits="1" branch="false"/>
+						<line number="74" hits="1" branch="false"/>
+						<line number="76" hits="1" branch="false"/>
+						<line number="78" hits="1" branch="false"/>
+						<line number="80" hits="1" branch="false"/>
+						<line number="85" hits="1" branch="false"/>
+						<line number="87" hits="1" branch="false"/>
+						<line number="88" hits="1" branch="false"/>
+						<line number="90" hits="1" branch="false"/>
+						<line number="92" hits="1" branch="false"/>
+						<line number="97" hits="9" branch="false"/>
+						<line number="101" hits="4" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="102" hits="1" branch="false"/>
+						<line number="104" hits="3" branch="false"/>
+					</lines>
+				</class>
+				<class name="br.com.reclameaqui.teste.service.ReclamacaoServiceImpl$1" filename="br/com/reclameaqui/teste/service/ReclamacaoServiceImpl.java" line-rate="1.0" branch-rate="1.0" complexity="1.25">
+					<methods>
+						<method name="&lt;init&gt;" signature="(Lbr/com/reclameaqui/teste/service/ReclamacaoServiceImpl;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="50" hits="2" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="50" hits="2" branch="false"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package name="br.com.reclameaqui.teste.utils" line-rate="0.8" branch-rate="1.0" complexity="2.5">
+			<classes>
+				<class name="br.com.reclameaqui.teste.utils.ClearRepositories" filename="br/com/reclameaqui/teste/utils/ClearRepositories.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="10" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="clear" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="18" hits="2" branch="false"/>
+								<line number="19" hits="2" branch="false"/>
+								<line number="20" hits="2" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="10" hits="2" branch="false"/>
+						<line number="18" hits="2" branch="false"/>
+						<line number="19" hits="2" branch="false"/>
+						<line number="20" hits="2" branch="false"/>
+					</lines>
+				</class>
+				<class name="br.com.reclameaqui.teste.utils.Utils" filename="br/com/reclameaqui/teste/utils/Utils.java" line-rate="0.6666666666666666" branch-rate="1.0" complexity="4.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="10" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="asJsonString" signature="(Ljava/lang/Object;)Ljava/lang/String;" line-rate="0.6" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="14" hits="6" branch="false"/>
+								<line number="15" hits="6" branch="false"/>
+								<line number="16" hits="6" branch="false"/>
+								<line number="17" hits="0" branch="false"/>
+								<line number="18" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="10" hits="2" branch="false"/>
+						<line number="14" hits="6" branch="false"/>
+						<line number="15" hits="6" branch="false"/>
+						<line number="16" hits="6" branch="false"/>
+						<line number="17" hits="0" branch="false"/>
+						<line number="18" hits="0" branch="false"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+	</packages>
+</coverage>
