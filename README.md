@@ -7,7 +7,7 @@
 ###### Cobertura de Testes
 [![Codacy Badge](https://api.codacy.com/project/badge/Coverage/56390a4a4cab48b2865639e2dcd2d3d2)](https://www.codacy.com/app/matheustf/testereclameaqui?utm_source=github.com&utm_medium=referral&utm_content=matheustf/testereclameaqui&utm_campaign=Badge_Coverage)
 
-# Projeto ReclameAqui
+### Projeto ReclameAqui
 
 #  Ferramentas
 ###### Codigicação:
@@ -57,9 +57,9 @@
 
 4. Travis informa status de build ao github
 
-5.Se OK, o código é enviado para o Codacy e para o Heroku
+5. Se OK, o código é enviado para o Codacy e para o Heroku
 
-6.Codacy atualiza dashboard com validações de qualidade de código, pontos criticos para possíveis erros e percentual de cobertura de testes
+6. Codacy atualiza dashboard com validações de qualidade de código, pontos criticos para possíveis erros e percentual de cobertura de testes
 
 7. Codacy atualiza a pagina do github com informações de cobertura de testes e qualidade de código
 
