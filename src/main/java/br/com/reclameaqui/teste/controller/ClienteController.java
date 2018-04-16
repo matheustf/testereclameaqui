@@ -26,8 +26,6 @@ import br.com.reclameaqui.teste.service.ClienteService;
 import br.com.reclameaqui.teste.service.ClienteServiceImpl;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiResponse;
-import io.swagger.annotations.ApiResponses;
 
 @Api(tags = "Cliente", description = "endpoint")
 @RestController
@@ -47,7 +45,8 @@ public class ClienteController {
 	@ResponseStatus(HttpStatus.OK)
 	@GetMapping("/clientes")
 	public ResponseEntity<List<ClienteDTO>> buscarTodasClientes() {
-
+		logger.info("Rest consultando Clientes");
+		
 		List<ClienteDTO> listClientes = clienteService.buscarTodos();
 
 		return new ResponseEntity<List<ClienteDTO>>(listClientes, HttpStatus.OK);
@@ -57,6 +56,7 @@ public class ClienteController {
 	@ResponseStatus(HttpStatus.OK)
 	@GetMapping("/teste")
 	public String teste() {
+		logger.info("Rest testando aplicação");
 		return "Application OK";
 	}
 
@@ -64,7 +64,7 @@ public class ClienteController {
 	@ResponseStatus(HttpStatus.OK)
 	@GetMapping("/cliente/{id}")
 	public ResponseEntity<ClienteDTO> consultar(@PathVariable(value = "id") String id) {
-		logger.info("Rest consultar cliente");
+		logger.info("Rest consultando Cliente por ID");
 
 		ClienteDTO clienteDTO;
 		try {
@@ -80,7 +80,7 @@ public class ClienteController {
 	@ResponseStatus(HttpStatus.OK)
 	@GetMapping("/cliente/cpf/{cpf}")
 	public ResponseEntity<ClienteDTO> consultarPorCpf(@PathVariable(value = "cpf") String cpf) {
-		logger.info("Rest consultar Cliente");
+		logger.info("Rest consultando Cliente por CPF");
 		ClienteDTO clienteDTO;
 		try {
 			clienteDTO = clienteService.consultarPorCpf(cpf);
@@ -95,7 +95,7 @@ public class ClienteController {
 	@ResponseStatus(HttpStatus.CREATED)
 	@PostMapping("/cliente")
 	public ResponseEntity<ClienteDTO> incluir(@RequestBody @Valid ClienteDTO clienteDTO) {
-		logger.info("Rest incluir cliente");
+		logger.info("Rest incluindo Cliente");
 
 		ClienteDTO responseClienteDTO = clienteService.incluir(clienteDTO);
 		return new ResponseEntity<ClienteDTO>(responseClienteDTO, HttpStatus.CREATED);
@@ -106,7 +106,7 @@ public class ClienteController {
 	@PutMapping("/cliente/{id}")
 	public ResponseEntity<ClienteDTO> atualizar(@PathVariable(value = "id") String id,
 			@RequestBody @Valid ClienteDTO clienteDTODetails) {
-		logger.info("Rest atualizar cliente");
+		logger.info("Rest atualizando Cliente por ID");
 
 		ClienteDTO clienteDTO;
 
@@ -124,7 +124,7 @@ public class ClienteController {
 	@PutMapping("/cliente/cpf/{cpf}")
 	public ResponseEntity<ClienteDTO> atualizarPorCpf(@PathVariable(value = "cpf") String cpf,
 			@RequestBody @Valid ClienteDTO clienteDTODetails) {
-		logger.info("Rest atualizar cliente");
+		logger.info("Rest atualizando Cliente por CPF");
 
 		ClienteDTO clienteDTO;
 
@@ -141,7 +141,7 @@ public class ClienteController {
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	@DeleteMapping("/cliente/{id}")
 	public ResponseEntity<ClienteDTO> deletar(@PathVariable(value = "id") String id) {
-		logger.info("Rest deletar cliente");
+		logger.info("Rest deletando Cliente por ID");
 
 		ResponseEntity<ClienteDTO> response;
 		try {
@@ -157,7 +157,7 @@ public class ClienteController {
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	@DeleteMapping("/cliente/cpf/{cpf}")
 	public ResponseEntity<ClienteDTO> deletarPorCpf(@PathVariable(value = "cpf") String cpf) {
-		logger.info("Rest deletar cliente");
+		logger.info("Rest deletando Cliente por CPF");
 
 		ResponseEntity<ClienteDTO> response;
 		try {
@@ -174,7 +174,8 @@ public class ClienteController {
 	@PostMapping("/clientes/consultar/reclamantes")
 	public ResponseEntity<ReclamantesResponseDTO> buscarClientesQueReclamam(
 			@RequestBody @Valid ReclamantesRequestDTO consultaReclamacaoRequestDTO) {
-
+		logger.info("Rest consultando Reclamantes");
+		
 		ReclamantesResponseDTO reclamantes = clienteService.buscarClientesQueReclamam(consultaReclamacaoRequestDTO);
 		
 		return new ResponseEntity<ReclamantesResponseDTO>(reclamantes, HttpStatus.OK);

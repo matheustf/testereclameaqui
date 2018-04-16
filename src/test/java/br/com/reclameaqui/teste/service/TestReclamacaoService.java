@@ -35,7 +35,6 @@ import br.com.reclameaqui.teste.dtos.EnderecoDTO;
 import br.com.reclameaqui.teste.dtos.ReclamacaoDTO;
 import br.com.reclameaqui.teste.exceptions.ReclamacaoNaoEncontradaException;
 import br.com.reclameaqui.teste.repository.ReclamacaoRepository;
-import br.com.reclameaqui.teste.service.ReclamacaoServiceImpl;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = TesteApplication.class, webEnvironment = WebEnvironment.RANDOM_PORT)

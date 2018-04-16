@@ -43,7 +43,8 @@ public class ReclamacaoController {
 	@ResponseStatus(HttpStatus.OK)
 	@GetMapping("/reclamacoes")
 	public ResponseEntity<List<ReclamacaoDTO>> buscarTodasReclamacoes() {
-
+		logger.info("Rest consultando Reclamacoes");
+		
 		List<ReclamacaoDTO> listReclamacoes = reclamacaoService.buscarTodos();
 		
 		return new ResponseEntity<List<ReclamacaoDTO>>(listReclamacoes, HttpStatus.OK);
@@ -53,7 +54,7 @@ public class ReclamacaoController {
 	@ResponseStatus(HttpStatus.OK)
 	@GetMapping("/reclamacao/{idReclamacao}")
 	public ResponseEntity<ReclamacaoDTO> consultar(@PathVariable(value = "idReclamacao") String idReclamacao) {
-		logger.info("Rest consultar reclamacao");
+		logger.info("Rest consultando Reclamacao");
 		
 		ReclamacaoDTO reclamacaoDTO;
 		try {
@@ -70,7 +71,7 @@ public class ReclamacaoController {
 	@ResponseStatus(HttpStatus.CREATED)
 	@PostMapping("/reclamacao")
 	public ResponseEntity<ReclamacaoDTO> incluir(@RequestBody ReclamacaoDTO reclamacaoDTO) {
-		logger.info("Rest incluir reclamacao");
+		logger.info("Rest incluindo Reclamacao");
 
 		ReclamacaoDTO responseReclamacaoDTO = reclamacaoService.incluir(reclamacaoDTO);
 		return new ResponseEntity<ReclamacaoDTO>(responseReclamacaoDTO, HttpStatus.CREATED);
@@ -81,7 +82,7 @@ public class ReclamacaoController {
 	@PutMapping("/reclamacao/{id}")
 	public ResponseEntity<ReclamacaoDTO> atualizar(@PathVariable(value = "id") String id,
 			@RequestBody @Valid ReclamacaoDTO reclamacaoDTODetails) {
-		logger.info("Rest atualizar reclamacao");
+		logger.info("Rest atualizando Reclamacao");
 
 		ReclamacaoDTO reclamacaoDTO;
 		try {
@@ -97,7 +98,7 @@ public class ReclamacaoController {
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	@DeleteMapping("/reclamacao/{id}")
 	public ResponseEntity<ReclamacaoDTO> deletar(@PathVariable(value = "id") String id) {
-		logger.info("Rest deletar reclamacao");
+		logger.info("Rest deletando Reclamacao");
 		
 		ResponseEntity<ReclamacaoDTO> response;
 		try {

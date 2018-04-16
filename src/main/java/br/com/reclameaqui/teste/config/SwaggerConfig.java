@@ -1,4 +1,4 @@
-package br.com.reclameaqui.teste;
+package br.com.reclameaqui.teste.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

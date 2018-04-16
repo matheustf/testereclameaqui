@@ -35,7 +35,6 @@ import br.com.reclameaqui.teste.enums.TipoConsulta;
 import br.com.reclameaqui.teste.exceptions.ClienteNaoEncontradoException;
 import br.com.reclameaqui.teste.repository.ClienteRepository;
 import br.com.reclameaqui.teste.repository.ReclamacaoRepository;
-import br.com.reclameaqui.teste.service.ClienteServiceImpl;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = TesteApplication.class, webEnvironment = WebEnvironment.RANDOM_PORT)
