@@ -41,7 +41,7 @@ public class ClienteController {
 		this.clienteService = clienteService;
 	}
 
-	@ApiOperation(value = "Consultar Clientes", notes = "Retrieving the collection of user tasks", response = ClienteDTO.class )
+	@ApiOperation(value = "Consultar Clientes")
 	@ResponseStatus(HttpStatus.OK)
 	@GetMapping("/clientes")
 	public ResponseEntity<List<ClienteDTO>> buscarTodasClientes() {

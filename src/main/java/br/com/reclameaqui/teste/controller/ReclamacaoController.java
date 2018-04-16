@@ -25,7 +25,7 @@ import br.com.reclameaqui.teste.service.ReclamacaoServiceImpl;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
-@Api(tags = "Reclamação", description = "endpoint")
+@Api(tags = "Reclamacao", description = "endpoint2")
 @RestController
 @RequestMapping("")
 public class ReclamacaoController {
@@ -39,7 +39,7 @@ public class ReclamacaoController {
 		this.reclamacaoService = reclamacaoService;
 	}
 	
-	@ApiOperation(value = "Consultar Reclamações")
+	@ApiOperation(value = "Consultar Reclamacoes")
 	@ResponseStatus(HttpStatus.OK)
 	@GetMapping("/reclamacoes")
 	public ResponseEntity<List<ReclamacaoDTO>> buscarTodasReclamacoes() {
