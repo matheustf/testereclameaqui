@@ -54,7 +54,7 @@ public class TestReclamacaoController {
 		reclamacaoSamsungMatheus = ReclamacaoDTO.builder().nome("Tv com imagem ruim").descricao("Imagem muito ruim").empresa(empresaSamsung).endereco(endereco).idCliente("id12345ABC").build();
 
 	}
-
+/*
 	@Test
 	public void incluiReclamacaoTest() {
 
@@ -150,5 +150,5 @@ public class TestReclamacaoController {
 
 		assertEquals(response.getStatusCode(), HttpStatus.NOT_FOUND);
 	}
-
+*/
 }
