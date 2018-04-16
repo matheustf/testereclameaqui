@@ -10,6 +10,54 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Coverage/56390a4a4cab48b2865639e2dcd2d3d2)](https://www.codacy.com/app/matheustf/testereclameaqui?utm_source=github.com&utm_medium=referral&utm_content=matheustf/testereclameaqui&utm_campaign=Badge_Coverage)
 
 
+
+# Execução
+
+##### Instalação do Heroku no Linux
+
+sudo add-apt-repository "deb https://cli-assets.heroku.com/branches/stable/apt ./"
+curl -L https://cli-assets.heroku.com/apt/release.key | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install heroku
+
+
+###### Logando com Heroku
+Executar o comando em qualquer diretório: 
+
+heroku login
+
+(inserir usuario e senha cadastrados no site do heroku)
+
+
+
+###### Clone do repositório Heroku
+
+heroku git:clone -a testereclameaqui
+
+
+###### Executar a aplicação
+
+heroku open
+
+
+###### Validar
+
+O servidor estará em execução após esse comando, para validar executar:
+
+https://testereclameaqui.herokuapp.com/teste
+
+a resposta deverá ser:
+
+Application OK
+
+
+###### OBS
+
+OBS: só é possível ter acesso aos sistemas quem tem permissão concedida heroku
+
+Caso Windows baixar neste site: https://devcenter.heroku.com/articles/deploying-spring-boot-apps-to-heroku
+
+
 #  Ferramentas
 ###### Codigicação:
 	Java 8
