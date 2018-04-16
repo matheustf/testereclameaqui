@@ -15,13 +15,17 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.reclameaqui.teste.dtos.ReclamacaoDTO;
 import br.com.reclameaqui.teste.exceptions.ReclamacaoNaoEncontradaException;
 import br.com.reclameaqui.teste.service.ReclamacaoService;
 import br.com.reclameaqui.teste.service.ReclamacaoServiceImpl;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 
+@Api(tags = "Reclamação", description = "endpoint")
 @RestController
 @RequestMapping("")
 public class ReclamacaoController {
@@ -35,6 +39,8 @@ public class ReclamacaoController {
 		this.reclamacaoService = reclamacaoService;
 	}
 	
+	@ApiOperation(value = "Consultar Reclamações")
+	@ResponseStatus(HttpStatus.OK)
 	@GetMapping("/reclamacoes")
 	public ResponseEntity<List<ReclamacaoDTO>> buscarTodasReclamacoes() {
 
@@ -43,6 +49,8 @@ public class ReclamacaoController {
 		return new ResponseEntity<List<ReclamacaoDTO>>(listReclamacoes, HttpStatus.OK);
 	}
 
+	@ApiOperation(value = "Consultar Reclamação")
+	@ResponseStatus(HttpStatus.OK)
 	@GetMapping("/reclamacao/{idReclamacao}")
 	public ResponseEntity<ReclamacaoDTO> consultar(@PathVariable(value = "idReclamacao") String idReclamacao) {
 		logger.info("Rest consultar reclamacao");
@@ -58,6 +66,8 @@ public class ReclamacaoController {
 		return new ResponseEntity<ReclamacaoDTO>(reclamacaoDTO, HttpStatus.OK);
 	}
 
+	@ApiOperation(value = "Incluir Reclamação")
+	@ResponseStatus(HttpStatus.CREATED)
 	@PostMapping("/reclamacao")
 	public ResponseEntity<ReclamacaoDTO> incluir(@RequestBody ReclamacaoDTO reclamacaoDTO) {
 		logger.info("Rest incluir reclamacao");
@@ -66,6 +76,8 @@ public class ReclamacaoController {
 		return new ResponseEntity<ReclamacaoDTO>(responseReclamacaoDTO, HttpStatus.CREATED);
 	}
 
+	@ApiOperation(value = "Atualizar Reclamação")
+	@ResponseStatus(HttpStatus.NO_CONTENT)
 	@PutMapping("/reclamacao/{id}")
 	public ResponseEntity<ReclamacaoDTO> atualizar(@PathVariable(value = "id") String id,
 			@RequestBody @Valid ReclamacaoDTO reclamacaoDTODetails) {
@@ -81,6 +93,8 @@ public class ReclamacaoController {
 		return new ResponseEntity<ReclamacaoDTO>(reclamacaoDTO, HttpStatus.NO_CONTENT);
 	}
 
+	@ApiOperation(value = "Deletar Reclamação")
+	@ResponseStatus(HttpStatus.NO_CONTENT)
 	@DeleteMapping("/reclamacao/{id}")
 	public ResponseEntity<ReclamacaoDTO> deletar(@PathVariable(value = "id") String id) {
 		logger.info("Rest deletar reclamacao");

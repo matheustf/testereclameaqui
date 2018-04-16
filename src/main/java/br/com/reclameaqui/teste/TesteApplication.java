@@ -8,8 +8,6 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
-import org.springframework.context.annotation.EnableMBeanExport;
-import org.springframework.jmx.support.RegistrationPolicy;
 
 import br.com.reclameaqui.teste.documents.Cliente;
 import br.com.reclameaqui.teste.documents.Empresa;
@@ -21,7 +19,6 @@ import br.com.reclameaqui.teste.utils.ClearRepositories;
 
 @SpringBootApplication
 @EnableCaching
-@EnableMBeanExport(registration = RegistrationPolicy.IGNORE_EXISTING)
 public class TesteApplication implements CommandLineRunner{
 
 	@Autowired
