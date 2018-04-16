@@ -9,6 +9,7 @@ script: mvn cobertura:cobertura
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
+  - mvn cobertura:cobertura
   - wget https://github.com/codacy/codacy-coverage-reporter/releases/download/1.0.13/codacy-coverage-reporter-1.0.13-assembly.jar -O ccr.jar
   # Uploading Cobertura report to Codacy
   - java -cp ccr.jar com.codacy.CodacyCoverageReporter -l Java -r ./target/site/cobertura/coverage.xml --projectToken $CODACY_PROJECT_TOKEN
