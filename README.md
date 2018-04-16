@@ -13,49 +13,52 @@
 
 # Execução
 
-### Instalação do Heroku no Linux:
+###### Instalação do Heroku no Linux:
 
-sudo add-apt-repository "deb https://cli-assets.heroku.com/branches/stable/apt ./"
-curl -L https://cli-assets.heroku.com/apt/release.key | sudo apt-key add -
-sudo apt-get update
-sudo apt-get install heroku
+	sudo add-apt-repository "deb https://cli-assets.heroku.com/branches/stable/apt ./"
 
+	curl -L https://cli-assets.heroku.com/apt/release.key | sudo apt-key add -
 
-### Logando com Heroku:
-Executar o comando em qualquer diretório: 
+	sudo apt-get update
 
-heroku login
-
-(inserir usuario e senha cadastrados no site do heroku)
+	sudo apt-get install heroku
 
 
+###### Logando com Heroku:
+	Executar o comando em qualquer diretório: 
 
-### Clone do repositório Heroku:
+	heroku login
 
-heroku git:clone -a testereclameaqui
-
-
-### Executar a aplicação:
-
-heroku open
+	(inserir usuario e senha cadastrados no site do heroku)
 
 
-### Validar:
 
-https://testereclameaqui.herokuapp.com/teste
+###### Clone do repositório Heroku:
 
-Response: Application OK
+	heroku git:clone -a testereclameaqui
 
 
-### OBS
+###### Executar a aplicação:
 
-OBS: só é possível ter acesso aos sistemas quem tem permissão concedida heroku com a conta cadastrada
+	heroku open
 
-Caso Windows baixar neste site: https://devcenter.heroku.com/articles/deploying-spring-boot-apps-to-heroku
+
+###### Validar:
+
+	https://testereclameaqui.herokuapp.com/teste
+
+	Response: Application OK
+
+
+###### OBS
+
+	OBS: só é possível ter acesso aos sistemas quem tem permissão concedida heroku com a conta cadastrada
+
+	Caso Windows baixar neste site: https://devcenter.heroku.com/articles/deploying-spring-boot-apps-to-heroku
 
 
 #  Ferramentas
-###### Codigicação:
+###### Codidicação:
 	Java 8
 	Spring Boot 1.5.10
 
