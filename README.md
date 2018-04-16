@@ -44,7 +44,7 @@
 
 ###### Facilidades para teste:
 	Disponibilização de suite de Testes
-	Disponibilização de colections Postman
+	Disponibilização de colections Postman(raiz do diretório)
 	Disponibilização de interface Swagger
 
 # Sequencia de Devops
