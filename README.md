@@ -13,7 +13,7 @@
 
 # Execução
 
-##### Instalação do Heroku no Linux
+### Instalação do Heroku no Linux:
 
 sudo add-apt-repository "deb https://cli-assets.heroku.com/branches/stable/apt ./"
 curl -L https://cli-assets.heroku.com/apt/release.key | sudo apt-key add -
@@ -21,7 +21,7 @@ sudo apt-get update
 sudo apt-get install heroku
 
 
-###### Logando com Heroku
+### Logando com Heroku:
 Executar o comando em qualquer diretório: 
 
 heroku login
@@ -30,30 +30,26 @@ heroku login
 
 
 
-###### Clone do repositório Heroku
+### Clone do repositório Heroku:
 
 heroku git:clone -a testereclameaqui
 
 
-###### Executar a aplicação
+### Executar a aplicação:
 
 heroku open
 
 
-###### Validar
-
-O servidor estará em execução após esse comando, para validar executar:
+### Validar:
 
 https://testereclameaqui.herokuapp.com/teste
 
-a resposta deverá ser:
-
-Application OK
+Response: Application OK
 
 
-###### OBS
+### OBS
 
-OBS: só é possível ter acesso aos sistemas quem tem permissão concedida heroku
+OBS: só é possível ter acesso aos sistemas quem tem permissão concedida heroku com a conta cadastrada
 
 Caso Windows baixar neste site: https://devcenter.heroku.com/articles/deploying-spring-boot-apps-to-heroku
 
