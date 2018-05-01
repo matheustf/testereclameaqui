@@ -4,11 +4,16 @@ import static org.springframework.data.mongodb.core.aggregation.Aggregation.fiel
 import static org.springframework.data.mongodb.core.aggregation.Aggregation.group;
 import static org.springframework.data.mongodb.core.aggregation.Aggregation.project;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.mongodb.core.MongoTemplate;
+//import org.springframework.data.mongodb.core.query.Criteria;
+//import org.springframework.data.mongodb.core.query.Query;
+//import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.data.mongodb.core.MongoOperations;
+
 import java.util.List;
 import java.util.stream.Collectors;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.data.mongodb.core.aggregation.Aggregation;
 
 import br.com.reclameaqui.teste.documents.Cliente;
@@ -18,11 +23,11 @@ import br.com.reclameaqui.teste.enums.TipoConsulta;
 
 public class ReclamacaoRepositoryImpl implements ReclamacaoRepositoryCustom{
 	 
-	 private final MongoOperations mongoOperations;
+	 private final MongoTemplate mongoTemplate;
 
 	    @Autowired
-	    public ReclamacaoRepositoryImpl(MongoOperations mongoOperations) {
-	        this.mongoOperations = mongoOperations;
+	    public ReclamacaoRepositoryImpl(MongoTemplate mongoTemplate) {
+	        this.mongoTemplate = mongoTemplate;
 	    }
 	    
 	    @Override
@@ -34,7 +39,7 @@ public class ReclamacaoRepositoryImpl implements ReclamacaoRepositoryCustom{
 	                .first("idCliente").as("idCliente"),project().andExclude("_id")
 	                );
 	        
-			List<Cliente> singleResults = mongoOperations.aggregate(newAggregation, Reclamacao.class, Reclamacao.class).getMappedResults().stream().map(item -> item.getIdCliente()).collect(Collectors.toList());
+			List<Cliente> singleResults = mongoTemplate.aggregate(newAggregation, Reclamacao.class, Reclamacao.class).getMappedResults().stream().map(item -> item.getIdCliente()).collect(Collectors.toList());
 			
 			
 			for (Cliente teste : singleResults) {
